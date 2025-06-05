@@ -1,0 +1,34 @@
+DEBUG - 2025-02-07 02:52:04 --> Correo recibido: admin@example.com
+DEBUG - 2025-02-07 02:52:04 --> Consulta ejecutada: SELECT *
+FROM `tbl_usuarios`
+WHERE `correo_electronico` = 'admin@example.com'
+DEBUG - 2025-02-07 02:55:27 --> Correo recibido en el modelo: admin@example.com
+DEBUG - 2025-02-07 02:55:27 --> Consulta ejecutada: SELECT *
+FROM `tbl_usuarios`
+WHERE `correo_electronico` = 'admin@example.com'
+DEBUG - 2025-02-07 02:59:03 --> Correo recibido en el modelo: admin@example.com
+DEBUG - 2025-02-07 02:59:03 --> Consulta ejecutada: SELECT *
+FROM `tbl_usuarios`
+WHERE `correo_electronico` = 'admin@example.com'
+DEBUG - 2025-02-07 02:59:11 --> Correo recibido en el modelo: admin@example.com
+DEBUG - 2025-02-07 02:59:11 --> Consulta ejecutada: SELECT *
+FROM `tbl_usuarios`
+WHERE `correo_electronico` = 'admin@example.com'
+DEBUG - 2025-02-07 03:00:09 --> Correo recibido en el modelo: admin@example.com
+DEBUG - 2025-02-07 03:00:09 --> Consulta ejecutada: SELECT *
+FROM `tbl_usuarios`
+WHERE `correo_electronico` = 'admin@example.com'
+CRITICAL - 2025-02-07 17:18:05 --> ErrorException: Undefined variable $casosClinicos
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 84.
+ 1 APPPATH\Views\VistaSelectCasos.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $casosClinicos', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php', 84)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(47): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

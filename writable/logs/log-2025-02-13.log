@@ -1,0 +1,371 @@
+INFO - 2025-02-13 00:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 00:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 20:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 20:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-13 21:31:17 --> mysqli_sql_exception: Table 'cursos.tbl_pacientes' doesn't exist in C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sisOdon\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sisOdon\app\Controllers\COracle.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\COracle->PruebaOracle()
+#6 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+#7 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-02-13 21:31:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'cursos.tbl_pacientes' doesn't exist
+[Method: GET, Route: test-oracle]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`', [], false)
+ 2 APPPATH\Controllers\COracle.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->PruebaOracle()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 21:31:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'cursos.tbl_pacientes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`', [], false)
+ 4 APPPATH\Controllers\COracle.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->PruebaOracle()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 21:31:17 --> [Caused by] mysqli_sql_exception: Table 'cursos.tbl_pacientes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`', [], false)
+ 5 APPPATH\Controllers\COracle.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->PruebaOracle()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-13 22:01:30 --> mysqli_sql_exception: Table 'db_odontologia.casos_clinicos' doesn't exist in C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sisOdon\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sisOdon\app\Models\ModeloOracle.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sisOdon\app\Controllers\COracle.php(21): App\Models\ModeloOracle->getCasosPorFiltro(NULL, NULL)
+#6 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\COracle->index()
+#7 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+#8 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-02-13 22:01:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_odontologia.casos_clinicos' doesn't exist
+[Method: GET, Route: casos-clinicos]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CASOS_CLINICOS`', [], false)
+ 2 APPPATH\Models\ModeloOracle.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\COracle.php(21): App\Models\ModeloOracle->getCasosPorFiltro(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:01:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_odontologia.casos_clinicos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `CASOS_CLINICOS`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `CASOS_CLINICOS`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CASOS_CLINICOS`', [], false)
+ 4 APPPATH\Models\ModeloOracle.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\COracle.php(21): App\Models\ModeloOracle->getCasosPorFiltro(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:01:30 --> [Caused by] mysqli_sql_exception: Table 'db_odontologia.casos_clinicos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `CASOS_CLINICOS`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `CASOS_CLINICOS`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `CASOS_CLINICOS`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CASOS_CLINICOS`', [], false)
+ 5 APPPATH\Models\ModeloOracle.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\COracle.php(21): App\Models\ModeloOracle->getCasosPorFiltro(null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:08:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "casos_clinicos_view.php"
+[Method: GET, Route: casos-clinicos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('casos_clinicos_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('casos_clinicos_view', [], true)
+ 3 APPPATH\Controllers\COracle.php(23): view('casos_clinicos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:08:35 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: casos-clinicos]
+in APPPATH\Views\OracleCasos.php on line 14.
+ 1 APPPATH\Views\OracleCasos.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\OracleCasos.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\OracleCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('OracleCasos', [], true)
+ 5 APPPATH\Controllers\COracle.php(23): view('OracleCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-13 22:33:20 --> ErrorException: oci_execute(): ORA-00942: table or view does not exist in C:\xampp\htdocs\sisOdon\system\Database\OCI8\Connection.php:219
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ...', 'C:\\xampp\\htdocs...', 219)
+#1 C:\xampp\htdocs\sisOdon\system\Database\OCI8\Connection.php(219): oci_execute(Resource id #132, 32)
+#2 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(734): CodeIgniter\Database\OCI8\Connection->execute('SELECT *\nFROM "...')
+#3 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 C:\xampp\htdocs\sisOdon\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 C:\xampp\htdocs\sisOdon\app\Models\ModeloOracle.php(33): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\sisOdon\app\Controllers\COracle.php(20): App\Models\ModeloOracle->getCasosPorFiltro(NULL, NULL)
+#7 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\COracle->index()
+#8 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+#9 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-02-13 22:33:20 --> CodeIgniter\Database\Exceptions\DatabaseException: oci_execute(): ORA-00942: table or view does not exist
+[Method: GET, Route: casos-clinicos]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_casos_clinicos"', [], false)
+ 2 APPPATH\Models\ModeloOracle.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\COracle.php(20): App\Models\ModeloOracle->getCasosPorFiltro(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:33:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: oci_execute(): ORA-00942: table or view does not exist
+in SYSTEMPATH\Database\OCI8\Connection.php on line 231.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\OCI8\Connection->execute('SELECT *
+FROM "tbl_casos_clinicos"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tbl_casos_clinicos"')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_casos_clinicos"', [], false)
+ 4 APPPATH\Models\ModeloOracle.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\COracle.php(20): App\Models\ModeloOracle->getCasosPorFiltro(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:33:20 --> [Caused by] ErrorException: oci_execute(): ORA-00942: table or view does not exist
+in SYSTEMPATH\Database\OCI8\Connection.php on line 219.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'oci_execute(): ORA-00942: table or view does not exist', 'C:\\xampp\\htdocs\\sisOdon\\system\\Database\\OCI8\\Connection.php', 219)
+ 2 SYSTEMPATH\Database\OCI8\Connection.php(219): oci_execute(resource (oci8 statement), 32)
+ 3 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\OCI8\Connection->execute('SELECT *
+FROM "tbl_casos_clinicos"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tbl_casos_clinicos"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_casos_clinicos"', [], false)
+ 6 APPPATH\Models\ModeloOracle.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\COracle.php(20): App\Models\ModeloOracle->getCasosPorFiltro(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:36:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "PacientesOracle.php"
+[Method: GET, Route: casos-clinicos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('PacientesOracle.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('PacientesOracle', [], true)
+ 3 APPPATH\Controllers\COracle.php(20): view('PacientesOracle', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:40:36 --> ErrorException: Undefined variable $nombre
+[Method: GET, Route: casos-clinicos]
+in APPPATH\Views\OracleCasos.php on line 17.
+ 1 APPPATH\Views\OracleCasos.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\OracleCasos.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\OracleCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('OracleCasos', [], true)
+ 5 APPPATH\Controllers\COracle.php(23): view('OracleCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-13 22:42:27 --> mysqli_sql_exception: Table 'cursos.tbl_pacientes' doesn't exist in C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sisOdon\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sisOdon\app\Models\ModeloOracle.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sisOdon\app\Controllers\COracle.php(20): App\Models\ModeloOracle->getPacientes(NULL, NULL)
+#6 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\COracle->index()
+#7 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+#8 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-02-13 22:42:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'cursos.tbl_pacientes' doesn't exist
+[Method: GET, Route: casos-clinicos]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`', [], false)
+ 2 APPPATH\Models\ModeloOracle.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\COracle.php(20): App\Models\ModeloOracle->getPacientes(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:42:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'cursos.tbl_pacientes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`', [], false)
+ 4 APPPATH\Models\ModeloOracle.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\COracle.php(20): App\Models\ModeloOracle->getPacientes(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 22:42:27 --> [Caused by] mysqli_sql_exception: Table 'cursos.tbl_pacientes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `CURSOS`.`TBL_PACIENTES`', [], false)
+ 5 APPPATH\Models\ModeloOracle.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\COracle.php(20): App\Models\ModeloOracle->getPacientes(null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-13 23:26:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 23:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 23:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 23:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-13 23:40:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "insertar_paciente.php"
+[Method: GET, Route: insertar-paciente]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('insertar_paciente.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('insertar_paciente', [], true)
+ 3 APPPATH\Controllers\COracle.php(51): view('insertar_paciente')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->insertarPaciente()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-13 23:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 23:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 23:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-13 23:47:42 --> Error: Object of class OCILob could not be converted to string
+[Method: GET, Route: casos-totales]
+in APPPATH\Views\OracleCasosClinicos.php on line 31.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('OracleCasosClinicos', [], true)
+ 4 APPPATH\Controllers\COracle.php(31): view('OracleCasosClinicos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->casosClinicos()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-13 23:49:24 --> Error: Object of class OCILob could not be converted to string
+[Method: GET, Route: casos-totales]
+in APPPATH\Views\OracleCasosClinicos.php on line 31.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('OracleCasosClinicos', [], true)
+ 4 APPPATH\Controllers\COracle.php(31): view('OracleCasosClinicos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->casosClinicos()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-13 23:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 23:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-13 23:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-13 23:56:35 --> Error: Object of class OCILob could not be converted to string
+[Method: GET, Route: casos-totales]
+in APPPATH\Views\OracleCasosClinicos.php on line 31.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('OracleCasosClinicos', [], true)
+ 4 APPPATH\Controllers\COracle.php(31): view('OracleCasosClinicos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\COracle->casosClinicos()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\COracle))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
