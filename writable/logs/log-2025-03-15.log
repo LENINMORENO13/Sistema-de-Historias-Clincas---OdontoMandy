@@ -1,0 +1,51 @@
+INFO - 2025-03-15 13:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-15 13:45:08 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_odontologia', 3306, '', 0)
+#1 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sisOdon\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sisOdon\app\Models\ModeloGeneral.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sisOdon\app\Controllers\Home.php(114): App\Models\ModeloGeneral->obtenerUsuarioPorCorreo('lxmoreno@pucesi...')
+#6 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\Home->verificacionlogin()
+#7 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sisOdon\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sisOdon\app\Models\ModeloGeneral.php(18): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sisOdon\app\Controllers\Home.php(114): App\Models\ModeloGeneral->obtenerUsuarioPorCorreo('lxmoreno@pucesi...')
+#5 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\Home->verificacionlogin()
+#6 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-03-15 13:45:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: POST, Route: login/verificacionlogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_usuarios`
+WHERE `correo_electronico` = :correo_electronico:', [...], false)
+ 3 APPPATH\Models\ModeloGeneral.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(114): App\Models\ModeloGeneral->obtenerUsuarioPorCorreo('lxmoreno@pucesi.edu.ec')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->verificacionlogin()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-15 13:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-15 13:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-15 13:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-15 13:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

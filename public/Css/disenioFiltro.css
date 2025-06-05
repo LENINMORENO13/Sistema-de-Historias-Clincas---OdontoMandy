@@ -1,0 +1,98 @@
+/* Reset de márgenes y rellenos */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Diseño del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Título de la página */
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #cebc7c;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group label {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+form .form-control {
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+}
+
+form .form-control:focus {
+    border-color: #d68eea;
+    outline: none;
+}
+
+
+.btn-primary {
+    background-color: #ee9ac9;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #753d7d;
+}
+
+
+table {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #9fc2e9;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mensajes de alerta */
+.alert-warning {
+    background-color: #ffcc00;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}

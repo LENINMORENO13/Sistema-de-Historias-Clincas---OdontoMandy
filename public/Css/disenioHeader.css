@@ -1,0 +1,44 @@
+h2, h3 {
+    font-size: 1.5rem !important;  /* Tamaño constante */
+    font-weight: bold;
+}
+
+/* Opcional: Ajustes adicionales para evitar cambios inesperados */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    max-height: 50px; 
+    margin-right: 15px; 
+}
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: all 0.3s ease; 
+}
+
+.nav-link:hover {
+    color: #f8f9fa !important; 
+    text-decoration: underline; 
+}
+
+.navbar-nav {
+    gap: 20px; 
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff; 
+}
+.navbar-dark {
+    background-color: #343a40 !important;
+}
+
+.navbar-collapse {
+    justify-content: flex-end; 
+}

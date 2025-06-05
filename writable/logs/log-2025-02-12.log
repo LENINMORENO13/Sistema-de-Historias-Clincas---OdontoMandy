@@ -1,0 +1,675 @@
+CRITICAL - 2025-02-12 03:31:15 --> ErrorException: Undefined property: CodeIgniter\View\View::$load
+[Method: GET, Route: InsertPaciente]
+in APPPATH\Views\VistaPacientes.php on line 14.
+ 1 APPPATH\Views\VistaPacientes.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$load', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaPacientes.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaPacientes', [], true)
+ 5 APPPATH\Controllers\Home.php(23): view('VistaPacientes')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MetodoVerFormularioUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:00:41 --> ErrorException: Undefined property: stdClass::$pa_fecha_creacion
+[Method: GET, Route: Select]
+in APPPATH\Views\VistaSelectPacientes.php on line 100.
+ 1 APPPATH\Views\VistaSelectPacientes.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pa_fecha_creacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectPacientes.php', 100)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectPacientes', [], true)
+ 5 APPPATH\Controllers\Home.php(59): view('VistaSelectPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->SelectUsuarioFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:01:54 --> ErrorException: Undefined property: stdClass::$pa_fecha_creacion
+[Method: GET, Route: Select]
+in APPPATH\Views\VistaSelectPacientes.php on line 100.
+ 1 APPPATH\Views\VistaSelectPacientes.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pa_fecha_creacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectPacientes.php', 100)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectPacientes', [], true)
+ 5 APPPATH\Controllers\Home.php(58): view('VistaSelectPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->SelectUsuarioFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:01:55 --> ErrorException: Undefined property: stdClass::$pa_fecha_creacion
+[Method: GET, Route: Select]
+in APPPATH\Views\VistaSelectPacientes.php on line 100.
+ 1 APPPATH\Views\VistaSelectPacientes.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pa_fecha_creacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectPacientes.php', 100)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectPacientes', [], true)
+ 5 APPPATH\Controllers\Home.php(58): view('VistaSelectPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->SelectUsuarioFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:01:57 --> ErrorException: Undefined property: stdClass::$pa_fecha_creacion
+[Method: GET, Route: Select]
+in APPPATH\Views\VistaSelectPacientes.php on line 100.
+ 1 APPPATH\Views\VistaSelectPacientes.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pa_fecha_creacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectPacientes.php', 100)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectPacientes', [], true)
+ 5 APPPATH\Controllers\Home.php(58): view('VistaSelectPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->SelectUsuarioFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:34:13 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActP.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActP.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:34:18 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:34:20 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:34:52 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:35:02 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:35:27 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:35:28 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:35:35 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:35:43 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:36:08 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:36:33 --> ErrorException: Undefined array key 0
+[Method: GET, Route: Actualizar/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarPaciente.php on line 20.
+ 1 APPPATH\Views\VistaActualizarPaciente.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarPaciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarPaciente', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('VistaActualizarPaciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->ExtraerSelectUsuarioFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:38:00 --> ErrorException: Undefined array key 0
+[Method: GET, Route: ActualizarCaso/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarCaso.php on line 37.
+ 1 APPPATH\Views\VistaActualizarCaso.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarCaso', [], true)
+ 5 APPPATH\Controllers\CCasos.php(60): view('VistaActualizarCaso', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->ExtraerSelectCasoFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:39:18 --> ErrorException: Undefined array key 0
+[Method: GET, Route: ActualizarCaso/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarCaso.php on line 37.
+ 1 APPPATH\Views\VistaActualizarCaso.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarCaso', [], true)
+ 5 APPPATH\Controllers\CCasos.php(60): view('VistaActualizarCaso', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->ExtraerSelectCasoFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:39:19 --> ErrorException: Undefined array key 0
+[Method: GET, Route: ActualizarCaso/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarCaso.php on line 37.
+ 1 APPPATH\Views\VistaActualizarCaso.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarCaso', [], true)
+ 5 APPPATH\Controllers\CCasos.php(60): view('VistaActualizarCaso', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->ExtraerSelectCasoFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:39:34 --> ErrorException: Undefined array key 0
+[Method: GET, Route: ActualizarCaso/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarCaso.php on line 109.
+ 1 APPPATH\Views\VistaActualizarCaso.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php', 109)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarCaso', [], true)
+ 5 APPPATH\Controllers\CCasos.php(60): view('VistaActualizarCaso', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->ExtraerSelectCasoFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:40:24 --> ErrorException: Undefined array key 0
+[Method: GET, Route: ActualizarCaso/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarCaso.php on line 109.
+ 1 APPPATH\Views\VistaActualizarCaso.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php', 109)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarCaso', [], true)
+ 5 APPPATH\Controllers\CCasos.php(60): view('VistaActualizarCaso', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->ExtraerSelectCasoFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:41:04 --> ErrorException: Undefined array key 0
+[Method: GET, Route: ActualizarCaso/Public/Css/disenioActPA.css]
+in APPPATH\Views\VistaActualizarCaso.php on line 108.
+ 1 APPPATH\Views\VistaActualizarCaso.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php', 108)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaActualizarCaso.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarCaso', [], true)
+ 5 APPPATH\Controllers\CCasos.php(60): view('VistaActualizarCaso', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->ExtraerSelectCasoFC('Public', 'Css', 'disenioActPA.css')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 04:54:49 --> ErrorException: Undefined property: stdClass::$paciente
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 106.
+ 1 APPPATH\Views\VistaSelectCasos.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$paciente', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php', 106)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(48): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:07:21 --> ErrorException: Undefined array key "Vcorreo"
+[Method: POST, Route: Paciente]
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Vcorreo"', 'C:\\xampp\\htdocs\\sisOdon\\app\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MetodoInsertarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:07:38 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: Paciente]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(35): CodeIgniter\Model->__call('verificarduplicidadcorreo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MetodoInsertarUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:21:08 --> ErrorException: Undefined property: stdClass::$cc_fecha_modificacion
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 113.
+ 1 APPPATH\Views\VistaSelectCasos.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cc_fecha_modificacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php', 113)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(48): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:26:35 --> ErrorException: Undefined property: stdClass::$cc_fecha_modificacion
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 113.
+ 1 APPPATH\Views\VistaSelectCasos.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cc_fecha_modificacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php', 113)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(48): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:27:21 --> ErrorException: Undefined property: stdClass::$cc_fecha_modificacion
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 113.
+ 1 APPPATH\Views\VistaSelectCasos.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cc_fecha_modificacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php', 113)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(48): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:27:29 --> ErrorException: Undefined property: stdClass::$cc_fecha_modificacion
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 113.
+ 1 APPPATH\Views\VistaSelectCasos.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cc_fecha_modificacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php', 113)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(48): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:30:01 --> ErrorException: Undefined property: stdClass::$cc_fecha_modificacion
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 113.
+ 1 APPPATH\Views\VistaSelectCasos.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cc_fecha_modificacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php', 113)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(48): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:31:57 --> ErrorException: Undefined property: stdClass::$cc_fecha_modificacion
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 113.
+ 1 APPPATH\Views\VistaSelectCasos.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cc_fecha_modificacion', 'C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php', 113)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sisOdon\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(48): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-12 20:56:38 --> mysqli_sql_exception: PROCEDURE db_odontologia.ObtenerCasosConPacientes does not exist in C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL ObtenerCas...', 0)
+#1 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL ObtenerCas...')
+#2 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL ObtenerCas...')
+#3 C:\xampp\htdocs\sisOdon\app\Models\ModeloGeneral.php(218): CodeIgniter\Database\BaseConnection->query('CALL ObtenerCas...', Array)
+#4 C:\xampp\htdocs\sisOdon\app\Controllers\CCasos.php(106): App\Models\ModeloGeneral->ObtenerCasosConPacientes(NULL, NULL)
+#5 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-02-12 20:56:38 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE db_odontologia.ObtenerCasosConPacientes does not exist
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\ModeloGeneral.php(218): CodeIgniter\Database\BaseConnection->query('CALL ObtenerCasosConPacientes(?, ?)', [...])
+ 2 APPPATH\Controllers\CCasos.php(106): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:56:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE db_odontologia.ObtenerCasosConPacientes does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL ObtenerCasosConPacientes(NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL ObtenerCasosConPacientes(NULL, NULL)')
+ 3 APPPATH\Models\ModeloGeneral.php(218): CodeIgniter\Database\BaseConnection->query('CALL ObtenerCasosConPacientes(?, ?)', [...])
+ 4 APPPATH\Controllers\CCasos.php(106): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:56:38 --> [Caused by] mysqli_sql_exception: PROCEDURE db_odontologia.ObtenerCasosConPacientes does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('CALL ObtenerCasosConPacientes(NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL ObtenerCasosConPacientes(NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL ObtenerCasosConPacientes(NULL, NULL)')
+ 4 APPPATH\Models\ModeloGeneral.php(218): CodeIgniter\Database\BaseConnection->query('CALL ObtenerCasosConPacientes(?, ?)', [...])
+ 5 APPPATH\Controllers\CCasos.php(106): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 20:57:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 4 APPPATH\Controllers\CCasos.php(108): view('VistaCasosPacientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-12 21:40:39 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed when a session is active', 'C:\\xampp\\htdocs\\sisOdon\\system\\Session\\Handlers\\FileHandler.php', 74)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(74): ini_set('session.save_path', 'C:\\xampp\\htdocs\\sisOdon\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(697): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\Session), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('session')
+10 SYSTEMPATH\Common.php(971): service('session')
+11 SYSTEMPATH\CodeIgniter.php(1062): session()
+12 SYSTEMPATH\CodeIgniter.php(542): CodeIgniter\CodeIgniter->storePreviousURL(Object(CodeIgniter\HTTP\SiteURI))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-12 22:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 22:18:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: POST, Route: login/verificacionlogin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(132): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->verificacionlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-12 22:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 22:18:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/.php"
+[Method: POST, Route: login/verificacionlogin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/', [], true)
+ 3 APPPATH\Controllers\Home.php(132): view('/')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->verificacionlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-12 22:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 22:21:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: POST, Route: login/verificacionlogin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(132): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->verificacionlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-12 22:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 22:25:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "VistaLoginPrueba.php"
+[Method: POST, Route: login/verificacionlogin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('VistaLoginPrueba.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaLoginPrueba', [], true)
+ 3 APPPATH\Controllers\Home.php(132): view('VistaLoginPrueba')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->verificacionlogin()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-12 22:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 22:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:15:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 23:28:50 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_odontologia', 3306, '', 0)
+#1 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sisOdon\app\Models\ModeloGeneral.php(218): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\sisOdon\app\Controllers\CCasos.php(107): App\Models\ModeloGeneral->ObtenerCasosConPacientes(NULL, NULL)
+#5 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\sisOdon\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sisOdon\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sisOdon\app\Models\ModeloGeneral.php(218): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#3 C:\xampp\htdocs\sisOdon\app\Controllers\CCasos.php(107): App\Models\ModeloGeneral->ObtenerCasosConPacientes(NULL, NULL)
+#4 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#5 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#6 C:\xampp\htdocs\sisOdon\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\sisOdon\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\sisOdon\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\sisOdon\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-12 23:28:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\ModeloGeneral.php(218): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER_CASOS_PACIENTES(?, ?)', [...])
+ 3 APPPATH\Controllers\CCasos.php(107): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-12 23:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-12 23:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
