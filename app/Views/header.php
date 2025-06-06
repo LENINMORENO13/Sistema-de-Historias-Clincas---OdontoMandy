@@ -16,8 +16,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <!-- Logo con texto -->
-            <a class="navbar-brand" href="http://localhost/sisOdon/Inicio">
-                <img src="https://ccm.org.ec/wp-content/uploads/2021/07/LOGOS-PUCE-PNG-02.png" alt="Logo">
+            <a class="navbar-brand" href="<?= base_url('Inicio') ?>">
+                <img src="O.MANDY.png" alt="Logo">
                 Sistema Odontológico
             </a>
 
@@ -30,27 +30,27 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="http://localhost/sisOdon/InsertPaciente">
+                        <a class="nav-link text-white" href="<?= base_url('InsertPaciente'); ?>">
                             <i class="bi bi-person-plus"></i> Insertar paciente
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="http://localhost/sisOdon/VistaCC">
+                        <a class="nav-link text-white" href="<?= base_url('VistaCC'); ?>">
                             <i class="bi bi-plus-circle"></i> Añadir nuevo Caso clínico
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="http://localhost/sisOdon/CasosPacientes">
+                        <a class="nav-link text-white" href="<?= base_url('CasosPacientes'); ?>">
                             <i class="bi bi-search"></i> Busqueda de caso por filtro
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="http://localhost/sisOdon/SelectCasos">
+                        <a class="nav-link text-white" href="<?= base_url('SelectCasos'); ?>">
                             <i class="bi bi-search"></i> Revisar casos clínicos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="http://localhost/sisOdon/Select">
+                        <a class="nav-link text-white" href="<?= base_url('Select'); ?>">
                             <i class="bi bi-list"></i> Listado de pacientes
                         </a>
                     </li>
