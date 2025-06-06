@@ -16,8 +16,9 @@
         .header-bg {
             background-color: #343a40;
             color: white;
-            padding: 5px 0;
+            padding: 4px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
         
         /* Estilo para la imagen del login */
@@ -102,13 +103,13 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-md-3 header-logo">
-                    <a href="http://localhost/proyectopost/VistaPrincipal">
-                        <img src="https://ccm.org.ec/wp-content/uploads/2021/07/LOGOS-PUCE-PNG-02.png" alt="Logo">
+                    <a href="">
+                        <img src="O.MANDY.png" alt="Logo">
                     </a>
                 </div>
 
                 <div class="col-md-8 header-text">
-                    <h1>Bienvenido al Sistema Odontológico-OdontoMandy</h1>
+                    <h1>Bienvenido al Sistema Odontológico</h1>
                     <p class="lead">Por favor ingresa tus datos para acceder</p>
                 </div>
             </div>
@@ -119,8 +120,8 @@
         <div class="card">
 
             <div class="card-body">
+                <img src="odontomandy.png" alt="Login Image" class="login-image">   
                 <h5 class="card-title">Iniciar Sesión</h5>
-
                 <form action="<?= base_url('login/verificacionlogin') ?>" method="post">
                     <div class="mb-3">
                         <label for="correo" class="form-label">Correo</label>
