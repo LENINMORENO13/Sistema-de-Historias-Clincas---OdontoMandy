@@ -1,0 +1,511 @@
+INFO - 2025-06-07 00:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-07 00:01:39 --> mysqli_sql_exception: PROCEDURE odontomandy_db.SP_SELECT_USUARIO does not exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_SELECT_...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_SELECT_...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_SELECT_...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(63): CodeIgniter\Database\BaseConnection->query('CALL SP_SELECT_...')
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\Home.php(159): App\Models\ModeloGeneral->SelectUsuarioFM()
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\Home->MostrarDashboard()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-07 00:01:39 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE odontomandy_db.SP_SELECT_USUARIO does not exist
+[Method: GET, Route: Inicio]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\ModeloGeneral.php(63): CodeIgniter\Database\BaseConnection->query('CALL SP_SELECT_USUARIO')
+ 2 APPPATH\Controllers\Home.php(159): App\Models\ModeloGeneral->SelectUsuarioFM()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MostrarDashboard()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 00:01:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE odontomandy_db.SP_SELECT_USUARIO does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_SELECT_USUARIO')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_SELECT_USUARIO')
+ 3 APPPATH\Models\ModeloGeneral.php(63): CodeIgniter\Database\BaseConnection->query('CALL SP_SELECT_USUARIO')
+ 4 APPPATH\Controllers\Home.php(159): App\Models\ModeloGeneral->SelectUsuarioFM()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MostrarDashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 00:01:39 --> [Caused by] mysqli_sql_exception: PROCEDURE odontomandy_db.SP_SELECT_USUARIO does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_SELECT_USUARIO', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_SELECT_USUARIO')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_SELECT_USUARIO')
+ 4 APPPATH\Models\ModeloGeneral.php(63): CodeIgniter\Database\BaseConnection->query('CALL SP_SELECT_USUARIO')
+ 5 APPPATH\Controllers\Home.php(159): App\Models\ModeloGeneral->SelectUsuarioFM()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MostrarDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-06-07 01:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-07 03:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-07 04:03:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?,?,?,?,?,?)' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_INSERT_...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_INSERT_...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_INSERT_...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(148): CodeIgniter\Database\BaseConnection->query('CALL SP_INSERT_...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(36): App\Models\ModeloGeneral->MetodoModeloInsertCaso(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCaso()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-06-07 04:04:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?,?,?,?,?,?)' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_INSERT_...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_INSERT_...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_INSERT_...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(148): CodeIgniter\Database\BaseConnection->query('CALL SP_INSERT_...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(36): App\Models\ModeloGeneral->MetodoModeloInsertCaso(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCaso()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-06-07 19:09:47 --> mysqli_sql_exception: PROCEDURE odontomandy_db.SP_OBTENER_CASOS_PACIENTES does not exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(225): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasosConPacientes(NULL, NULL)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-07 19:09:47 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE odontomandy_db.SP_OBTENER_CASOS_PACIENTES does not exist
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\ModeloGeneral.php(225): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER_CASOS_PACIENTES(?, ?)', [...])
+ 2 APPPATH\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:09:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE odontomandy_db.SP_OBTENER_CASOS_PACIENTES does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)')
+ 3 APPPATH\Models\ModeloGeneral.php(225): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER_CASOS_PACIENTES(?, ?)', [...])
+ 4 APPPATH\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:09:47 --> [Caused by] mysqli_sql_exception: PROCEDURE odontomandy_db.SP_OBTENER_CASOS_PACIENTES does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)')
+ 4 APPPATH\Models\ModeloGeneral.php(225): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER_CASOS_PACIENTES(?, ?)', [...])
+ 5 APPPATH\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-07 19:14:36 --> mysqli_sql_exception: PROCEDURE odontomandy_db.SP_OBTENER_CASOS_PACIENTES does not exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(225): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasosConPacientes(NULL, NULL)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-07 19:14:36 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE odontomandy_db.SP_OBTENER_CASOS_PACIENTES does not exist
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\ModeloGeneral.php(225): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER_CASOS_PACIENTES(?, ?)', [...])
+ 2 APPPATH\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:14:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE odontomandy_db.SP_OBTENER_CASOS_PACIENTES does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)')
+ 3 APPPATH\Models\ModeloGeneral.php(225): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER_CASOS_PACIENTES(?, ?)', [...])
+ 4 APPPATH\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:14:36 --> [Caused by] mysqli_sql_exception: PROCEDURE odontomandy_db.SP_OBTENER_CASOS_PACIENTES does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER_CASOS_PACIENTES(NULL, NULL)')
+ 4 APPPATH\Models\ModeloGeneral.php(225): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER_CASOS_PACIENTES(?, ?)', [...])
+ 5 APPPATH\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasosConPacientes(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:51:59 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:52:05 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:53:30 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:53:42 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:54:41 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:54:50 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 19:56:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 20:06:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 20:15:30 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 20:15:42 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 20:18:36 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 20:20:28 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Database\BaseConnection.php on line 927.
+ 1 SYSTEMPATH\Model.php(716): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(922): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 20:47:15 --> BadMethodCallException: Call to undefined method App\Models\ModeloGeneral::ObtenerCasos
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 20:48:20 --> BadMethodCallException: Call to undefined method App\Models\ModeloGeneral::ObtenerCasos
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 20:50:34 --> BadMethodCallException: Call to undefined method App\Models\ModeloGeneral::ObtenerCasos
+[Method: GET, Route: CasosPacientes]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\CCasos.php(113): CodeIgniter\Model->__call('ObtenerCasos', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-07 20:51:08 --> mysqli_sql_exception: PROCEDURE odontomandy_db.SP_OBTENERID_CASOS does not exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(227): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasos(NULL, NULL)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-06-07 20:51:16 --> mysqli_sql_exception: PROCEDURE odontomandy_db.SP_OBTENERID_CASOS does not exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(227): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-06-07 20:51:29 --> mysqli_sql_exception: PROCEDURE odontomandy_db.SP_OBTENERID_CASOS does not exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(227): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasos('Mart', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-06-07 20:52:25 --> mysqli_sql_exception: PROCEDURE odontomandy_db.SP_EXTRAERID_CASOS does not exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_EXTRAER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_EXTRAER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_EXTRAER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(227): CodeIgniter\Database\BaseConnection->query('CALL SP_EXTRAER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasos(NULL, NULL)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-06-07 20:52:31 --> mysqli_sql_exception: PROCEDURE odontomandy_db.SP_EXTRAERID_CASOS does not exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_EXTRAER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_EXTRAER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_EXTRAER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(227): CodeIgniter\Database\BaseConnection->query('CALL SP_EXTRAER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(113): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-07 20:54:53 --> ParseError: Unmatched '}'
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Models\ModeloGeneral.php on line 249.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Models\\ModeloGeneral.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ModeloGeneral')
+ 3 APPPATH\Controllers\CCasos.php(106): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ModeloGeneral')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 21:15:24 --> ErrorException: Undefined property: stdClass::$paciente
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 62.
+ 1 APPPATH\Views\VistaCasosPacientes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$paciente', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 62)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(123): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 21:16:35 --> ErrorException: Undefined property: stdClass::$paciente
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 62.
+ 1 APPPATH\Views\VistaCasosPacientes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$paciente', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 62)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(123): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 21:16:39 --> ErrorException: Undefined property: stdClass::$paciente
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 62.
+ 1 APPPATH\Views\VistaCasosPacientes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$paciente', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 62)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(123): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 21:29:07 --> ErrorException: Undefined property: stdClass::$paciente
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 62.
+ 1 APPPATH\Views\VistaCasosPacientes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$paciente', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 62)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(118): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-07 21:30:10 --> ErrorException: Undefined property: stdClass::$fecha_de_nacimiento
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 64.
+ 1 APPPATH\Views\VistaCasosPacientes.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$fecha_de_nacimiento', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(118): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-06-07 22:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-07 22:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-07 22:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-07 22:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

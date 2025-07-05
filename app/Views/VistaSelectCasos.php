@@ -2,14 +2,14 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Casos Clínicos - Administración</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color:rgb(194, 217, 241);
+            background-color: rgb(194, 217, 241);
         }
 
         .container {
@@ -20,61 +20,49 @@
             color: #495057;
             font-weight: bold;
             text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card {
             margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
         }
 
-        /* Tabla más ancha y con mejor diseño */
-        .table-container {
-            max-width: 100%;
-            margin: auto;
-            overflow-x: auto;
+        .odontograma-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            max-width: 250px;
         }
 
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #ffffff;
-        }
-
-        .table th,
-        .table td {
-            border: 1px solid #ddd;
-            padding: 10px;
+        .odontograma-diente {
+            width: 24px;
+            height: 24px;
+            border: 1px solid #333;
+            border-radius: 4px;
             text-align: center;
-            vertical-align: middle;
-        }
-
-        .table th {
-            background-color: #007bff;
+            font-size: 10px;
+            line-height: 24px;
             color: white;
-            white-space: nowrap;
+            cursor: default;
         }
 
-        /* Diseño de botones */
-        .btn-sm {
-            margin: 2px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .btn-warning {
-            background-color: #ffcc00;
-            border-color: #ffcc00;
-            color: #333;
-        }
-
-        .btn-danger {
+        /* Colores para estado del diente */
+        .rojo {
             background-color: #dc3545;
-            border-color: #dc3545;
         }
 
-        .btn-warning:hover {
-            background-color: #e0a800;
+        .amarillo {
+            background-color: #ffc107;
+            color: #212529;
         }
 
-        .btn-danger:hover {
-            background-color: #c82333;
+        .verde {
+            background-color: #28a745;
+        }
+
+        .ninguno {
+            background-color: #6c757d;
         }
     </style>
 </head>
@@ -82,47 +70,51 @@
 <body>
     <div class="container">
         <h2>Lista de Casos Clínicos</h2>
-        <div class="table-container">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th style="display: none;">ID Caso</th>
-                        <th style="display: none;">ID Paciente</th>
-                        <th>Paciente</th>
-                        <th>Descripción</th>
-                        <th>Diagnóstico</th>
-                        <th>Tratamiento</th>
-                        <th>Fecha de Consulta</th>
-                        <th>Fecha de Modificacion</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Aquí entra el ciclo foreach para llenar la tabla con los datos de casos clínicos -->
-                    <?php foreach ($VectorDatos as $caso): ?>
-                        <tr>
-                            <td style="display: none;"><?= $caso->id_casos ?></td>
-                            <td style="display: none;"><?= $caso->id_paciente ?></td>
-                            <td><?= $caso->Paciente ?></td>
-                            <td><?= $caso->cc_descripcion ?></td>
-                            <td><?= $caso->cc_diagnostico ?></td>
-                            <td><?= $caso->cc_tratamiento ?></td>
-                            <td><?= $caso->cc_fecha_consulta ?></td>
-                            <td><?= $caso->cc_fecha_modificacion ?></td>
-                            <td><?= $caso->cc_estado ?></td>
-                            <td>
-                                <a href="<?= base_url() . 'ActualizarCaso/' . $caso->id_casos ?>" class="btn btn-warning btn-sm">Actualizar</a>
-                            </td>
-                            <td>
-                                <a href="<?= base_url() . 'EliminarCasos/' . $caso->id_casos ?>" class="btn btn-danger btn-sm">Eliminar</a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
+
+        <?php foreach ($VectorDatos as $caso): ?>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><?= htmlspecialchars($caso->paciente) ?> (<?= htmlspecialchars($caso->edad) ?> años)</h5>
+                    <p class="card-text">
+                        <strong>Dirección:</strong> <?= htmlspecialchars($caso->direccion) ?><br />
+                        <strong>Fecha de nacimiento:</strong> <?= htmlspecialchars($caso->fecha_nacimiento) ?><br />
+                        <strong>Teléfono:</strong> <?= htmlspecialchars($caso->telefono) ?><br />
+                        <strong>Cédula:</strong> <?= htmlspecialchars($caso->cedula) ?><br />
+                        <strong>Motivo de Consulta:</strong> <?= htmlspecialchars($caso->motivo_consulta) ?><br />
+                        <strong>Antecedentes Personales:</strong> <?= htmlspecialchars($caso->antecedente_personal_1) ?>, <?= htmlspecialchars($caso->antecedente_personal_2) ?><br />
+                        <strong>Antecedentes Familiares:</strong> <?= htmlspecialchars($caso->antecedente_familiar_1) ?>, <?= htmlspecialchars($caso->antecedente_familiar_2) ?><br />
+                        <strong>Fecha de Registro:</strong> <?= htmlspecialchars($caso->fecha_registro) ?><br />
+                    </p>
+
+                    <div>
+                        <strong>Odontograma:</strong>
+                        <div class="odontograma-box mt-2">
+                            <?php
+                            $odontograma = json_decode($caso->odontograma, true);
+                            if ($odontograma && is_array($odontograma)) {
+                                foreach ($odontograma as $diente => $estado) {
+                                    $clase_color = 'ninguno'; // color por defecto
+                                    if ($estado === 'rojo') $clase_color = 'rojo';
+                                    else if ($estado === 'amarillo') $clase_color = 'amarillo';
+                                    else if ($estado === 'verde') $clase_color = 'verde';
+
+                                    echo '<div class="odontograma-diente ' . $clase_color . '" title="Diente ' . htmlspecialchars($diente) . ': ' . htmlspecialchars($estado) . '">' . htmlspecialchars($diente) . '</div>';
+                                }
+                            } else {
+                                echo '<span>No hay odontograma disponible</span>';
+                            }
+                            ?>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <a href="<?= base_url() . 'ActualizarCaso/' . $caso->id ?>" class="btn btn-warning btn-sm me-2">Actualizar</a>
+                        <a href="<?= base_url() . 'EliminarCasos/' . $caso->id ?>" class="btn btn-danger btn-sm">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

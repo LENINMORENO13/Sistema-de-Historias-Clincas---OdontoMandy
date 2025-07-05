@@ -1,0 +1,98 @@
+ERROR - 2025-07-05 03:01:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp_insertar_historial_clinico_detalle('2','Nada','Nada','Nada')' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('sp_insertar_his...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('sp_insertar_his...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('sp_insertar_his...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(189): CodeIgniter\Database\BaseConnection->query('sp_insertar_his...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(97): App\Models\ModeloGeneral->MetodoModeloInsertCasoDetallado(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCasoDetallado()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-05 03:03:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp_insertar_historial_clinico_detalle('2','Nada','Nada','Nada')' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('sp_insertar_his...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('sp_insertar_his...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('sp_insertar_his...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(189): CodeIgniter\Database\BaseConnection->query('sp_insertar_his...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(97): App\Models\ModeloGeneral->MetodoModeloInsertCasoDetallado(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCasoDetallado()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-05 03:04:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp_insertar_historial_clinico_detalle('2','nada','nada','nada')' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('sp_insertar_his...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('sp_insertar_his...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('sp_insertar_his...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(189): CodeIgniter\Database\BaseConnection->query('sp_insertar_his...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(97): App\Models\ModeloGeneral->MetodoModeloInsertCasoDetallado(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCasoDetallado()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-05 03:06:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp_insertar_historial_clinico_detalle('2','Nada','Nad','Nada')' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('sp_insertar_his...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('sp_insertar_his...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('sp_insertar_his...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(189): CodeIgniter\Database\BaseConnection->query('sp_insertar_his...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(97): App\Models\ModeloGeneral->MetodoModeloInsertCasoDetallado(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCasoDetallado()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-05 03:17:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp_insertar_historial_clinico_detalle('3','Nada','Nada','Nada')' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('sp_insertar_his...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('sp_insertar_his...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('sp_insertar_his...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(189): CodeIgniter\Database\BaseConnection->query('sp_insertar_his...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(97): App\Models\ModeloGeneral->MetodoModeloInsertCasoDetallado(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCasoDetallado()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-05 03:25:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp_insertar_historial_clinico_detalle('3','Nada','Nada','Nada')' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('sp_insertar_his...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('sp_insertar_his...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('sp_insertar_his...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(189): CodeIgniter\Database\BaseConnection->query('sp_insertar_his...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(97): App\Models\ModeloGeneral->MetodoModeloInsertCasoDetallado(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCasoDetallado()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-05 03:37:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp_insertar_historial_clinico_detalle('3','Nada','Nada','Nada')' at line 1 in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('sp_insertar_his...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('sp_insertar_his...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('sp_insertar_his...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(189): CodeIgniter\Database\BaseConnection->query('sp_insertar_his...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(97): App\Models\ModeloGeneral->MetodoModeloInsertCasoDetallado(Array)
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoInsertarCasoDetallado()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}

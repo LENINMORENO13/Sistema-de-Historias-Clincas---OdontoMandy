@@ -12,7 +12,7 @@ class Home extends BaseController
     {
         $datosconexion = \Config\Database::connect();
         if ($datosconexion->connect()) {
-            echo 'Se conecto don Inge, vamos bien';
+            echo 'Se conecto al OdontoMandy correctamente';
         } else {
             echo 'Error de conexion, a gastronomia';
         }
@@ -156,16 +156,13 @@ class Home extends BaseController
     {
         $modelo = new ModeloGeneral();
 
-        $totalPacientes = count($modelo->SelectUsuarioFM());
-
 
         $totalCasos = count($modelo->SelectCasosFM());
 
         $ultimosCasos = $modelo->SelectCasosFM();
-        $ultimosCasos = array_slice($ultimosCasos, 0, 5);
+        $ultimosCasos = array_slice($ultimosCasos, 0, 5); // Obtener los últimos 3 casos
 
         $data = [
-            'totalPacientes' => $totalPacientes,
             'totalCasos' => $totalCasos,
             'ultimosCasos' => $ultimosCasos
         ];

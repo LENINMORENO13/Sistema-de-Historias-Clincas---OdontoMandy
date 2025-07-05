@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use CodeIgniter\Database\MySQLi\Builder;
 use CodeIgniter\Model;
 //Cambiar por nombre del archivo el de la clase
 class ModeloGeneral extends Model
 {
+    protected $table = 'casos_clinicos'; // Nombre de la tabla
 
     //Modelo para el login
     // Nombre de la tabla
@@ -132,13 +134,19 @@ class ModeloGeneral extends Model
     public function MetodoModeloInsertCaso($ParametrosCasos)
     {
         try {
-            $v1 = $ParametrosCasos['id_paciente'];
-            $v2 = $ParametrosCasos['cc_descripcion'];
-            $v3 = $ParametrosCasos['cc_diagnostico'];
-            $v4 = $ParametrosCasos['cc_tratamiento'];
-            $v5 = $ParametrosCasos['cc_fecha_consulta'];
-            $v6 = $ParametrosCasos['cc_estado'];
-            $query = $this->db->query("CALL SP_INSERT_CASO(?,?,?,?,?,?)", array($v1, $v2, $v3, $v4, $v5, $v6));
+            $v1 = $ParametrosCasos['nombres_apellidos'];
+            $v2 = $ParametrosCasos['direccion'];
+            $v3 = $ParametrosCasos['fecha_nacimiento'];
+            $v4 = $ParametrosCasos['edad'];
+            $v5 = $ParametrosCasos['telefono'];
+            $v6 = $ParametrosCasos['cedula'];
+            $v7 = $ParametrosCasos['motivo_consulta'];
+            $v8 = $ParametrosCasos['antecedente_personal_1'];
+            $v9 = $ParametrosCasos['antecedente_personal_2'];
+            $v10 = $ParametrosCasos['antecedente_familiar_1'];
+            $v11 = $ParametrosCasos['antecedente_familiar_2'];
+            $v12 = $ParametrosCasos['odontograma'];
+            $query = $this->db->query("CALL SP_INSERT_CASO_CLINICO(?,?,?,?,?,?,?,?,?,?,?,?)", array($v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9, $v10, $v11, $v12));
 
             return $query ? true : false;
         } catch (\Throwable $th) {
@@ -160,29 +168,48 @@ class ModeloGeneral extends Model
     public function SelectCasosFM()
     {
         try {
-            $variable = $this->db->query('CALL SP_SELECT_CASO');
-            return $variable->getResult();
+            $builder = $this->db->query('CALL SP_ListarCasosClinicos');
+            $result = $builder->getResult();      // Guardamos resultado en $result
+            $builder->freeResult();                // Liberamos recursos antes de retornar
+            return $result;                        // Retornamos el resultado almacenado
         } catch (\Throwable $th) {
             throw $th;
         }
     }
 
-    //Metodo para eliminar casos por ID
-    public function EliminarCasoFM($ideliminar)
+
+    //Metodo del Modelo para la HC Detallada
+    public function MetodoModeloInsertCasoDetallado($ParametrosCasoDetallado)
     {
         try {
-            //Query realiza la sentencia de eliminado
-            $variable = $this->db->query('CALL SP_DELETE_CASO(?)', array($ideliminar));
-            //Este if es para validar si se elimino o no
-            if ($variable) {
-                return true;
-            } else {
-                return false;
-            }
+            $v1 = $ParametrosCasoDetallado['id_paciente'];
+            $v2 = $ParametrosCasoDetallado['diagnostico'];
+            $v3 = $ParametrosCasoDetallado['tratamiento'];
+            $v4 = $ParametrosCasoDetallado['indicaciones'];
+            $query = $this->db->query("CALL sp_insertar_historial_clinico_detalle(?,?,?,?)", array($v1,$v2,$v3,$v4));
+            return $query ? true : false;
         } catch (\Throwable $th) {
-            throw $th;
+            return $th;
         }
     }
+
+
+    //Metodo para eliminar casos por ID
+    // public function EliminarCasoFM($ideliminar)
+    // {
+    //     try {
+    //         //Query realiza la sentencia de eliminado
+    //         $variable = $this->db->query('CALL SP_DELETE_CASO(?)', array($ideliminar));
+    //         //Este if es para validar si se elimino o no
+    //         if ($variable) {
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
+    //     } catch (\Throwable $th) {
+    //         throw $th;
+    //     }
+    // }
 
     //Metodo actualizar casos
     public function ActualizarCasosFM($datosenviadosdelpost)
@@ -209,13 +236,26 @@ class ModeloGeneral extends Model
             throw $th;
         }
     }
-
-    public function ObtenerCasosConPacientes($buscar_paciente = '', $estado = '')
+    public function ObtenerCasos($nombre = '', $cedula = '')
     {
-        // Preparar la consulta para ejecutar el procedimiento almacenado
-        $query = $this->db->query("CALL SP_OBTENER_CASOS_PACIENTES(?, ?)", [$buscar_paciente, $estado]);
+        try {
+            // Preparar llamada al procedimiento almacenado con filtros
+            $query = $this->db->query("CALL SP_OBTENER_CASOS(?, ?)", [$nombre, $cedula]);
 
-        // Obtener los resultados
-        return $query->getResult();
+            // Devolver resultados
+            return $query->getResult();
+        } catch (\Throwable $th) {
+            // Aquí podrías manejar o loggear errores
+            return [];
+        }
     }
+
+    // public function ObtenerCasosConPacientes($buscar_caso_nombre = '', $buscar_caso_cedula = '')
+    // {
+    //     // Preparar la consulta para ejecutar el procedimiento almacenado
+    //     $query = $this->db->query("CALL SP_OBTENERID_CASOS(?, ?)", [$buscar_caso_nombre, $buscar_caso_cedula]);
+
+    //     // Obtener los resultados
+    //     return $query->getResult();
+    // }
 }
