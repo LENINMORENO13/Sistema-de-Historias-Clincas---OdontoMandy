@@ -19,12 +19,19 @@ class CCasos extends BaseController
     {
         $instancia = new ModeloGeneral();
         $datos = [
-            'id_paciente' => $this->request->getPost('id_paciente'),
-            'cc_descripcion' => $this->request->getPost('cc_descripcion'),
-            'cc_diagnostico' => $this->request->getPost('cc_diagnostico'),
-            'cc_tratamiento' => $this->request->getPost('cc_tratamiento'),
-            'cc_fecha_consulta' => $this->request->getPost('cc_fecha_consulta'),
-            'cc_estado' => $this->request->getPost('cc_estado')
+            'nombres_apellidos' => $this->request->getPost('nombres_apellidos'),
+            'direccion' => $this->request->getPost('direccion'),
+            'fecha_nacimiento' => $this->request->getPost('fecha_nacimiento'),
+            'edad' => $this->request->getPost('edad'),
+            'telefono' => $this->request->getPost('telefono'),
+            'cedula' => $this->request->getPost('cedula'),
+            'motivo_consulta' => $this->request->getPost('motivo_consulta'),
+            'antecedente_personal_1' => $this->request->getPost('antecedente_personal_1'),
+            'antecedente_personal_2' => $this->request->getPost('antecedente_personal_2'),
+            'antecedente_familiar_1' => $this->request->getPost('antecedente_familiar_1'),
+            'antecedente_familiar_2' => $this->request->getPost('antecedente_familiar_2'),
+            'odontograma' => $this->request->getPost('odontograma'),
+
         ];
         //Compruebo la ejecucion del metodo del modelo
         if ($instancia->MetodoModeloInsertCaso($datos)) {
@@ -72,6 +79,37 @@ class CCasos extends BaseController
 
 
 
+
+
+    //Metodo para la historia clinica detallada
+    public function MetodoMostrarCasoDetallado(){
+        return view('historia_clinica_detalle');
+    }
+
+    public function MetodoInsertarCasoDetallado(){
+        $instancia = new ModeloGeneral();
+        $datosdetallados = [
+            'id_paciente' => $this->request->getPost('id_paciente'),
+            'diagnostico' => $this->request->getPost('diagnostico'),
+            'tratamiento' => $this->request->getPost('tratamiento'),
+            'indicaciones' => $this->request->getPost('indicaciones'),
+        ];
+        if ($instancia->MetodoModeloInsertCasoDetallado($datosdetallados)){
+            return redirect()->to(base_url('/MostrarCD'));
+        }else{
+            echo ('Error al ingresar los datos');
+        }
+    }
+
+
+
+
+
+
+
+    // return view('header') . view('historia_clinica_detallada' .view('footer'));
+    
+
     //Modelo para la actualizacion de Casos
     public function MetodoActualizarCasosFC()
     {
@@ -95,21 +133,28 @@ class CCasos extends BaseController
     //METODO OBTENER CASOS CON PACIENTES CON INNER
 
     public function MostrarCasosConPacientes()
-    {
-        // Instanciamos el modelo
-        $instancia = new ModeloGeneral();
+    { {
+            $paciente = $this->request->getGet('buscar_caso_nombre') ?? '';
+            $cedula = $this->request->getGet('buscar_caso_cedula') ?? '';
 
-        // Obtenemos los parámetros de búsqueda desde el formulario
-        $buscar_paciente = $this->request->getGet('buscar_paciente');
-        $estado = $this->request->getGet('estado');
+            $data = [];
 
-        // Si se proporciona un parámetro de búsqueda, lo pasamos al modelo
-        $datos['casosPacientes'] = $instancia->ObtenerCasosConPacientes($buscar_paciente, $estado);
-        if(empty($casosPacientes)) {
-            $datos ['mesaje error'] = 'No se encontraron resultados';
-        } else {
-            $datos ['casosPacientes'] = $casosPacientes;
+            // Solo buscar si hay un filtro aplicado
+            if (!empty($paciente) || !empty($cedula)) {
+                $modelo = new ModeloGeneral();
+                $casos = $modelo->ObtenerCasos($paciente, $cedula);
+
+                if (empty($casos)) {
+                    $data['mensaje_error'] = "No se encontraron resultados.";
+                }
+
+                $data['casosPacientes'] = $casos;
+            } else {
+                // No buscar nada, no mostrar tabla
+                $data['casosPacientes'] = [];
+            }
+
+            return view('VistaCasosPacientes', $data);
         }
-        return view('headerFiltracion'). view('VistaCasosPacientes', $datos);
     }
 }

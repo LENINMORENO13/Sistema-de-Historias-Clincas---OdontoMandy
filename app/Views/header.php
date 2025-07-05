@@ -30,11 +30,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url('InsertPaciente'); ?>">
-                            <i class="bi bi-person-plus"></i> Insertar paciente
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link text-white" href="<?= base_url('VistaCC'); ?>">
                             <i class="bi bi-plus-circle"></i> Añadir nuevo Caso clínico
                         </a>
@@ -47,11 +42,6 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="<?= base_url('SelectCasos'); ?>">
                             <i class="bi bi-search"></i> Revisar casos clínicos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url('Select'); ?>">
-                            <i class="bi bi-list"></i> Listado de pacientes
                         </a>
                     </li>
                 </ul>

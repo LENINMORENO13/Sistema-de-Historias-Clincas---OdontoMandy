@@ -48,17 +48,6 @@
     $routes->get('/CasosPacientes', 'CCasos::MostrarCasosConPacientes');
 
 
-
-    //RUTAS CON ORACLE
-    $routes->get('/test-oracle', 'COracle::PruebaOracle');
-    $routes->get('/casos-clinicos', 'COracle::index');
-
-
-    $routes->get('/casos-totales', 'COracle::casosClinicos');  // Ruta para ver todos los casos clínicos
-    $routes->get('/casos-clinicos/paciente/(:num)', 'COracle::casosPaciente/$1');  // Ruta para ver casos de un paciente específico
-    // Ruta para ver casos de un paciente específico
-
-    $routes->get('/insertar-paciente', 'COracle::insertarPaciente');  // Ruta para mostrar el formulario
-    $routes->post('/insertar-paciente', 'COracle::procesarInsertarPaciente');  // Ruta para procesar el formulario y guardar los datos
-     // Ruta para procesar el formulario y guardar
-
+    //Rutas para el caso clinico detallado
+    $routes->get('/MostrarCD', 'CCasos::MetodoMostrarCasoDetallado');
+    $routes->post('/InsertarCD', 'CCasos::MetodoInsertarCasoDetallado');
