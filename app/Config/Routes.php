@@ -49,5 +49,17 @@
 
 
     //Rutas para el caso clinico detallado
-    $routes->get('/MostrarCD', 'CCasos::MetodoMostrarCasoDetallado');
+    // $routes->get('/MostrarCD', 'CCasos::MetodoMostrarCasoDetallado');
+    $routes->get('/MostrarCD/(:num)', 'CCasos::MetodoMostrarCasoDetallado/$1');
     $routes->post('/InsertarCD', 'CCasos::MetodoInsertarCasoDetallado');
+    $routes->get('/FormularioDetallado/(:num)', 'CCasos::mostrarFormularioDetallado/$1');
+    $routes->get('/ResumenHistorial/(:num)', 'CCasos::MetodoResumenHistorial/$1');
+
+
+
+
+
+
+
+    // $routes->get('/hashear-claves', 'Home::convertirContraseñasAHASH');
+

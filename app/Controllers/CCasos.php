@@ -33,13 +33,15 @@ class CCasos extends BaseController
             'odontograma' => $this->request->getPost('odontograma'),
 
         ];
+        $nuevo_id = $instancia->MetodoModeloInsertCaso($datos);
         //Compruebo la ejecucion del metodo del modelo
-        if ($instancia->MetodoModeloInsertCaso($datos)) {
-            return redirect()->to(base_url('/SelectCasos'));
+        if ($nuevo_id) {
+            // Redirige al formulario de caso detallado con el ID nuevo
+            return redirect()->to(base_url('/MostrarCD/' . $nuevo_id));
         } else {
             echo ('Error al ingresar datos');
+            return;
         }
-        return view('header') . view('VistaCC') . view('footer');
     }
 
     //Metodo para seleccionar todos los casos clinicos
@@ -82,25 +84,61 @@ class CCasos extends BaseController
 
 
     //Metodo para la historia clinica detallada
-    public function MetodoMostrarCasoDetallado(){
-        return view('historia_clinica_detalle');
+    public function MetodoMostrarCasoDetallado($id_paciente = null)
+    {
+        if (!$id_paciente) {
+            return redirect()->to(base_url('/SelectCasos')); // O cualquier vista segura
+        }
+        return view('historia_clinica_detalle', ['id_paciente' => $id_paciente]);
     }
 
-    public function MetodoInsertarCasoDetallado(){
+
+    public function MetodoInsertarCasoDetallado()
+    {
         $instancia = new ModeloGeneral();
         $datosdetallados = [
             'id_paciente' => $this->request->getPost('id_paciente'),
             'diagnostico' => $this->request->getPost('diagnostico'),
             'tratamiento' => $this->request->getPost('tratamiento'),
             'indicaciones' => $this->request->getPost('indicaciones'),
+
+            'estado' => $this->request->getPost('estado'),
         ];
-        if ($instancia->MetodoModeloInsertCasoDetallado($datosdetallados)){
-            return redirect()->to(base_url('/MostrarCD'));
-        }else{
-            echo ('Error al ingresar los datos');
+        $resultado = $instancia->MetodoModeloInsertCasoDetallado($datosdetallados);
+        if ($resultado) {
+            return redirect()->to(base_url('/MostrarCD/' . $datosdetallados['id_paciente']));
+        } else {
+            echo 'Error al ingresar los datos';
         }
     }
 
+
+    public function mostrarFormularioDetallado($idPaciente)
+    {
+        // Enviamos el id con el nombre 'id_paciente' para que coincida con la vista
+        return view('VistaFormularioDetallado', ['id_paciente' => $idPaciente]);
+    }
+
+
+
+
+    //Metodo para ver la hisoira clincia detallada
+    public function MetodoResumenHistorial($id_paciente)
+    {
+        $modelo = new ModeloGeneral();
+
+        // Obtener datos generales del paciente (si quieres mostrarlos)
+        $datosPaciente = $modelo->obtenerDatosPaciente($id_paciente);
+
+        // Obtener el historial detallado (casos clínicos detallados)
+        $historial = $modelo->obtenerHistorialClinicoPorPaciente($id_paciente);
+
+        return view('resumen_historial_paciente', [
+            'id_paciente' => $id_paciente,
+            'datosPaciente' => $datosPaciente,
+            'historial' => $historial
+        ]);
+    }
 
 
 
@@ -108,7 +146,7 @@ class CCasos extends BaseController
 
 
     // return view('header') . view('historia_clinica_detallada' .view('footer'));
-    
+
 
     //Modelo para la actualizacion de Casos
     public function MetodoActualizarCasosFC()

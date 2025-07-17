@@ -13,6 +13,7 @@
     <div class="container">
         <h1>Nuevo Caso Clínico</h1>
         <form action="<?php echo base_url() ?>/InsertCC" method="post" id="form-caso-clinico">
+            <?= csrf_field()?>
             <div class="form-group">
                 <label for="id_paciente">Nombres y Apellidos:</label>
                 <input type="text" name="nombres_apellidos" required />
@@ -90,7 +91,7 @@
             <!-- Campo oculto para enviar el JSON -->
             <input type="hidden" name="odontograma" id="odontograma_estado" />
 
-            <button type="submit">Guardar Caso Clí  nico</button>
+            <button type="submit">Guardar Caso Clínico</button>
         </form>
     </div>
 
