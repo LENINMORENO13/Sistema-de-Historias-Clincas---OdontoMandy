@@ -10,9 +10,10 @@
 
     <style>
         /* Fondo para el header */
-        body{
+        body {
             background-image: url('https://img.freepik.com/vector-premium/cuidado-dental-lindo-diente-patrones-fisuras-fondo-dentista_513640-1155.jpg?semt=ais_hybrid');
         }
+
         .header-bg {
             background-color: #343a40;
             color: white;
@@ -20,13 +21,17 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        
+
         /* Estilo para la imagen del login */
         .login-image {
-            width: 150px;           /* Tamaño pequeño de la imagen (puedes ajustarlo como desees) */
-            height: 150px;           /* Mantiene la relación de aspecto */
-            margin-bottom: 20px;    /* Espacio entre la imagen y el formulario */
-            display: block;         /* Centra la imagen */
+            width: 150px;
+            /* Tamaño pequeño de la imagen (puedes ajustarlo como desees) */
+            height: 150px;
+            /* Mantiene la relación de aspecto */
+            margin-bottom: 20px;
+            /* Espacio entre la imagen y el formulario */
+            display: block;
+            /* Centra la imagen */
             margin-left: auto;
             margin-right: auto;
         }
@@ -92,12 +97,12 @@
 </head>
 
 <body>
-<?php if (session()->getFlashdata('error')): ?>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <?= session()->getFlashdata('error'); ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-<?php endif; ?>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('error'); ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
 
     <header class="header-bg">
         <div class="container">
@@ -120,9 +125,10 @@
         <div class="card">
 
             <div class="card-body">
-                <img src="odontomandy.png" alt="Login Image" class="login-image">   
+                <img src="odontomandy.png" alt="Login Image" class="login-image">
                 <h5 class="card-title">Iniciar Sesión</h5>
                 <form action="<?= base_url('login/verificacionlogin') ?>" method="post">
+                    <?= csrf_field() ?>
                     <div class="mb-3">
                         <label for="correo" class="form-label">Correo</label>
                         <input type="email" class="form-control" id="correo" name="correo" required>

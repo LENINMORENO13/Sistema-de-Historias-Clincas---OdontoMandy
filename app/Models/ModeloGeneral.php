@@ -4,10 +4,13 @@ namespace App\Models;
 
 use CodeIgniter\Database\MySQLi\Builder;
 use CodeIgniter\Model;
+use LDAP\Result;
+
 //Cambiar por nombre del archivo el de la clase
 class ModeloGeneral extends Model
 {
     protected $table = 'casos_clinicos'; // Nombre de la tabla
+    protected $primaryKey = 'id'; // Clave primaria
 
     //Modelo para el login
     // Nombre de la tabla
@@ -146,13 +149,20 @@ class ModeloGeneral extends Model
             $v10 = $ParametrosCasos['antecedente_familiar_1'];
             $v11 = $ParametrosCasos['antecedente_familiar_2'];
             $v12 = $ParametrosCasos['odontograma'];
-            $query = $this->db->query("CALL SP_INSERT_CASO_CLINICO(?,?,?,?,?,?,?,?,?,?,?,?)", array($v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9, $v10, $v11, $v12));
 
-            return $query ? true : false;
+            $query = $this->db->query(
+                "CALL SP_INSERT_CASO_CLINICO(?,?,?,?,?,?,?,?,?,?,?,?)",
+                [$v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9, $v10, $v11, $v12]
+            );
+
+            // Esto captura el primer resultado del SELECT LAST_INSERT_ID()
+            $result = $query->getRow();
+            return $result->nuevo_id ?? false;
         } catch (\Throwable $th) {
             return $th;
         }
     }
+
 
     public function SelectExtraerCasoFM($valoridurl)
     {
@@ -186,13 +196,15 @@ class ModeloGeneral extends Model
             $v2 = $ParametrosCasoDetallado['diagnostico'];
             $v3 = $ParametrosCasoDetallado['tratamiento'];
             $v4 = $ParametrosCasoDetallado['indicaciones'];
-            $query = $this->db->query("CALL sp_insertar_historial_clinico_detalle(?,?,?,?)", array($v1,$v2,$v3,$v4));
+            $v5 = $ParametrosCasoDetallado['estado'];
+            $query = $this->db->query("CALL sp_insertar_historial_clinico_detalle(?,?,?,?,?)", array($v1, $v2, $v3, $v4, $v5));
             return $query ? true : false;
         } catch (\Throwable $th) {
             return $th;
         }
     }
 
+    
 
     //Metodo para eliminar casos por ID
     // public function EliminarCasoFM($ideliminar)
@@ -210,6 +222,24 @@ class ModeloGeneral extends Model
     //         throw $th;
     //     }
     // }
+
+
+    public function obtenerDatosPaciente($id_paciente)
+    {
+        return $this->db->table('casos_clinicos')
+            ->where('id', $id_paciente)
+            ->get()
+            ->getRow();
+    }
+
+    public function obtenerHistorialClinicoPorPaciente($id_paciente)
+    {
+        return $this->db->table('historial_clinico_detalle')
+            ->where('id', $id_paciente) // si tienes campo fecha_registro
+            ->get()
+            ->getResult();
+    }
+
 
     //Metodo actualizar casos
     public function ActualizarCasosFM($datosenviadosdelpost)

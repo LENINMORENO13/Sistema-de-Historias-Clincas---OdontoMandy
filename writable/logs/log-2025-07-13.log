@@ -1,0 +1,607 @@
+INFO - 2025-07-13 03:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-13 03:30:05 --> CSRF token verified.
+WARNING - 2025-07-13 03:41:55 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:41:55 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:41:55 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:41:55 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:41:55 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:45:23 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:45:23 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:45:23 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:45:23 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:45:23 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:51:33 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:51:33 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:51:33 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:51:33 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 03:51:33 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:00:03 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:00:03 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:00:03 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:00:03 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:00:03 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-13 04:07:24 --> CSRF token verified.
+WARNING - 2025-07-13 04:11:27 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:11:27 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:11:27 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:11:27 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:11:27 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:14:54 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:14:54 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:14:54 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:14:54 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-13 04:14:54 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 04:15:18 --> mysqli_sql_exception: Table 'odontomandy_db.historia_clinica_detalle' doesn't exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(238): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#8 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-13 04:15:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'odontomandy_db.historia_clinica_detalle' doesn't exist
+[Method: GET, Route: ResumenHistorial/36]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historia_clinica_detalle`
+WHERE `id_paciente` = :id_paciente:
+ORDER BY `fecha_registro` DESC', [...], false)
+ 2 APPPATH\Models\ModeloGeneral.php(238): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-13 04:15:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'odontomandy_db.historia_clinica_detalle' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `historia_clinica_detalle`
+WHERE `id_paciente` = \'36\'
+ORDER BY `fecha_registro` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `historia_clinica_detalle`
+WHERE `id_paciente` = \'36\'
+ORDER BY `fecha_registro` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historia_clinica_detalle`
+WHERE `id_paciente` = :id_paciente:
+ORDER BY `fecha_registro` DESC', [...], false)
+ 4 APPPATH\Models\ModeloGeneral.php(238): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-13 04:15:18 --> [Caused by] mysqli_sql_exception: Table 'odontomandy_db.historia_clinica_detalle' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `historia_clinica_detalle`
+WHERE `id_paciente` = \'36\'
+ORDER BY `fecha_registro` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `historia_clinica_detalle`
+WHERE `id_paciente` = \'36\'
+ORDER BY `fecha_registro` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `historia_clinica_detalle`
+WHERE `id_paciente` = \'36\'
+ORDER BY `fecha_registro` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historia_clinica_detalle`
+WHERE `id_paciente` = :id_paciente:
+ORDER BY `fecha_registro` DESC', [...], false)
+ 5 APPPATH\Models\ModeloGeneral.php(238): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 04:16:57 --> mysqli_sql_exception: Table 'odontomandy_db.historil_clinico_detalle' doesn't exist in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#8 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-13 04:16:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'odontomandy_db.historil_clinico_detalle' doesn't exist
+[Method: GET, Route: ResumenHistorial/36]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historil_clinico_detalle`
+WHERE `id_paciente` = :id_paciente:', [...], false)
+ 2 APPPATH\Models\ModeloGeneral.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-13 04:16:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'odontomandy_db.historil_clinico_detalle' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `historil_clinico_detalle`
+WHERE `id_paciente` = \'36\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `historil_clinico_detalle`
+WHERE `id_paciente` = \'36\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historil_clinico_detalle`
+WHERE `id_paciente` = :id_paciente:', [...], false)
+ 4 APPPATH\Models\ModeloGeneral.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-13 04:16:57 --> [Caused by] mysqli_sql_exception: Table 'odontomandy_db.historil_clinico_detalle' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `historil_clinico_detalle`
+WHERE `id_paciente` = \'36\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `historil_clinico_detalle`
+WHERE `id_paciente` = \'36\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `historil_clinico_detalle`
+WHERE `id_paciente` = \'36\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historil_clinico_detalle`
+WHERE `id_paciente` = :id_paciente:', [...], false)
+ 5 APPPATH\Models\ModeloGeneral.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-13 04:17:03 --> mysqli_sql_exception: Unknown column 'id_paciente' in 'where clause' in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#8 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-13 04:17:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_paciente' in 'where clause'
+[Method: GET, Route: ResumenHistorial/36]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historial_clinico_detalle`
+WHERE `id_paciente` = :id_paciente:', [...], false)
+ 2 APPPATH\Models\ModeloGeneral.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-13 04:17:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_paciente' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `historial_clinico_detalle`
+WHERE `id_paciente` = \'36\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `historial_clinico_detalle`
+WHERE `id_paciente` = \'36\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historial_clinico_detalle`
+WHERE `id_paciente` = :id_paciente:', [...], false)
+ 4 APPPATH\Models\ModeloGeneral.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-13 04:17:03 --> [Caused by] mysqli_sql_exception: Unknown column 'id_paciente' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `historial_clinico_detalle`
+WHERE `id_paciente` = \'36\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `historial_clinico_detalle`
+WHERE `id_paciente` = \'36\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `historial_clinico_detalle`
+WHERE `id_paciente` = \'36\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `historial_clinico_detalle`
+WHERE `id_paciente` = :id_paciente:', [...], false)
+ 5 APPPATH\Models\ModeloGeneral.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\CCasos.php(131): App\Models\ModeloGeneral->obtenerHistorialClinicoPorPaciente('36')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-13 04:17:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "resumen_historial_paciente.php"
+[Method: GET, Route: ResumenHistorial/36]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('resumen_historial_paciente.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('resumen_historial_paciente', [], true)
+ 3 APPPATH\Controllers\CCasos.php(133): view('resumen_historial_paciente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-13 04:20:48 --> ErrorException: Undefined variable $paciente
+[Method: GET, Route: ResumenHistorial/36]
+in APPPATH\Views\resumen_historial_paciente.php on line 11.
+ 1 APPPATH\Views\resumen_historial_paciente.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\resumen_historial_paciente.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\resumen_historial_paciente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('resumen_historial_paciente', [], true)
+ 5 APPPATH\Controllers\CCasos.php(133): view('resumen_historial_paciente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MetodoResumenHistorial('36')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

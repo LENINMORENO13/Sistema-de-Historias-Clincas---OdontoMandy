@@ -109,7 +109,11 @@
 
                     <div class="mt-3">
                         <a href="<?= base_url() . 'ActualizarCaso/' . $caso->id ?>" class="btn btn-warning btn-sm me-2">Actualizar</a>
-                        <a href="<?= base_url() . 'EliminarCasos/' . $caso->id ?>" class="btn btn-danger btn-sm">Eliminar</a>
+                        <!-- <a href="<?= base_url() . 'EliminarCasos/' . $caso->id ?>" class="btn btn-danger btn-sm">Eliminar</a> -->
+                        <a href="<?= base_url('ResumenHistorial/' . $caso->id) ?>" class="btn btn-sm btn-primary">
+                            Ver Historial Clínico
+                        </a>
+
                     </div>
                 </div>
             </div>

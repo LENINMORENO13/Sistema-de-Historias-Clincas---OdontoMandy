@@ -255,7 +255,7 @@ button[type="submit"]:hover {
     .boton-regresar {
         margin: 30px 15px 40px;
         width: 100%;
-        text-align: center;
+        text-align: left;
         font-size: 1.1rem;
     }
 }
