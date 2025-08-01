@@ -4,121 +4,256 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Agregar Detalle - Caso Clínico</title>
+    <title>Detalles de Caso Clínico - Continuación</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
     <style>
         body {
-            background: #f0f8ff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
+            /* Consistencia con la primera parte */
+            background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+            /* Consistencia con la primera parte */
+            margin: 0;
+            padding: 20px;
+            /* Padding general para no pegar al borde */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* Alinear al inicio del contenedor, no al centro vertical */
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 500px;
-            background: white;
-            margin: 40px auto;
-            padding: 30px 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+            max-width: 700px;
+            /* Un poco más ancho para albergar los card */
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* Sombra para dar profundidad */
+            margin-top: 30px;
+            /* Separación de la parte superior */
+            margin-bottom: 30px;
+            /* Separación de la parte inferior */
         }
 
         h1 {
+            font-weight: bold;
+            color: #2c3e50;
+            /* Color de título más oscuro */
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            /* Línea inferior para el título */
+            margin-bottom: 30px;
+            /* Mayor margen para el título principal */
             text-align: center;
-            color: #003366;
-            margin-bottom: 25px;
-            font-weight: 700;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 2em;
+            /* Tamaño de título más grande */
         }
 
-        h1 i {
-            font-size: 2rem;
-            color: #007bff;
-        }
-
-        label {
-            font-weight: 600;
-            color: #004080;
-        }
-
-        input[type="text"],
-        input[type="number"],
-        select {
-            width: 100%;
-            padding: 10px 12px;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            border: 1.5px solid #007bff;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        input[type="text"]:focus,
-        input[type="number"]:focus,
-        select:focus {
-            border-color: #0056b3;
-            outline: none;
-            box-shadow: 0 0 6px #80bdff;
-        }
-
-        button {
-            width: 100%;
-            background-color: #007bff;
-            color: white;
-            font-weight: 700;
-            padding: 12px 0;
-            font-size: 1.1rem;
+        .card {
             border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            box-shadow: 0 3px 8px rgba(0, 123, 255, 0.4);
-            transition: background-color 0.3s ease;
+            /* Eliminar borde predeterminado de la tarjeta */
+            margin-bottom: 25px;
         }
 
-        button:hover {
-            background-color: #0056b3;
+        .card-header {
+            font-weight: bold;
+            background-color: #3498db !important;
+            /* Azul más vibrante para los encabezados */
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 8px 8px 0 0 !important;
+            /* Bordes redondeados superiores */
+            font-size: 1.1em;
+        }
+
+        .card-body {
+            padding: 25px;
+            border: 1px solid #dcdcdc;
+            /* Borde suave para los cuerpos de las tarjetas */
+            border-top: none;
+            /* Eliminar el borde superior para que se una al header */
+            border-radius: 0 0 8px 8px;
+            /* Bordes redondeados inferiores */
+        }
+
+        /* Estilos para los campos de formulario */
+        .form-label {
+            /* Usamos form-label de Bootstrap para consistencia */
+            font-weight: 600;
+            color: #495057;
+            /* Un gris oscuro profesional */
+            margin-bottom: .5rem;
+        }
+
+        .form-control,
+        .form-select {
+            border: 1px solid #ced4da;
+            /* Borde más suave por defecto */
+            border-radius: .4rem;
+            /* Bordes ligeramente más redondeados */
+            padding: .75rem 1rem;
+            font-size: 1rem;
+            transition: all 0.2s ease-in-out;
+            box-shadow: none;
+            /* Eliminar shadow por defecto */
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #3498db;
+            /* Resaltar borde en foco con el color primario */
+            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+            /* Sombra de foco con el color primario */
+            outline: none;
+        }
+
+        .form-control[readonly] {
+            background-color: #e9ecef;
+            /* Fondo diferente para campos de solo lectura */
+            cursor: not-allowed;
+            border-color: #ced4da;
+        }
+
+        /* Botones */
+        .btn-primary {
+            background-color: #28a745;
+            /* Botón de guardar en verde (consistencia) */
+            border-color: #28a745;
+            font-size: 1.1em;
+            /* Un poco más pequeño que el de la primera parte si es necesario, o igual */
+            padding: 12px 25px;
+            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+            width: 100%;
+            /* Ocupa todo el ancho */
+            border-radius: 8px;
+            /* Bordes más redondeados */
+            margin-top: 20px;
+            /* Espacio antes del botón */
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+            transform: translateY(-2px);
+            /* Pequeño efecto de levantamiento */
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            font-size: 1em;
+            padding: 10px 20px;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            border-radius: 8px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+
+        /* Alineación del icono en el botón */
+        .btn-primary i {
+            margin-right: 8px;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
         }
     </style>
 </head>
 
 <body>
+    <?php if (session()->getFlashdata('mensaje_exito')): ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('mensaje_exito'); ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('mensaje_error')): ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('mensaje_error'); ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
+
     <div class="container">
-        <h1><i class="bi bi-file-medical"></i> Agregar Detalle</h1>
+        <h1><i class="bi bi-journal-medical"></i> Continuación del Registro Clínico</h1>
         <form action="<?= base_url('/InsertarCD') ?>" method="post" id="form_caso_detallado">
             <?= csrf_field() ?>
-            <div class="mb-3">
-                <label for="id_paciente">ID del paciente</label>
-                <input type="number" name="id_paciente" id="id_paciente" value="<?= esc($id_paciente) ?>" readonly>
+
+            <div class="card">
+                <div class="card-header">1. IDENTIFICACIÓN DEL PACIENTE</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="id_paciente" class="form-label">ID del Paciente</label>
+                        <input type="number" name="id_paciente" id="id_paciente" class="form-control" value="<?= esc($id_paciente) ?>" readonly>
+                        <small class="form-text text-muted">Este campo se rellena automáticamente.</small>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="diagnostico">Diagnóstico</label>
-                <input type="text" name="diagnostico" id="diagnostico" required placeholder="Ingrese diagnóstico">
+
+            <div class="card">
+                <div class="card-header">2. DETALLES DE DIAGNÓSTICO</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="diagnostico" class="form-label">Diagnóstico Principal</label>
+                        <input type="text" name="diagnostico" id="diagnostico" class="form-control" required placeholder="Ej: Caries dental, Gingivitis, Periodontitis, etc.">
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="tratamiento">Tratamiento</label>
-                <input type="text" name="tratamiento" id="tratamiento" required placeholder="Ingrese tratamiento">
+
+            <div class="card">
+                <div class="card-header">3. PLAN DE TRATAMIENTO</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="tratamiento" class="form-label">Tratamiento Propuesto</label>
+                        <input type="text" name="tratamiento" id="tratamiento" class="form-control" required placeholder="Ej: Obturación, Endodoncia, Exodoncia, Limpieza.">
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="indicaciones">Indicaciones</label>
-                <input type="text" name="indicaciones" id="indicaciones" required placeholder="Ingrese indicaciones">
+
+            <div class="card">
+                <div class="card-header">4. INDICACIONES AL PACIENTE</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="indicaciones" class="form-label">Instrucciones Post-Tratamiento</label>
+                        <textarea name="indicaciones" id="indicaciones" class="form-control" required placeholder="Instrucciones para el paciente (ej: dieta blanda, higiene, citas de control)." rows="4"></textarea>
+                    </div>
+                </div>
             </div>
-            <div class="mb-4">
-                <label for="estado">Estado</label>
-                <select name="estado" id="estado" required>
-                    <option value="activo" selected>Activo</option>
-                    <option value="inactivo">Inactivo</option>
-                </select>
+
+            <div class="card">
+                <div class="card-header">5. ESTADO DEL CASO</div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <label for="estado" class="form-label">Estado Actual del Caso Clínico</label>
+                        <select name="estado" id="estado" class="form-select" required>
+                            <option value="activo" selected>Activo (En tratamiento)</option>
+                            <option value="inactivo">Inactivo (Pendiente)</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <button type="submit"><i class="bi bi-plus-circle"></i> Agregar Caso Clínico Detallado</button>
+
+            <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> GUARDAR DETALLES DEL CASO</button>
         </form>
+        <div class="text-center mt-3">
+            <a href="<?= base_url('Inicio') ?>" class="btn btn-secondary">VOLVER AL INICIO</a>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

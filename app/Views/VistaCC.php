@@ -4,105 +4,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Caso Clínico</title>
-    <link rel="stylesheet" href="Public/Css/disenioCC.css">
+    <title>Ficha Técnica de Admisión - Caso Clínico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #e0eafc, #cfdef3); /* Colores más suaves y profesionales */
+        }
+        h1 {
+            font-weight: bold;
+            color: #2c3e50; /* Color de título más oscuro */
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db; /* Línea inferior para el título */
+            margin-bottom: 25px;
+        }
 
+        .container {
+            margin-top: 30px;
+            max-width: 950px; /* Un poco más ancho para mejor visualización */
+            background-color: #ffffff; /* Fondo blanco para la ficha */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+        }
+
+        .card-header {
+            font-weight: bold;
+            background-color: #3498db !important; /* Azul más vibrante para los encabezados */
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 8px 8px 0 0 !important; /* Bordes redondeados superiores */
+            font-size: 1.1em;
+        }
+        .card-body {
+            padding: 25px;
+            border: 1px solid #dcdcdc; /* Borde suave para los cuerpos de las tarjetas */
+            border-top: none; /* Eliminar el borde superior para que se una al header */
+            border-radius: 0 0 8px 8px; /* Bordes redondeados inferiores */
+        }
+        .card {
+            border: none; /* Eliminar borde predeterminado de la tarjeta */
+            margin-bottom: 25px;
+        }
+
+        .form-floating label {
+            color: #6c757d; /* Color de las etiquetas flotantes */
+        }
+        .form-control:focus {
+            border-color: #3498db; /* Resaltar borde en foco */
+            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+        }
+
+        .diente {
+            width: 35px; /* Un poco más grande */
+            height: 35px;
+            border: 1px solid #a0a0a0; /* Borde más suave */
+            border-radius: 8px; /* Bordes más redondeados */
+            text-align: center;
+            font-size: 13px; /* Tamaño de fuente un poco más grande */
+            line-height: 35px; /* Ajustar line-height */
+            display: inline-block;
+            margin: 3px; /* Más espacio entre dientes */
+            cursor: pointer;
+            background-color: #f0f0f0; /* Fondo más claro */
+            color: #444; /* Color de texto más oscuro */
+            transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.05); /* Sombra sutil */
+        }
+
+        .diente:hover {
+            transform: scale(1.08); /* Ligeramente más grande al pasar el ratón */
+            border: 2px solid #3498db; /* Borde de resalte */
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+        }
+
+        .diente[style*="background-color: red"] {
+            background-color: #e74c3c !important; /* Rojo más fuerte */
+            color: white;
+            border-color: #c0392b;
+        }
+
+        .diente[style*="background-color: blue"] {
+            background-color: #2980b9 !important; /* Azul más fuerte */
+            color: white;
+            border-color: #2471a3;
+        }
+
+        .fila {
+            text-align: center; /* Centrar las filas de dientes */
+            padding: 5px 0;
+            background-color: #f8f9fa; /* Fondo ligero para cada fila */
+            border-radius: 5px;
+            margin-bottom: 10px !important;
+        }
+
+        #modal-confirm {
+            display: none;
+            background: rgba(0, 0, 0, 0.6); /* Fondo más oscuro para el modal */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #modal-confirm.show {
+            display: flex;
+        }
+
+        #modal-confirm p {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #28a745; /* Verde de éxito */
+            font-size: 1.2em;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        #modal-confirm button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .btn-primary {
+            background-color: #28a745; /* Botón de guardar en verde */
+            border-color: #28a745;
+            font-size: 1.2em;
+            padding: 12px 25px;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        .sticky-bottom {
+            position: sticky;
+            bottom: 0;
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            z-index: 100;
+            text-align: center; /* Centrar el botón */
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Nuevo Caso Clínico</h1>
-        <form action="<?php echo base_url() ?>/InsertCC" method="post" id="form-caso-clinico">
-            <?= csrf_field()?>
-            <div class="form-group">
-                <label for="id_paciente">Nombres y Apellidos:</label>
-                <input type="text" name="nombres_apellidos" required />
+        <h1 class="text-center mb-4">FICHA TÉCNICA DE ADMISIÓN ODONTOLÓGICA</h1>
+        <form action="<?= base_url() ?>/InsertCC" method="post" id="form-caso-clinico">
+            <?= csrf_field() ?>
+
+            <div class="card mb-4">
+                <div class="card-header">1. DATOS DE IDENTIFICACIÓN DEL PACIENTE</div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6 form-floating">
+                            <input type="text" name="nombres_apellidos" class="form-control" id="nombres" placeholder="Nombres y Apellidos" required>
+                            <label for="nombres">Nombres y Apellidos Completos</label>
+                        </div>
+                        <div class="col-md-6 form-floating">
+                            <input type="number" name="cedula" class="form-control" id="cedula" placeholder="Cédula de Identidad" required>
+                            <label for="cedula">Cédula de Identidad</label>
+                        </div>
+                        <div class="col-md-6 form-floating">
+                            <input type="date" name="fecha_nacimiento" class="form-control" id="fecha_nacimiento" placeholder="Fecha de Nacimiento" required>
+                            <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                        </div>
+                        <div class="col-md-6 form-floating">
+                            <input type="number" name="edad" class="form-control" id="edad" placeholder="Edad del Paciente" required>
+                            <label for="edad">Edad</label>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="direccion">Dirección:</label>
-                <input type="text" name="direccion" required />
+            <div class="card mb-4">
+                <div class="card-header">2. INFORMACIÓN DE CONTACTO</div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6 form-floating">
+                            <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Dirección Domiciliaria" required>
+                            <label for="direccion">Dirección Domiciliaria</label>
+                        </div>
+                        <div class="col-md-6 form-floating">
+                            <input type="number" name="telefono" class="form-control" id="telefono" placeholder="Número de Teléfono" required>
+                            <label for="telefono">Teléfono de Contacto</label>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" name="fecha_nacimiento" required />
+            <div class="card mb-4">
+                <div class="card-header">3. MOTIVO DE CONSULTA</div>
+                <div class="card-body">
+                    <div class="form-floating">
+                        <textarea name="motivo_consulta" class="form-control" id="motivo" placeholder="Describa el motivo principal de la visita." style="height: 120px" required></textarea>
+                        <label for="motivo">Descripción del Motivo de Consulta</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="edad">Edad:</label>
-                <input type="number" name="edad" required />
+            <div class="card mb-4">
+                <div class="card-header">4. ANTECEDENTES MÉDICOS PERSONALES</div>
+                <div class="card-body">
+                    <div class="form-floating mb-3">
+                        <textarea name="antecedente_personal_1" class="form-control" id="antecedente_personal_1" placeholder="Enfermedades crónicas, alergias, medicación actual, etc." style="height: 100px" required></textarea>
+                        <label for="antecedente_personal_1">Antecedente Médico Personal 1</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea name="antecedente_personal_2" class="form-control" id="antecedente_personal_2" placeholder="Cirugías previas, hospitalizaciones, hábitos nocivos (fumar, beber)." style="height: 100px" required></textarea>
+                        <label for="antecedente_personal_2">Antecedente Médico Personal 2</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="telefono">Teléfono:</label>
-                <input type="number" name="telefono" required />
+            <div class="card mb-4">
+                <div class="card-header">5. ANTECEDENTES FAMILIARES RELEVANTES</div>
+                <div class="card-body">
+                    <div class="form-floating mb-3">
+                        <textarea name="antecedente_familiar_1" class="form-control" id="antecedente_familiar_1" placeholder="Historia de enfermedades hereditarias en la familia (diabetes, hipertensión, cáncer)." style="height: 100px" required></textarea>
+                        <label for="antecedente_familiar_1">Antecedente Familiar 1</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea name="antecedente_familiar_2" class="form-control" id="antecedente_familiar_2" placeholder="Cualquier otra condición relevante en la historia familiar." style="height: 100px" required></textarea>
+                        <label for="antecedente_familiar_2">Antecedente Familiar 2</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="cedula">Cédula:</label>
-                <input type="number" name="cedula" required />
+            <div class="card mb-4">
+                <div class="card-header">6. ODONTOGRAMA</div>
+                <div class="card-body">
+                    <label class="form-label fw-bold">Seleccione un color para marcar la condición del diente:</label>
+                    <select id="colorSelector" class="form-select mb-3" style="max-width: 250px;">
+                        <option value="ninguno" selected>Sin Marca (Valor Predeterminado)</option>
+                        <option value="rojo">Problema (Rojo)</option>
+                        <option value="azul">Tratado (Azul)</option>
+                    </select>
+                    <div id="odontograma" class="mt-4">
+                        <h5 class="text-center mb-3">Dentición Permanente</h5>
+                        <div class="fila mb-2" id="fila-superior"></div>
+                        <div class="fila mb-4" id="fila-inferior"></div>
+                        <h5 class="text-center mb-3">Dentición Temporal (Niños)</h5>
+                        <div class="fila mb-2" id="fila-ninos-superior"></div>
+                        <div class="fila mb-4" id="fila-ninos-inferior"></div>
+                    </div>
+                    <input type="hidden" name="odontograma" id="odontograma_estado" />
+                </div>
             </div>
 
-            <div class="form-group" style="flex-basis: 100%;">
-                <label for="motivo_consulta">Motivo de la consulta:</label>
-                <textarea name="motivo_consulta" required></textarea>
+            <div class="d-grid sticky-bottom mt-4">
+                <button type="submit" class="btn btn-primary btn-lg">REGISTRAR CASO CLÍNICO</button>
             </div>
-
-            <div class="form-group" style="flex-basis: 100%;">
-                <label for="antecedente_personal_1">Antecedentes Personales 1:</label>
-                <textarea name="antecedente_personal_1" required></textarea>
-            </div>
-
-            <div class="form-group" style="flex-basis: 100%;">
-                <label for="antecedente_personal_2">Antecedentes Personales 2:</label>
-                <textarea name="antecedente_personal_2" required></textarea>
-            </div>
-
-            <div class="form-group" style="flex-basis: 100%;">
-                <label for="antecedente_familiar_1">Antecedentes Familiares 1:</label>
-                <textarea name="antecedente_familiar_1" required></textarea>
-            </div>
-
-            <div class="form-group" style="flex-basis: 100%;">
-                <label for="antecedente_familiar_2">Antecedentes Familiares 2:</label>
-                <textarea name="antecedente_familiar_2" required></textarea>
-            </div>
-
-            <label for="colorSelector" style="width: 100%; margin-top: 20px;">Selecciona color para marcar el diente:</label>
-            <select id="colorSelector" style="margin-bottom: 15px; width: 220px;">
-                <option value="ninguno" selected>Sin color</option>
-                <option value="rojo">Rojo</option>
-                <option value="azul">Azul</option>
-            </select>
-
-            <!-- Odontograma visual en filas -->
-            <div id="odontograma">
-                <div class="fila" id="fila-superior"></div>
-                <div class="fila" id="fila-inferior"></div>
-            </div>
-
-            <div id="espacio-separador"></div>
-            <div id="odontograma">
-                <div class="fila" id="fila-ninos-superior"></div>
-                <div class="fila" id="fila-ninos-inferior"></div>
-            </div>
-
-            <!-- Campo oculto para enviar el JSON -->
-            <input type="hidden" name="odontograma" id="odontograma_estado" />
-
-            <button type="submit">Guardar Caso Clínico</button>
         </form>
+
+        <div class="text-center mt-3 mb-5">
+            <a href="<?= base_url('Inicio') ?>" class="btn btn-secondary">VOLVER AL INICIO</a>
+        </div>
     </div>
 
-    <a href="<?= base_url('Inicio') ?>" class="boton-regresar">Regresar</a>
-
-    <!-- Modal confirmación -->
     <div id="modal-confirm" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
         <p id="modal-title">Caso clínico agregado con éxito ✅</p>
-        <button id="btn-cerrar-modal" type="button" aria-label="Cerrar mensaje de confirmación">Cerrar</button>
+        <button id="btn-cerrar-modal" type="button" class="btn btn-success mt-2">Cerrar</button>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const colorSelector = document.getElementById("colorSelector");
         const dientesEstado = {};
@@ -112,19 +295,15 @@
         const filaNinosSuperior = document.getElementById("fila-ninos-superior");
         const filaNinosInferior = document.getElementById("fila-ninos-inferior");
 
-        // Dientes adultos superiores: 18 al 11 y 21 al 28
+        // Dientes permanentes
         for (let i = 18; i >= 11; i--) crearDiente(filaSuperior, i);
         for (let i = 21; i <= 28; i++) crearDiente(filaSuperior, i);
-
-        // Dientes adultos inferiores: 48 al 41 y 31 al 38
         for (let i = 48; i >= 41; i--) crearDiente(filaInferior, i);
         for (let i = 31; i <= 38; i++) crearDiente(filaInferior, i);
 
-        // Dientes de niño superiores (temporales): 55 al 51 y 61 al 65
+        // Dientes temporales (niños)
         for (let i = 55; i >= 51; i--) crearDiente(filaNinosSuperior, i);
         for (let i = 61; i <= 65; i++) crearDiente(filaNinosSuperior, i);
-
-        // Dientes de niño inferiores (temporales): 85 al 81 y 71 al 75
         for (let i = 85; i >= 81; i--) crearDiente(filaNinosInferior, i);
         for (let i = 71; i <= 75; i++) crearDiente(filaNinosInferior, i);
 
@@ -133,58 +312,41 @@
             diente.className = "diente";
             diente.textContent = numero;
             diente.dataset.num = numero;
-            dientesEstado[numero] = "ninguno";
+            dientesEstado[numero] = "ninguno"; // Estado inicial
 
             diente.addEventListener("click", () => {
                 const color = colorSelector.value;
                 dientesEstado[numero] = color;
 
-                diente.style.backgroundColor = "";
-                diente.style.color = "black";
+                // Reiniciar estilos
+                diente.style.backgroundColor = "#f0f0f0";
+                diente.style.color = "#444";
 
                 if (color === "rojo") {
                     diente.style.backgroundColor = "red";
-                    diente.style.color = "white";
                 } else if (color === "azul") {
                     diente.style.backgroundColor = "blue";
-                    diente.style.color = "white";
                 }
             });
 
             fila.appendChild(diente);
         }
 
-        // Al enviar el formulario, actualizar el campo oculto y mostrar modal
-        document
-            .getElementById("form-caso-clinico")
-            .addEventListener("submit", function (e) {
-                // Actualizar el JSON del odontograma
-                document.getElementById("odontograma_estado").value =
-                    JSON.stringify(dientesEstado);
+        document.getElementById("form-caso-clinico").addEventListener("submit", function(e) {
+            // e.preventDefault(); // Descomentar para evitar el envío real del formulario durante pruebas
+            document.getElementById("odontograma_estado").value = JSON.stringify(dientesEstado);
+            mostrarModalConfirmacion();
+        });
 
-                // Mostrar modal de confirmación
-                mostrarModalConfirmacion();
-            });
-
-        // Modal control
         const modal = document.getElementById("modal-confirm");
-        const btnCerrarModal = document.getElementById("btn-cerrar-modal");
-
-        function mostrarModalConfirmacion() {
-            modal.classList.add("show");
-            modal.focus();
-        }
-
-        btnCerrarModal.addEventListener("click", () => {
+        document.getElementById("btn-cerrar-modal").addEventListener("click", () => {
             modal.classList.remove("show");
         });
 
-        // Cerrar modal con ESC
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && modal.classList.contains("show")) {
-                modal.classList.remove("show");
-            }
-        });
+        function mostrarModalConfirmacion() {
+            modal.classList.add("show");
+        }
     </script>
 </body>
+
 </html>
