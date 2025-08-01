@@ -106,9 +106,11 @@ class CCasos extends BaseController
         ];
         $resultado = $instancia->MetodoModeloInsertCasoDetallado($datosdetallados);
         if ($resultado) {
-            return redirect()->to(base_url('/MostrarCD/' . $datosdetallados['id_paciente']));
+            session()->setFlashdata('mensaje_exito', 'El registro clinico se ha guardado correctamente');
+            return redirect()->to(base_url('/ResumenHistorial/' . $datosdetallados['id_paciente']));
         } else {
-            echo 'Error al ingresar los datos';
+            session()->setFlashdata('mensaje_error', 'Hubo un error al guardar los datos del caso clinico. Por favor, inténtelo de nuevo');
+            return redirect()->back()->withInput();
         }
     }
 
@@ -174,13 +176,14 @@ class CCasos extends BaseController
     { {
             $paciente = $this->request->getGet('buscar_caso_nombre') ?? '';
             $cedula = $this->request->getGet('buscar_caso_cedula') ?? '';
+            $fecha = $this->request->getGet('buscar_caso_fecha') ?? '';
 
             $data = [];
 
             // Solo buscar si hay un filtro aplicado
-            if (!empty($paciente) || !empty($cedula)) {
+            if (!empty($paciente) || !empty($cedula) || !empty($fecha)) {
                 $modelo = new ModeloGeneral();
-                $casos = $modelo->ObtenerCasos($paciente, $cedula);
+                $casos = $modelo->ObtenerCasos($paciente, $cedula, $fecha);
 
                 if (empty($casos)) {
                     $data['mensaje_error'] = "No se encontraron resultados.";
@@ -194,5 +197,20 @@ class CCasos extends BaseController
 
             return view('VistaCasosPacientes', $data);
         }
+    }
+
+    public function buscar_caso()
+    {
+        $nombre = $this->request->getGet('buscar_caso_nombre') ?? '';
+        $cedula = $this->request->getGet('buscar_caso_cedula') ?? '';
+        $fecha = $this->request->getGet('buscar_caso_fecha') ?? '';
+
+        $modelo = new ModeloGeneral();
+        $resultados = $modelo->ObtenerCasos($nombre, $cedula, $fecha);
+
+        return view('VistaCasosPacientes', [
+            'casosPacientes' => $resultados,
+            'mensaje_error' => empty($resultados) ? 'No se encontraron resultados.' : ''
+        ]);
     }
 }

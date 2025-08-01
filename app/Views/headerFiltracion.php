@@ -19,8 +19,7 @@
         <div class="container-fluid">
             <!-- Logo con texto -->
             <a class="navbar-brand" href="<?= base_url('Inicio') ?>">
-                <img src="https://ccm.org.ec/wp-content/uploads/2021/07/LOGOS-PUCE-PNG-02.png" alt="Logo" style="max-height: 40px;">
-                Sistema Odontológico
+                Sistema Odontológico OdontoMandy
             </a>
 
             <!-- Botón de navegación para dispositivos móviles -->
@@ -44,16 +43,6 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="<?= base_url('SelectCasos') ?>">
                             <i class="bi bi-search"></i> Revisar casos clínicos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url('InsertPaciente') ?>">
-                            <i class="bi bi-person-plus"></i> Insertar paciente
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url('Select') ?>">
-                            <i class="bi bi-list"></i> Listado de pacientes
                         </a>
                     </li>
                 </ul>

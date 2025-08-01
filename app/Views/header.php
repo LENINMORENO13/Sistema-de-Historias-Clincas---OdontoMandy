@@ -4,44 +4,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Profesional</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="Public/Css/disenioHeader.css">
+    <title>Sistema Odontológico OdontoMandy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Estilos generales del cuerpo para asegurar el layout full-height */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; /* Un fondo muy suave para el cuerpo */
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar personalizado */
+        .navbar {
+            background-color: #007bff !important; /* Azul primario de Bootstrap, más vibrante */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto flotante */
+            padding: 0.8rem 1.5rem; /* Padding más equilibrado */
+        }
+
+        .navbar-brand {
+            display: flex; /* Para alinear el logo y el texto */
+            align-items: center;
+            font-weight: 600; /* Texto de marca más grueso */
+            font-size: 1.35rem; /* Tamaño de fuente ligeramente mayor */
+            color: #ffffff !important; /* Asegurar color blanco para la marca */
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #e0f0ff !important; /* Tono más claro al pasar el mouse */
+        }
+
+        .navbar-brand img {
+            height: 40px; /* Tamaño del logo */
+            margin-right: 12px; /* Espacio entre el logo y el texto */
+            border-radius: 50%; /* Si el logo es cuadrado, lo hace circular */
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Sombra sutil alrededor del logo */
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.3); /* Borde más claro para el botón del toggle */
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Estilos para los elementos de navegación */
+        .navbar-nav .nav-item {
+            margin-left: 15px; /* Espacio entre elementos del menú */
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important; /* Texto del enlace blanco */
+            font-weight: 500; /* Fuente semibold */
+            padding: 0.75rem 1rem; /* Padding más generoso para los enlaces */
+            border-radius: 8px; /* Bordes redondeados para los enlaces */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            display: flex; /* Para alinear icono y texto */
+            align-items: center;
+            gap: 8px; /* Espacio entre icono y texto */
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active { /* Estilo para el enlace activo */
+            background-color: rgba(255, 255, 255, 0.2); /* Fondo ligeramente transparente al pasar el mouse/activo */
+            color: #ffffff !important;
+            transform: translateY(-2px); /* Pequeño efecto de elevación */
+        }
+
+        .navbar-nav .nav-link i {
+            font-size: 1.1em; /* Tamaño de los iconos */
+        }
+
+        /* Contenido principal */
+        .main-content {
+            flex-grow: 1; /* Permite que el contenido crezca y empuje el footer hacia abajo */
+            padding: 20px;
+        }
+
+        /* Media queries para responsividad */
+        @media (max-width: 991.98px) {
+            .navbar {
+                padding: 0.5rem 1rem;
+            }
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            .navbar-brand img {
+                height: 35px;
+                margin-right: 10px;
+            }
+            .navbar-nav .nav-item {
+                margin-left: 0; /* Eliminar margen horizontal en móviles */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador para cada elemento */
+            }
+            .navbar-nav .nav-link {
+                padding: 0.75rem 1.5rem; /* Más padding para los enlaces en móvil */
+                justify-content: flex-start; /* Alinear a la izquierda en móvil */
+            }
+            .navbar-collapse {
+                background-color: #0069d9; /* Fondo azul más oscuro para el menú desplegable en móvil */
+                border-radius: 0 0 10px 10px;
+                margin-top: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            }
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <!-- Logo con texto -->
             <a class="navbar-brand" href="<?= base_url('Inicio') ?>">
-                <img src="O.MANDY.png" alt="Logo">
-                Sistema Odontológico
+                <img src="<?= base_url('O.MANDY.png') ?>" alt="Logo OdontoMandy">
+                OdontoMandy | Sistema Clínico
             </a>
 
-            <!-- Botón de navegación para dispositivos móviles -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menú de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url('VistaCC'); ?>">
-                            <i class="bi bi-plus-circle"></i> Añadir nuevo Caso clínico
+                        <a class="nav-link" href="<?= base_url('Inicio'); ?>">
+                            <i class="bi bi-house-door-fill"></i> Inicio
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url('CasosPacientes'); ?>">
-                            <i class="bi bi-search"></i> Busqueda de caso por filtro
+                        <a class="nav-link" href="<?= base_url('VistaCC'); ?>">
+                            <i class="bi bi-journal-plus"></i> Registrar Caso
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url('SelectCasos'); ?>">
-                            <i class="bi bi-search"></i> Revisar casos clínicos
+                        <a class="nav-link" href="<?= base_url('CasosPacientes'); ?>">
+                            <i class="bi bi-search"></i> Buscar Casos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('SelectCasos'); ?>">
+                            <i class="bi bi-journal-check"></i> Revisar Casos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('/'); ?>">
+                            <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
                         </a>
                     </li>
                 </ul>
@@ -49,13 +161,10 @@
         </div>
     </nav>
 
-    <!-- Contenido principal -->
-    <div class="container mt-4">
-        <!-- Aquí puedes agregar el contenido específico de tu página -->
-    </div>
+    <div class="container mt-4 main-content">
+        </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

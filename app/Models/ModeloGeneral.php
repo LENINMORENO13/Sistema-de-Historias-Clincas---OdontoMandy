@@ -204,7 +204,7 @@ class ModeloGeneral extends Model
         }
     }
 
-    
+
 
     //Metodo para eliminar casos por ID
     // public function EliminarCasoFM($ideliminar)
@@ -266,26 +266,24 @@ class ModeloGeneral extends Model
             throw $th;
         }
     }
-    public function ObtenerCasos($nombre = '', $cedula = '')
+    public function ObtenerCasos($nombre = '', $cedula = '', $fecha = '')
     {
-        try {
-            // Preparar llamada al procedimiento almacenado con filtros
-            $query = $this->db->query("CALL SP_OBTENER_CASOS(?, ?)", [$nombre, $cedula]);
+        $builder = $this->db->table('casos_clinicos');
 
-            // Devolver resultados
-            return $query->getResult();
-        } catch (\Throwable $th) {
-            // Aquí podrías manejar o loggear errores
-            return [];
+        if (!empty($nombre)) {
+            $builder->like('nombres_apellidos', $nombre);
         }
+        if (!empty($cedula)) {
+            $builder->where('cedula', $cedula);
+        }
+        if (!empty($fecha)) {
+            $fecha_inicio = $fecha . ' 00:00:00';
+            $fecha_fin = $fecha . ' 23:59:59';
+            $builder->where('fecha_registro >=', $fecha_inicio);
+            $builder->where('fecha_registro <=', $fecha_fin);
+        }
+
+        $query = $builder->get();
+        return $query->getResult();
     }
-
-    // public function ObtenerCasosConPacientes($buscar_caso_nombre = '', $buscar_caso_cedula = '')
-    // {
-    //     // Preparar la consulta para ejecutar el procedimiento almacenado
-    //     $query = $this->db->query("CALL SP_OBTENERID_CASOS(?, ?)", [$buscar_caso_nombre, $buscar_caso_cedula]);
-
-    //     // Obtener los resultados
-    //     return $query->getResult();
-    // }
 }

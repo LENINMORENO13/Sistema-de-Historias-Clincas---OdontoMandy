@@ -1,0 +1,392 @@
+INFO - 2025-07-20 23:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-20 23:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-20 23:27:23 --> CSRF token verified.
+INFO - 2025-07-20 23:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-20 23:27:34 --> CSRF token verified.
+ERROR - 2025-07-20 23:27:46 --> mysqli_sql_exception: Unknown column 'examen_clinico' in 'field list' in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+WARNING - 2025-07-20 23:28:00 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-20 23:28:00 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-20 23:28:00 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-20 23:28:00 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-20 23:28:00 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-20 23:28:32 --> CSRF token verified.
+WARNING - 2025-07-20 23:28:37 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-20 23:28:37 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-20 23:28:37 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-20 23:28:37 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-07-20 23:28:37 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\VistaSelectCasos.php on line 93.
+ 1 APPPATH\Views\VistaSelectCasos.php(93): json_decode(null, true)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-20 23:30:18 --> mysqli_sql_exception: Unknown column 'examen_clinico' in 'field list' in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('asd', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-20 23:30:22 --> mysqli_sql_exception: Unknown column 'examen_clinico' in 'field list' in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-20 23:30:54 --> mysqli_sql_exception: Unknown column 'examen_clinico' in 'field list' in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-20 23:31:02 --> mysqli_sql_exception: Unknown column 'examen_clinico' in 'field list' in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Juan', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-20 23:31:52 --> mysqli_sql_exception: Unknown column 'examen_clinico' in 'field list' in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Juan', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-20 23:31:55 --> mysqli_sql_exception: Unknown column 'examen_clinico' in 'field list' in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(312): mysqli->query('CALL SP_OBTENER...', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_OBTENER...')
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_OBTENER...')
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-07-20 23:49:10 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'odontomandy_db', 3306, '', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#4 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+ERROR - 2025-07-20 23:49:43 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'odontomandy_db', 3306, '', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#4 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+ERROR - 2025-07-20 23:49:55 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'odontomandy_db', 3306, '', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#4 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+ERROR - 2025-07-20 23:50:05 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'odontomandy_db', 3306, '', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#4 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+ERROR - 2025-07-20 23:51:00 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'odontomandy_db', 3306, '', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#4 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+ERROR - 2025-07-20 23:51:34 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'odontomandy_db', 3306, '', 0)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#4 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#7 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SisOdontoMandy\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SisOdontoMandy\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SisOdontoMandy\app\Models\ModeloGeneral.php(273): CodeIgniter\Database\BaseConnection->query('CALL SP_OBTENER...', Array)
+#3 C:\xampp\htdocs\SisOdontoMandy\app\Controllers\CCasos.php(183): App\Models\ModeloGeneral->ObtenerCasos('Lenin', '')
+#4 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+#5 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+#6 C:\xampp\htdocs\SisOdontoMandy\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SisOdontoMandy\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\SisOdontoMandy\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}

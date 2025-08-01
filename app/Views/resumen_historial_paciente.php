@@ -6,94 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Resumen Historial Clínico - Paciente</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
     <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-light: #f8f9fa;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+        }
+
         body {
-            background: #f0f8ff; /* Azul muy suave */
+            background: var(--background-light);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
         }
 
-        header {
-            background-color: #007bff;
+        .header-app {
+            background-color: var(--primary-color);
             color: white;
-            padding: 1.2rem;
+            padding: 1.5rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
-            margin-bottom: 30px;
-            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
         }
 
-        header h1 {
+        .header-app h1 {
             margin: 0;
             font-weight: 700;
-            font-size: 1.8rem;
+            font-size: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.6rem;
+            gap: 0.8rem;
         }
 
-        header h1 i {
-            font-size: 2rem;
-            color: #e0f0ff;
+        .header-app h1 i {
+            font-size: 2.2rem;
+            color: rgba(255, 255, 255, 0.8);
         }
 
-        .container {
-            max-width: 900px;
+        .card-patient-details {
             background: white;
-            padding: 25px;
+            padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
         }
 
-        h2 {
-            font-weight: 600;
-            color: #003366;
-            margin-bottom: 0.3rem;
+        .card-patient-details h2 {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
         }
 
-        p {
-            color: #555;
-            font-size: 0.95rem;
-            margin-bottom: 1.4rem;
+        .card-patient-details p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 0;
         }
 
-        table.table {
-            border-radius: 8px;
+        .table-responsive {
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .table-custom thead {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
         }
 
-        table thead.table-dark {
-            background-color: #0056b3;
-            color: #fff;
-        }
-
-        table tbody tr:hover {
+        .table-custom tbody tr:hover {
             background-color: #e9f5ff;
         }
 
+        .table-custom th, .table-custom td {
+            padding: 1rem;
+        }
+        
+        /* Estilos para los botones de acción */
+        .btn-action-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
         .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
             font-weight: 600;
-            box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 123, 255, 0.2);
         }
 
         .btn-primary:hover {
             background-color: #0056b3;
             border-color: #0056b3;
+            box-shadow: 0 5px 10px rgba(0, 123, 255, 0.3);
         }
 
         .btn-secondary {
-            background-color: #6c757d;
-            border-color: #6c757d;
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
             font-weight: 600;
         }
 
@@ -101,52 +120,79 @@
             background-color: #5a6268;
             border-color: #545b62;
         }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .header-app h1 {
+                font-size: 1.5rem;
+            }
+            .header-app h1 i {
+                font-size: 1.8rem;
+            }
+            .btn-action-group {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <header>
+    <header class="header-app">
         <h1><i class="bi bi-tooth"></i> Consultorio Odontológico OdontoMandy</h1>
     </header>
 
     <div class="container">
-        <h2>Historial Clínico de <?= htmlspecialchars($datosPaciente->nombres_apellidos) ?></h2>
-        <p><strong>ID Paciente:</strong> <?= htmlspecialchars($datosPaciente->id) ?></p>
+        <div class="card-patient-details">
+            <h2>Historial Clínico de <?= htmlspecialchars($datosPaciente->nombres_apellidos) ?></h2>
+            <p class="text-muted">ID Paciente: <?= htmlspecialchars($datosPaciente->id) ?></p>
+        </div>
 
-        <a href="<?= base_url('SelectCasos') ?>" class="btn btn-secondary mb-4"><i class="bi bi-arrow-left-circle"></i> Volver a lista de casos</a>
-
+        <div class="btn-action-group mb-4">
+             <a href="<?= base_url('SelectCasos') ?>" class="btn btn-secondary"><i class="bi bi-arrow-left-circle me-2"></i> Volver a la lista de casos</a>
+            <?php if (!empty($historial)): ?>
+                <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Agregar nuevo detalle</a>
+            <?php else: ?>
+                <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Agregar primer detalle</a>
+            <?php endif; ?>
+        </div>
+        
         <?php if (!empty($historial)): ?>
-            <table class="table table-striped table-bordered shadow-sm">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Diagnóstico</th>
-                        <th>Tratamiento</th>
-                        <th>Indicaciones</th>
-                        <th>Fecha de registro</th>
-                        <th>Estado del paciente</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($historial as $detalle): ?>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-custom">
+                    <thead class="table-dark">
                         <tr>
-                            <td><?= htmlspecialchars($detalle->diagnostico) ?></td>
-                            <td><?= htmlspecialchars($detalle->tratamiento) ?></td>
-                            <td><?= htmlspecialchars($detalle->indicaciones) ?></td>
-                            <td><?= htmlspecialchars($detalle->fecha_del_registro) ?></td>
-                            <td><?= htmlspecialchars($detalle->estado) ?></td>
+                            <th>Diagnóstico</th>
+                            <th>Tratamiento</th>
+                            <th>Indicaciones</th>
+                            <th>Fecha de registro</th>
+                            <th>Estado del paciente</th>
                         </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-
-            <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary mt-4"><i class="bi bi-plus-circle"></i> Agregar nuevo detalle</a>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($historial as $detalle): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($detalle->diagnostico) ?></td>
+                                <td><?= htmlspecialchars($detalle->tratamiento) ?></td>
+                                <td><?= htmlspecialchars($detalle->indicaciones) ?></td>
+                                <td><?= htmlspecialchars($detalle->fecha_del_registro) ?></td>
+                                <td><?= htmlspecialchars($detalle->estado) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
         <?php else: ?>
-            <p class="fs-5 text-muted">No hay registros en el historial clínico para este paciente.</p>
-            <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Agregar primer detalle</a>
+            <div class="alert alert-info text-center mt-5" role="alert">
+                <i class="bi bi-info-circle-fill me-2"></i> No hay registros en el historial clínico para este paciente.
+            </div>
         <?php endif; ?>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

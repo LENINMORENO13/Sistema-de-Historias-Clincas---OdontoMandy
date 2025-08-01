@@ -1,40 +1,39 @@
-    <?= $this->include('header') ?>
-    <div class="container mt-4">
-        <h2>📊 Inicio</h2>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card text-white bg-danger mb-3">
-                    <div class="card-header">Total Casos Clínicos</div>
-                    <div class="card-body">
-                        <h3 class="card-title"><?= $totalCasos ?></h3>
+<?= $this->include('header') ?>
+<div class="container mt-2">
+    <h2 class="mb-4 text-primary"><i class="bi bi-speedometer2"></i> Panel de Inicio</h2>
+    <div class="row g-3 mb-5">
+        <div class="col-md-5">
+            <div class="card text-white bg-gradient bg-danger shadow-sm">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <div>
+                        <h6 class="card-subtitle mb-2 text-white">Total Casos Clínicos</h6>
+                        <h3 class="card-title fw-bold"><?= $totalCasos ?></h3>
                     </div>
+                    <i class="bi bi-clipboard2-pulse-fill fs-1 opacity-75"></i>
                 </div>
             </div>
         </div>
-
-        <h3>📝 Últimos Casos Clínicos</h3>
-        <table class="table table-striped">
-            <thead>
+        <!-- Aquí podrías añadir más tarjetas si quieres -->
+    <h4 class="mb-3 text-dark"><i class="bi bi-journal-medical"></i> Últimos Casos Clínicos</h4>
+    <div class="table-responsive">
+        <table class="table table-hover align-middle shadow-sm">
+            <thead class="table-primary">
                 <tr>
-                    <th>Nombre y Apellido</th>
-                    <th>Descripción</th>
-                    <th>Fecha</th>
+                    <th>🧑 Paciente</th>
+                    <th>📝 Descripción</th>
+                    <th>📅 Fecha</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($ultimosCasos as $caso): ?>
                     <tr>
-                        <td><?= $caso->paciente?></td>
-                        <td><?= $caso->motivo_consulta ?></td>
-                        <td><?= $caso->fecha_registro ?></td>
+                        <td><?= esc($caso->paciente) ?></td>
+                        <td><?= esc($caso->motivo_consulta) ?></td>
+                        <td><?= esc($caso->fecha_registro) ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <div class="text-center mt-4" style="margin-bottom: .8em;">
-            <a href="<?= base_url() ?>/" class="btn btn-danger btn-lg">Cerrar sesión</a>
-        </div>
     </div>
 
-    <?= $this->include('footer') ?>
+</div>

@@ -55,7 +55,7 @@
     $routes->get('/FormularioDetallado/(:num)', 'CCasos::mostrarFormularioDetallado/$1');
     $routes->get('/ResumenHistorial/(:num)', 'CCasos::MetodoResumenHistorial/$1');
 
-
+    
 
 
 

@@ -1,0 +1,224 @@
+INFO - 2025-07-31 04:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-31 04:09:25 --> CSRF token verified.
+CRITICAL - 2025-07-31 04:12:58 --> ErrorException: Undefined property: stdClass::$estado_civil
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 80.
+ 1 APPPATH\Views\VistaSelectCasos.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$estado_civil', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php', 80)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-31 04:17:17 --> CSRF token verified.
+INFO - 2025-07-31 04:19:42 --> CSRF token verified.
+INFO - 2025-07-31 05:44:39 --> CSRF token verified.
+INFO - 2025-07-31 05:50:04 --> CSRF token verified.
+CRITICAL - 2025-07-31 05:52:26 --> ErrorException: Undefined property: stdClass::$id_casos
+[Method: GET, Route: ActualizarCaso/40]
+in APPPATH\Views\VistaActualizarCaso.php on line 107.
+ 1 APPPATH\Views\VistaActualizarCaso.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_casos', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaActualizarCaso.php', 107)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaActualizarCaso.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarCaso', [], true)
+ 5 APPPATH\Controllers\CCasos.php(69): view('VistaActualizarCaso', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->ExtraerSelectCasoFC('40')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 05:53:53 --> ErrorException: Undefined property: stdClass::$nombres_apellidos
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 258.
+ 1 APPPATH\Views\VistaSelectCasos.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombres_apellidos', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php', 258)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 05:55:55 --> ErrorException: Undefined property: stdClass::$id_casos
+[Method: GET, Route: ActualizarCaso/40]
+in APPPATH\Views\VistaActualizarCaso.php on line 107.
+ 1 APPPATH\Views\VistaActualizarCaso.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_casos', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaActualizarCaso.php', 107)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaActualizarCaso.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaActualizarCaso', [], true)
+ 5 APPPATH\Controllers\CCasos.php(69): view('VistaActualizarCaso', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->ExtraerSelectCasoFC('40')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:04:11 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 257.
+ 1 APPPATH\Views\VistaCasosPacientes.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 257)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(196): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:05:22 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 273.
+ 1 APPPATH\Views\VistaCasosPacientes.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 273)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(196): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:06:22 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 273.
+ 1 APPPATH\Views\VistaCasosPacientes.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 273)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(196): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:07:02 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 273.
+ 1 APPPATH\Views\VistaCasosPacientes.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 273)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(196): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:08:51 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 273.
+ 1 APPPATH\Views\VistaCasosPacientes.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 273)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(196): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:08:52 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 273.
+ 1 APPPATH\Views\VistaCasosPacientes.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 273)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(196): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:09:37 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 273.
+ 1 APPPATH\Views\VistaCasosPacientes.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 273)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(196): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:10:47 --> ErrorException: Undefined variable $request
+[Method: GET, Route: CasosPacientes]
+in APPPATH\Views\VistaCasosPacientes.php on line 332.
+ 1 APPPATH\Views\VistaCasosPacientes.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $request', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php', 332)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaCasosPacientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaCasosPacientes', [], true)
+ 5 APPPATH\Controllers\CCasos.php(196): view('VistaCasosPacientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->MostrarCasosConPacientes()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:16:36 --> ErrorException: Undefined property: stdClass::$nombres_apellidos
+[Method: GET, Route: Inicio]
+in APPPATH\Views\VistaDashboard.php on line 52.
+ 1 APPPATH\Views\VistaDashboard.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombres_apellidos', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaDashboard.php', 52)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaDashboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaDashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(199): view('VistaDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MostrarDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-31 06:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-31 06:18:33 --> CSRF token verified.
+INFO - 2025-07-31 06:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-31 06:20:01 --> CSRF token verified.
+CRITICAL - 2025-07-31 06:23:27 --> ErrorException: Undefined property: stdClass::$nombres_apellidos
+[Method: GET, Route: Inicio]
+in APPPATH\Views\VistaDashboard.php on line 53.
+ 1 APPPATH\Views\VistaDashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombres_apellidos', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaDashboard.php', 53)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaDashboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaDashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(199): view('VistaDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MostrarDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-31 06:24:19 --> ErrorException: Undefined property: stdClass::$nombres_apellidos
+[Method: GET, Route: Inicio]
+in APPPATH\Views\VistaDashboard.php on line 39.
+ 1 APPPATH\Views\VistaDashboard.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombres_apellidos', 'C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaDashboard.php', 39)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaDashboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaDashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(199): view('VistaDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->MostrarDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-31 06:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-31 06:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-31 06:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-31 06:37:28 --> CSRF token verified.
