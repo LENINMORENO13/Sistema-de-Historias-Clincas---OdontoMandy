@@ -10,21 +10,29 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom, #e0eafc, #cfdef3); /* Degradado suave */
+            background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+            /* Degradado suave */
             min-height: 100vh;
-            display: flex; /* Para usar flexbox en el body */
-            flex-direction: column; /* Apila el header y el main */
+            display: flex;
+            /* Para usar flexbox en el body */
+            flex-direction: column;
+            /* Apila el header y el main */
         }
 
         header {
-            background-color: #007bff; /* Azul primario de Bootstrap */
+            background-color: #007bff;
+            /* Azul primario de Bootstrap */
             color: white;
-            padding: 1.5rem 0; /* Padding vertical, ancho completo */
+            padding: 1.5rem 0;
+            /* Padding vertical, ancho completo */
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-            margin-bottom: 30px; /* Espacio debajo del header */
-            border-radius: 0 0 15px 15px; /* Bordes redondeados inferiores */
-            width: 100%; /* Asegura que el header abarque todo el ancho */
+            margin-bottom: 30px;
+            /* Espacio debajo del header */
+            border-radius: 0 0 15px 15px;
+            /* Bordes redondeados inferiores */
+            width: 100%;
+            /* Asegura que el header abarque todo el ancho */
         }
 
         header h1 {
@@ -43,12 +51,13 @@
         }
 
         main {
-            flex-grow: 1; /* Permite que el contenido principal ocupe el espacio restante */
-            display: flex; /* Para centrar el container dentro de main */
+            flex-grow: 1;
+            /* Permite que el contenido principal ocupe el espacio restante */
+            display: flex;
+            /* Para centrar el container dentro de main */
             justify-content: center;
-            padding: 0 20px; /* Padding horizontal para el main */
-            /* Si no hay footer, es posible que no necesitemos margin-bottom para el container,
-               pero lo mantendremos en .container por si el contenido es corto y hay espacio */
+            padding: 0 20px;
+            /* Padding horizontal para el main */
         }
 
         .container {
@@ -57,8 +66,10 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            width: 100%; /* Asegura que ocupe el ancho máximo permitido por max-width */
-            margin-bottom: 30px; /* Espacio al final del contenido */
+            width: 100%;
+            /* Asegura que ocupe el ancho máximo permitido por max-width */
+            margin-bottom: 30px;
+            /* Espacio al final del contenido */
         }
 
         .page-title {
@@ -69,7 +80,8 @@
             margin-bottom: 30px;
             text-align: center;
             font-size: 1.8em;
-            display: flex; /* Para el icono */
+            display: flex;
+            /* Para el icono */
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
@@ -182,7 +194,7 @@
             padding-top: 15px;
             border-top: 1px solid #eee;
         }
-        
+
         .btn {
             border-radius: 0.5rem;
             font-weight: 600;
@@ -195,6 +207,7 @@
             border-color: #ffc107;
             color: #212529;
         }
+
         .btn-warning:hover {
             background-color: #e0a800;
             border-color: #d39e00;
@@ -205,6 +218,7 @@
             background-color: #007bff;
             border-color: #007bff;
         }
+
         .btn-primary:hover {
             background-color: #0056b3;
             border-color: #004085;
@@ -221,6 +235,7 @@
             align-items: center;
             gap: 8px;
         }
+
         .btn-add-new:hover {
             background-color: #218838;
             border-color: #1e7e34;
@@ -236,12 +251,13 @@
             text-align: center;
             font-size: 1.1em;
             margin-bottom: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .row-cols-1.row-cols-md-2.row-cols-lg-3 .col {
             display: flex;
         }
+
         .row-cols-1.row-cols-md-2.row-cols-lg-3 .col .card {
             flex: 1;
         }
@@ -259,37 +275,47 @@
                 font-size: 1.8rem;
                 gap: 0.6rem;
             }
+
             header h1 i {
                 font-size: 2rem;
             }
+
             main {
                 padding: 0 15px;
             }
+
             .container {
                 padding: 20px;
             }
+
             .page-title {
                 font-size: 1.5em;
                 margin-bottom: 20px;
             }
+
             .header-actions {
                 justify-content: center;
                 margin-bottom: 20px;
             }
+
             .btn-add-new {
                 width: 100%;
                 text-align: center;
             }
+
             .card-title {
                 font-size: 1.1em;
             }
+
             .card-actions {
                 flex-direction: column;
                 gap: 10px;
             }
+
             .card-actions .btn {
                 width: 100%;
             }
+
             .odontograma-diente {
                 width: 25px;
                 height: 25px;
@@ -302,15 +328,19 @@
             main {
                 padding: 0 10px;
             }
+
             header {
                 padding: 1rem 0;
             }
+
             header h1 {
                 font-size: 1.5rem;
             }
+
             header h1 i {
                 font-size: 1.7rem;
             }
+
             .container {
                 padding: 10px;
             }
@@ -319,14 +349,9 @@
 </head>
 
 <body>
-    <!-- <header>
-        <h1><i class="bi bi-heart-pulse-fill"></i> Consultorio Odontológico OdontoMandy</h1>
-    </header> -->
-
     <main>
         <div class="container">
             <h2 class="page-title"><i class="bi bi-folder-fill me-2"></i> Gestión de Casos Clínicos</h2>
-
 
             <?php if (empty($VectorDatos)): ?>
                 <div class="alert alert-info-custom" role="alert">
@@ -349,32 +374,50 @@
                                     </p>
 
                                     <div class="odontograma-section">
-                                        <h6 class="mb-2" style="color: #007bff; font-weight: bold;"><i class="bi bi-grid-3x3-gap-fill me-1"></i> Odontograma Resumido:</h6>
+                                        <h6 class="mb-2" style="color: #007bff; font-weight: bold;">
+                                            <i class="bi bi-grid-3x3-gap-fill me-1"></i> Odontograma Resumido:
+                                        </h6>
                                         <div class="odontograma-box">
                                             <?php
                                             $odontograma = json_decode($caso->odontograma, true);
                                             if ($odontograma && is_array($odontograma)) {
                                                 $dientes_visibles = [];
-                                                // Priorizar dientes con estado diferente a 'ninguno' o 'normal' si existe
                                                 foreach ($odontograma as $diente => $estado) {
-                                                    if ($estado === 'rojo' || $estado === 'amarillo' || $estado === 'verde') { // Solo muestra si tienen estos estados
+                                                    $color = '';
+                                                    if (is_array($estado) && isset($estado['color'])) {
+                                                        $color = $estado['color'];
+                                                    } else {
+                                                        $color = $estado;
+                                                    }
+                                                    if ($color === 'rojo' || $color === 'amarillo' || $color === 'verde') {
                                                         $dientes_visibles[$diente] = $estado;
                                                     }
                                                 }
-                                                // Si no hay dientes con un estado diferente a 'ninguno' o 'normal', mostrar los primeros 8
                                                 if (empty($dientes_visibles) && count($odontograma) > 0) {
                                                     $dientes_visibles = array_slice($odontograma, 0, 8, true);
                                                 } elseif (empty($dientes_visibles)) {
                                                     echo '<span class="text-muted fst-italic">No hay datos de odontograma específicos.</span>';
                                                 }
-
                                                 foreach ($dientes_visibles as $diente => $estado) {
                                                     $clase_color = 'ninguno';
-                                                    if ($estado === 'rojo') $clase_color = 'rojo';
-                                                    else if ($estado === 'amarillo') $clase_color = 'amarillo';
-                                                    else if ($estado === 'verde') $clase_color = 'verde';
+                                                    $color = '';
+                                                    $nota = '';
+                                                    if (is_array($estado)) {
+                                                        $color = isset($estado['color']) ? $estado['color'] : 'ninguno';
+                                                        $nota = isset($estado['nota']) ? $estado['nota'] : '';
+                                                    } else {
+                                                        $color = $estado;
+                                                    }
+                                                    if ($color === 'rojo') $clase_color = 'rojo';
+                                                    else if ($color === 'amarillo') $clase_color = 'amarillo';
+                                                    else if ($color === 'verde') $clase_color = 'verde';
 
-                                                    echo '<div class="odontograma-diente ' . $clase_color . '" title="Diente ' . htmlspecialchars($diente) . ': ' . htmlspecialchars($estado) . '">' . htmlspecialchars($diente) . '</div>';
+                                                    $titulo = 'Diente ' . htmlspecialchars($diente) . ': ' . htmlspecialchars($color);
+                                                    if (!empty($nota)) {
+                                                        $titulo .= ' - Nota: ' . htmlspecialchars($nota);
+                                                    }
+
+                                                    echo '<div class="odontograma-diente ' . $clase_color . '" title="' . $titulo . '">' . htmlspecialchars($diente) . '</div>';
                                                 }
                                             } else {
                                                 echo '<span class="text-muted fst-italic">No hay información de odontograma disponible.</span>';
@@ -384,9 +427,6 @@
                                     </div>
 
                                     <div class="card-actions">
-                                        <a href="<?= base_url('ActualizarCaso/' . $caso->id) ?>" class="btn btn-warning btn-sm">
-                                            <i class="bi bi-pencil-square"></i> Editar
-                                        </a>
                                         <a href="<?= base_url('ResumenHistorial/' . $caso->id) ?>" class="btn btn-primary btn-sm">
                                             <i class="bi bi-file-earmark-medical-fill"></i> Ver Historial
                                         </a>
@@ -401,6 +441,18 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecciona todos los elementos que tienen el atributo 'title'
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'));
+
+            // Crea una instancia de Bootstrap.Tooltip para cada uno de ellos
+            tooltipTriggerList.forEach(function(el) {
+                new bootstrap.Tooltip(el);
+            });
+        });
+    </script>
 </body>
 
 </html>

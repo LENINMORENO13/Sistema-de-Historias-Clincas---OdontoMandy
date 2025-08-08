@@ -1,0 +1,28 @@
+INFO - 2025-08-03 03:36:51 --> CSRF token verified.
+INFO - 2025-08-03 03:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-03 03:37:00 --> CSRF token verified.
+INFO - 2025-08-03 03:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-03 03:37:04 --> TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given
+[Method: GET, Route: SelectCasos]
+in APPPATH\Views\VistaSelectCasos.php on line 377.
+ 1 APPPATH\Views\VistaSelectCasos.php(377): htmlspecialchars([...])
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\SisOdontoMandy\\app\\Views\\VistaSelectCasos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('VistaSelectCasos', [], true)
+ 5 APPPATH\Controllers\CCasos.php(57): view('VistaSelectCasos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CCasos->SelectCasosFC()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CCasos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-08-03 03:43:09 --> CSRF token verified.
+INFO - 2025-08-03 03:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-03 03:43:22 --> CSRF token verified.
+INFO - 2025-08-03 03:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-03 03:56:30 --> CSRF token verified.
+INFO - 2025-08-03 03:58:39 --> CSRF token verified.
+INFO - 2025-08-03 03:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-03 03:58:46 --> CSRF token verified.
+INFO - 2025-08-03 03:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-03 05:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

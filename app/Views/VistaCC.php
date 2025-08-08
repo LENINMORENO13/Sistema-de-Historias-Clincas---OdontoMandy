@@ -9,98 +9,132 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #e0eafc, #cfdef3); /* Colores más suaves y profesionales */
+            background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+            /* Colores más suaves y profesionales */
         }
+
         h1 {
             font-weight: bold;
-            color: #2c3e50; /* Color de título más oscuro */
+            color: #2c3e50;
+            /* Color de título más oscuro */
             padding-bottom: 15px;
-            border-bottom: 2px solid #3498db; /* Línea inferior para el título */
+            border-bottom: 2px solid #3498db;
+            /* Línea inferior para el título */
             margin-bottom: 25px;
         }
 
         .container {
             margin-top: 30px;
-            max-width: 950px; /* Un poco más ancho para mejor visualización */
-            background-color: #ffffff; /* Fondo blanco para la ficha */
+            max-width: 950px;
+            /* Un poco más ancho para mejor visualización */
+            background-color: #ffffff;
+            /* Fondo blanco para la ficha */
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* Sombra para dar profundidad */
         }
 
         .card-header {
             font-weight: bold;
-            background-color: #3498db !important; /* Azul más vibrante para los encabezados */
+            background-color: #3498db !important;
+            /* Azul más vibrante para los encabezados */
             color: white !important;
             padding: 12px 20px;
-            border-radius: 8px 8px 0 0 !important; /* Bordes redondeados superiores */
+            border-radius: 8px 8px 0 0 !important;
+            /* Bordes redondeados superiores */
             font-size: 1.1em;
         }
+
         .card-body {
             padding: 25px;
-            border: 1px solid #dcdcdc; /* Borde suave para los cuerpos de las tarjetas */
-            border-top: none; /* Eliminar el borde superior para que se una al header */
-            border-radius: 0 0 8px 8px; /* Bordes redondeados inferiores */
+            border: 1px solid #dcdcdc;
+            /* Borde suave para los cuerpos de las tarjetas */
+            border-top: none;
+            /* Eliminar el borde superior para que se una al header */
+            border-radius: 0 0 8px 8px;
+            /* Bordes redondeados inferiores */
         }
+
         .card {
-            border: none; /* Eliminar borde predeterminado de la tarjeta */
+            border: none;
+            /* Eliminar borde predeterminado de la tarjeta */
             margin-bottom: 25px;
         }
 
         .form-floating label {
-            color: #6c757d; /* Color de las etiquetas flotantes */
+            color: #6c757d;
+            /* Color de las etiquetas flotantes */
         }
+
         .form-control:focus {
-            border-color: #3498db; /* Resaltar borde en foco */
+            border-color: #3498db;
+            /* Resaltar borde en foco */
             box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
         }
 
         .diente {
-            width: 35px; /* Un poco más grande */
+            width: 35px;
+            /* Un poco más grande */
             height: 35px;
-            border: 1px solid #a0a0a0; /* Borde más suave */
-            border-radius: 8px; /* Bordes más redondeados */
+            border: 1px solid #a0a0a0;
+            /* Borde más suave */
+            border-radius: 8px;
+            /* Bordes más redondeados */
             text-align: center;
-            font-size: 13px; /* Tamaño de fuente un poco más grande */
-            line-height: 35px; /* Ajustar line-height */
+            font-size: 13px;
+            /* Tamaño de fuente un poco más grande */
+            line-height: 35px;
+            /* Ajustar line-height */
             display: inline-block;
-            margin: 3px; /* Más espacio entre dientes */
+            margin: 3px;
+            /* Más espacio entre dientes */
             cursor: pointer;
-            background-color: #f0f0f0; /* Fondo más claro */
-            color: #444; /* Color de texto más oscuro */
+            background-color: #f0f0f0;
+            /* Fondo más claro */
+            color: #444;
+            /* Color de texto más oscuro */
             transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-            box-shadow: 1px 1px 3px rgba(0,0,0,0.05); /* Sombra sutil */
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+            /* Sombra sutil */
         }
 
         .diente:hover {
-            transform: scale(1.08); /* Ligeramente más grande al pasar el ratón */
-            border: 2px solid #3498db; /* Borde de resalte */
-            box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+            transform: scale(1.08);
+            /* Ligeramente más grande al pasar el ratón */
+            border: 2px solid #3498db;
+            /* Borde de resalte */
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
         }
 
         .diente[style*="background-color: red"] {
-            background-color: #e74c3c !important; /* Rojo más fuerte */
+            background-color: #e74c3c !important;
+            /* Rojo más fuerte */
             color: white;
             border-color: #c0392b;
         }
 
         .diente[style*="background-color: blue"] {
-            background-color: #2980b9 !important; /* Azul más fuerte */
+            background-color: #2980b9 !important;
+            /* Azul más fuerte */
             color: white;
             border-color: #2471a3;
         }
 
         .fila {
-            text-align: center; /* Centrar las filas de dientes */
+            text-align: center;
+            /* Centrar las filas de dientes */
             padding: 5px 0;
-            background-color: #f8f9fa; /* Fondo ligero para cada fila */
+            background-color: #f8f9fa;
+            /* Fondo ligero para cada fila */
             border-radius: 5px;
             margin-bottom: 10px !important;
         }
 
         #modal-confirm {
             display: none;
-            background: rgba(0, 0, 0, 0.6); /* Fondo más oscuro para el modal */
+            background: rgba(0, 0, 0, 0.6);
+            /* Fondo más oscuro para el modal */
             position: fixed;
             top: 0;
             left: 0;
@@ -120,28 +154,34 @@
             padding: 30px;
             border-radius: 10px;
             font-weight: bold;
-            color: #28a745; /* Verde de éxito */
+            color: #28a745;
+            /* Verde de éxito */
             font-size: 1.2em;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
+
         #modal-confirm button {
             margin-top: 15px;
             padding: 10px 25px;
             border-radius: 5px;
             font-size: 1em;
         }
+
         .btn-primary {
-            background-color: #28a745; /* Botón de guardar en verde */
+            background-color: #28a745;
+            /* Botón de guardar en verde */
             border-color: #28a745;
             font-size: 1.2em;
             padding: 12px 25px;
             transition: background-color 0.2s ease, border-color 0.2s ease;
         }
+
         .btn-primary:hover {
             background-color: #218838;
             border-color: #1e7e34;
         }
+
         .btn-secondary {
             background-color: #6c757d;
             border-color: #6c757d;
@@ -149,10 +189,12 @@
             padding: 10px 20px;
             transition: background-color 0.2s ease, border-color 0.2s ease;
         }
+
         .btn-secondary:hover {
             background-color: #5a6268;
             border-color: #545b62;
         }
+
         .sticky-bottom {
             position: sticky;
             bottom: 0;
@@ -160,7 +202,8 @@
             padding: 15px 0;
             border-top: 1px solid #eee;
             z-index: 100;
-            text-align: center; /* Centrar el botón */
+            text-align: center;
+            /* Centrar el botón */
         }
     </style>
 </head>
@@ -255,8 +298,8 @@
                     <label class="form-label fw-bold">Seleccione un color para marcar la condición del diente:</label>
                     <select id="colorSelector" class="form-select mb-3" style="max-width: 250px;">
                         <option value="ninguno" selected>Sin Marca (Valor Predeterminado)</option>
-                        <option value="rojo">Problema (Rojo)</option>
-                        <option value="azul">Tratado (Azul)</option>
+                        <option value="rojo">Extracciones (Rojo)</option>
+                        <option value="azul">Restauraciones(Azul)</option>
                     </select>
                     <div id="odontograma" class="mt-4">
                         <h5 class="text-center mb-3">Dentición Permanente</h5>
@@ -312,20 +355,35 @@
             diente.className = "diente";
             diente.textContent = numero;
             diente.dataset.num = numero;
-            dientesEstado[numero] = "ninguno"; // Estado inicial
+            dientesEstado[numero] = {
+                color: "ninguno",
+                nota: ""
+            }; // Estado inicial
 
             diente.addEventListener("click", () => {
                 const color = colorSelector.value;
-                dientesEstado[numero] = color;
 
-                // Reiniciar estilos
+                dientesEstado[numero].color = color;
+
+                // Reset estilos
                 diente.style.backgroundColor = "#f0f0f0";
                 diente.style.color = "#444";
 
                 if (color === "rojo") {
                     diente.style.backgroundColor = "red";
+                    diente.style.color = "white";
                 } else if (color === "azul") {
                     diente.style.backgroundColor = "blue";
+                    diente.style.color = "white";
+                }
+
+                // Solo pedir nota si color no es ninguno
+                if (color !== "ninguno") {
+                    const notaAnterior = dientesEstado[numero].nota || "";
+                    const nota = prompt(`Ingrese nota para el diente ${numero}:`, notaAnterior);
+                    dientesEstado[numero].nota = nota ? nota.trim() : "";
+                } else {
+                    dientesEstado[numero].nota = "";
                 }
             });
 
@@ -333,19 +391,10 @@
         }
 
         document.getElementById("form-caso-clinico").addEventListener("submit", function(e) {
-            // e.preventDefault(); // Descomentar para evitar el envío real del formulario durante pruebas
+            // e.preventDefault(); // Descomentar para pruebas
             document.getElementById("odontograma_estado").value = JSON.stringify(dientesEstado);
-            mostrarModalConfirmacion();
+            // Aquí puedes mostrar el modal o dejar que el backend procese normalmente
         });
-
-        const modal = document.getElementById("modal-confirm");
-        document.getElementById("btn-cerrar-modal").addEventListener("click", () => {
-            modal.classList.remove("show");
-        });
-
-        function mostrarModalConfirmacion() {
-            modal.classList.add("show");
-        }
     </script>
 </body>
 
