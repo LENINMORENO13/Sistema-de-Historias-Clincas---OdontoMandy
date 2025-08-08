@@ -150,6 +150,8 @@ class ModeloGeneral extends Model
             $v11 = $ParametrosCasos['antecedente_familiar_2'];
             $v12 = $ParametrosCasos['odontograma'];
 
+
+
             $query = $this->db->query(
                 "CALL SP_INSERT_CASO_CLINICO(?,?,?,?,?,?,?,?,?,?,?,?)",
                 [$v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9, $v10, $v11, $v12]

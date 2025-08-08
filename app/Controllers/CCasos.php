@@ -18,6 +18,14 @@ class CCasos extends BaseController
     public function MetodoInsertarCaso()
     {
         $instancia = new ModeloGeneral();
+        $odontograma = $this->request->getPost('odontograma');
+
+        if (is_array($odontograma)) {
+            $odontograma_json = json_encode($odontograma);
+        } else {
+            $odontograma_json = $odontograma ?? '{}';
+        }
+
         $datos = [
             'nombres_apellidos' => $this->request->getPost('nombres_apellidos'),
             'direccion' => $this->request->getPost('direccion'),
@@ -30,19 +38,19 @@ class CCasos extends BaseController
             'antecedente_personal_2' => $this->request->getPost('antecedente_personal_2'),
             'antecedente_familiar_1' => $this->request->getPost('antecedente_familiar_1'),
             'antecedente_familiar_2' => $this->request->getPost('antecedente_familiar_2'),
-            'odontograma' => $this->request->getPost('odontograma'),
-
+            'odontograma' => $odontograma_json, // aquí uso la variable con JSON
         ];
+
         $nuevo_id = $instancia->MetodoModeloInsertCaso($datos);
-        //Compruebo la ejecucion del metodo del modelo
+
         if ($nuevo_id) {
-            // Redirige al formulario de caso detallado con el ID nuevo
             return redirect()->to(base_url('/MostrarCD/' . $nuevo_id));
         } else {
             echo ('Error al ingresar datos');
             return;
         }
     }
+
 
     //Metodo para seleccionar todos los casos clinicos
     public function SelectCasosFC()
