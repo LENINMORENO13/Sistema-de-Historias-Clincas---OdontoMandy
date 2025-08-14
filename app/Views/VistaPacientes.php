@@ -11,8 +11,6 @@
 
 
 <body>
-   
-
 
     <div class="container">
         <form action="<?php base_url() ?>Paciente" method="post">
