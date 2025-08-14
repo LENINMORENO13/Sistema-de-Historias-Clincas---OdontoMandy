@@ -182,9 +182,7 @@
 
             .azul {
                 background-color: #0056b3;
-                /* Azul más oscuro */
                 border-color: #004085;
-                /* Bordes más oscuros para dar contraste */
             }
 
 
