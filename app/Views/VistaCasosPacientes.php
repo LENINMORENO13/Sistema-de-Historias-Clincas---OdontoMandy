@@ -312,7 +312,7 @@
                                 <td class="text-nowrap"><?= esc($caso->nombres_apellidos) ?></td>
                                 <td><?= esc($caso->direccion) ?></td>
                                 <td class="text-nowrap"><?= esc($caso->fecha_nacimiento) ?></td>
-                                <td><?= esc($caso->edad) ?></td>
+                                <td><?= calcularEdad($caso->fecha_nacimiento) ?></td>
                                 <td class="text-nowrap"><?= esc($caso->telefono) ?></td>
                                 <td class="text-nowrap"><?= esc($caso->cedula) ?></td>
                                 <td><?= esc($caso->motivo_consulta) ?></td>
@@ -339,7 +339,7 @@
                         <div class="card-text-item"><strong>Cédula:</strong> <?= esc($caso->cedula) ?></div>
                         <div class="card-text-item"><strong>Dirección:</strong> <?= esc($caso->direccion) ?></div>
                         <div class="card-text-item"><strong>Fecha de Nacimiento:</strong> <?= esc($caso->fecha_nacimiento) ?></div>
-                        <div class="card-text-item"><strong>Edad:</strong> <?= esc($caso->edad) ?></div>
+                        <div class="card-text-item"><strong>Edad:</strong> <?= calcularEdad($caso->fecha_nacimiento) ?></div>
                         <div class="card-text-item"><strong>Teléfono:</strong> <?= esc($caso->telefono) ?></div>
                         <div class="card-text-item"><strong>Motivo de Consulta:</strong> <?= esc($caso->motivo_consulta) ?></div>
                         <div class="card-text-item"><strong>Ant. Personal 1:</strong> <?= esc($caso->antecedente_personal_1) ?></div>

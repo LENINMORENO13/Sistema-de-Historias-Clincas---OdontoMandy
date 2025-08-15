@@ -201,10 +201,6 @@
                             <input type="date" name="fecha_nacimiento" class="form-control" id="fecha_nacimiento" placeholder="Fecha de Nacimiento" required>
                             <label for="fecha_nacimiento">Fecha de Nacimiento</label>
                         </div>
-                        <div class="col-md-6 form-floating">
-                            <input type="number" name="edad" class="form-control" id="edad" placeholder="Edad del Paciente" required>
-                            <label for="edad">Edad</label>
-                        </div>
                     </div>
                 </div>
             </div>

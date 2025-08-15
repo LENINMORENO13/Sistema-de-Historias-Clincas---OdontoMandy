@@ -30,7 +30,6 @@ class CCasos extends BaseController
             'nombres_apellidos' => $this->request->getPost('nombres_apellidos'),
             'direccion' => $this->request->getPost('direccion'),
             'fecha_nacimiento' => $this->request->getPost('fecha_nacimiento'),
-            'edad' => $this->request->getPost('edad'),
             'telefono' => $this->request->getPost('telefono'),
             'cedula' => $this->request->getPost('cedula'),
             'motivo_consulta' => $this->request->getPost('motivo_consulta'),

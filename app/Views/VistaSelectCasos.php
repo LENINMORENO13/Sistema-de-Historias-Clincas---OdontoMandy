@@ -359,7 +359,7 @@
                                     <div class="card case-card">
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                Paciente: <?= htmlspecialchars($caso->paciente) ?> (<?= htmlspecialchars($caso->edad) ?> años)
+                                                Paciente: <?= htmlspecialchars($caso->paciente) ?> (<?= calcularEdad($caso->fecha_nacimiento) ?> años)
                                             </h5>
                                             <p class="card-text">
                                                 <strong>Cédula:</strong> <?= htmlspecialchars($caso->cedula) ?><br />
