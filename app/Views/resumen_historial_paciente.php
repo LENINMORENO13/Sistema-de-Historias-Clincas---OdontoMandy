@@ -74,7 +74,7 @@
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
-        
+
         .table-custom thead {
             background-color: var(--primary-color);
             color: white;
@@ -85,17 +85,18 @@
             background-color: #e9f5ff;
         }
 
-        .table-custom th, .table-custom td {
+        .table-custom th,
+        .table-custom td {
             padding: 1rem;
         }
-        
+
         /* Estilos para los botones de acción */
         .btn-action-group {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
@@ -126,12 +127,15 @@
             .container {
                 padding: 1rem;
             }
+
             .header-app h1 {
                 font-size: 1.5rem;
             }
+
             .header-app h1 i {
                 font-size: 1.8rem;
             }
+
             .btn-action-group {
                 flex-direction: column;
                 gap: 1rem;
@@ -142,6 +146,12 @@
 </head>
 
 <body>
+    <?php if (session()->getFlashdata('mensaje_exito')): ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('mensaje_exito'); ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
     <header class="header-app">
         <h1><i class="bi bi-tooth"></i> Consultorio Odontológico OdontoMandy</h1>
     </header>
@@ -153,14 +163,14 @@
         </div>
 
         <div class="btn-action-group mb-4">
-             <a href="<?= base_url('SelectCasos') ?>" class="btn btn-secondary"><i class="bi bi-arrow-left-circle me-2"></i> Volver a la lista de casos</a>
+            <a href="<?= base_url('SelectCasos') ?>" class="btn btn-secondary"><i class="bi bi-arrow-left-circle me-2"></i> Volver a la lista de casos</a>
             <?php if (!empty($historial)): ?>
                 <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Agregar nuevo detalle</a>
             <?php else: ?>
                 <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Agregar primer detalle</a>
             <?php endif; ?>
         </div>
-        
+
         <?php if (!empty($historial)): ?>
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-custom">
@@ -192,7 +202,16 @@
             </div>
         <?php endif; ?>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var alerta = document.querySelector('.alert');
+
+        if (alerta) {
+            setTimeout(function() {
+                alerta.style.display = 'none';
+            }, 2000);
+        }
+    </script>
 </body>
+
 </html>

@@ -12,45 +12,33 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            /* Consistencia con la primera parte */
             background: linear-gradient(to bottom, #e0eafc, #cfdef3);
-            /* Consistencia con la primera parte */
             margin: 0;
             padding: 20px;
-            /* Padding general para no pegar al borde */
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            /* Alinear al inicio del contenedor, no al centro vertical */
             min-height: 100vh;
         }
 
         .container {
             max-width: 700px;
-            /* Un poco más ancho para albergar los card */
             background-color: #ffffff;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            /* Sombra para dar profundidad */
             margin-top: 30px;
-            /* Separación de la parte superior */
             margin-bottom: 30px;
-            /* Separación de la parte inferior */
         }
 
         h1 {
             font-weight: bold;
             color: #2c3e50;
-            /* Color de título más oscuro */
             padding-bottom: 15px;
             border-bottom: 2px solid #3498db;
-            /* Línea inferior para el título */
             margin-bottom: 30px;
-            /* Mayor margen para el título principal */
             text-align: center;
             font-size: 2em;
-            /* Tamaño de título más grande */
         }
 
         .card {
@@ -62,84 +50,65 @@
         .card-header {
             font-weight: bold;
             background-color: #3498db !important;
-            /* Azul más vibrante para los encabezados */
             color: white !important;
             padding: 12px 20px;
             border-radius: 8px 8px 0 0 !important;
-            /* Bordes redondeados superiores */
             font-size: 1.1em;
         }
 
         .card-body {
             padding: 25px;
             border: 1px solid #dcdcdc;
-            /* Borde suave para los cuerpos de las tarjetas */
             border-top: none;
-            /* Eliminar el borde superior para que se una al header */
             border-radius: 0 0 8px 8px;
-            /* Bordes redondeados inferiores */
         }
 
         /* Estilos para los campos de formulario */
         .form-label {
-            /* Usamos form-label de Bootstrap para consistencia */
             font-weight: 600;
             color: #495057;
-            /* Un gris oscuro profesional */
             margin-bottom: .5rem;
         }
 
         .form-control,
         .form-select {
             border: 1px solid #ced4da;
-            /* Borde más suave por defecto */
             border-radius: .4rem;
-            /* Bordes ligeramente más redondeados */
             padding: .75rem 1rem;
             font-size: 1rem;
             transition: all 0.2s ease-in-out;
             box-shadow: none;
-            /* Eliminar shadow por defecto */
         }
 
         .form-control:focus,
         .form-select:focus {
             border-color: #3498db;
-            /* Resaltar borde en foco con el color primario */
             box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
-            /* Sombra de foco con el color primario */
             outline: none;
         }
 
         .form-control[readonly] {
             background-color: #e9ecef;
-            /* Fondo diferente para campos de solo lectura */
             cursor: not-allowed;
             border-color: #ced4da;
         }
 
         /* Botones */
         .btn-primary {
-            background-color: #28a745;
-            /* Botón de guardar en verde (consistencia) */
-            border-color: #28a745;
+            background-color: #2980b9;
+            border-color: #2980b9;
             font-size: 1.1em;
-            /* Un poco más pequeño que el de la primera parte si es necesario, o igual */
             padding: 12px 25px;
             transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
             width: 100%;
-            /* Ocupa todo el ancho */
             border-radius: 8px;
-            /* Bordes más redondeados */
             margin-top: 20px;
-            /* Espacio antes del botón */
         }
 
         .btn-primary:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
+            background-color: #5fa5eaff;
+            border-color: #4961ebff;
             transform: translateY(-2px);
-            /* Pequeño efecto de levantamiento */
         }
 
         .btn-secondary {
@@ -156,12 +125,10 @@
             border-color: #545b62;
         }
 
-        /* Alineación del icono en el botón */
         .btn-primary i {
             margin-right: 8px;
         }
 
-        /* Estilos responsivos */
         @media (max-width: 768px) {
             .container {
                 margin: 20px auto;
@@ -176,20 +143,6 @@
 </head>
 
 <body>
-    <?php if (session()->getFlashdata('mensaje_exito')): ?>
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <?= session()->getFlashdata('mensaje_exito'); ?>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    <?php endif; ?>
-
-    <?php if (session()->getFlashdata('mensaje_error')): ?>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <?= session()->getFlashdata('mensaje_error'); ?>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    <?php endif; ?>
-
     <div class="container">
         <h1><i class="bi bi-journal-medical"></i> Continuación del Registro Clínico</h1>
         <form action="<?= base_url('/InsertarCD') ?>" method="post" id="form_caso_detallado">

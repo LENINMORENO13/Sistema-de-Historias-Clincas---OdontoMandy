@@ -156,7 +156,7 @@ class Home extends BaseController
                 session()->setFlashdata('error', 'Contraseña incorrecta.');
             }
         }
-        return view('headerLogin'); // Esta es la vista de login donde se mostrará el error
+        return redirect()->to(base_url('/')); // Esta es la vista de login donde se mostrará el error
     }
 
 

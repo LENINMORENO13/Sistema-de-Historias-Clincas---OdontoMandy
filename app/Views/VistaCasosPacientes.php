@@ -8,313 +8,244 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        /* Estilos generales del cuerpo para asegurar el layout full-height */
+        /* Estilos generales del cuerpo */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(to bottom, #e0eafc, #cfdef3);
-            /* Degradado suave para un fondo moderno */
             color: #333;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             margin: 0;
-            /* Eliminar margen predeterminado del body */
         }
 
-        /* Estilos para el contenedor principal, similar al dashboard */
+        /* Contenedor principal */
         .container {
             max-width: 1200px;
-            /* Ancho máximo para el contenido */
             background-color: #ffffff;
-            /* Fondo blanco para el contenedor */
             padding: 40px;
-            /* Más padding interno */
             border-radius: 15px;
-            /* Bordes redondeados */
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            /* Sombra más suave y extendida */
-            width: 0%;
-            /*
-             * CAMBIO: Hecho a 0 para corregir el width de la página
-             */
             margin-top: 0;
-            /* CAMBIO: Eliminar el margen superior que causaba la línea blanca */
             margin-bottom: 50px;
-            /* Espacio inferior para el contenedor */
             flex-grow: 1;
-            /* Permite que el contenedor crezca y empuje el footer hacia abajo */
         }
 
-        /* Títulos */
         h2,
         h3 {
             color: #0056b3;
-            /* Azul consistente con el header y dashboard */
             font-weight: bold;
             text-align: center;
-            /* Centrar títulos */
             margin-bottom: 3rem;
-            /* Más espacio debajo de los títulos principales */
         }
 
         h3 {
             margin-top: 3rem;
-            /* Margen superior para el título de resultados */
             margin-bottom: 1.5rem;
-            /* Margen inferior para el título de resultados */
             font-size: 1.8rem;
-            /* Tamaño de fuente para el título de resultados */
             text-align: left;
-            /* Alinear el título de resultados a la izquierda */
         }
 
-        /* Labels */
         label {
             font-weight: 600;
             color: #0056b3;
-            /* Color azul para labels */
             margin-bottom: .5rem;
-            /* Pequeño margen inferior */
         }
 
         /* Campos de entrada */
         input.form-control {
             border: 1px solid #007bff;
-            /* Borde azul para inputs */
             border-radius: 8px;
-            /* Bordes más redondeados */
             background-color: #ffffff;
             padding: 0.75rem 1rem;
-            /* Más padding para los inputs */
             box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
-            /* Sombra interna sutil */
             transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
         input.form-control:focus {
             border-color: #0056b3;
             box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
-            /* Sombra de enfoque de Bootstrap */
             outline: none;
         }
 
         /* Botón de Buscar */
         .btn-primary {
             background-color: #007bff;
-            /* Azul primario */
             border-color: #007bff;
             border-radius: 8px;
-            /* Bordes redondeados */
             padding: 10px 30px;
-            /* Padding más generoso */
             font-weight: bold;
             font-size: 1.1rem;
-            /* Tamaño de fuente ligeramente mayor */
             transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
             display: inline-flex;
-            /* Para alinear el icono y el texto */
             align-items: center;
             gap: 8px;
-            /* Espacio entre icono y texto */
         }
 
         .btn-primary:hover {
             background-color: #0056b3;
-            /* Azul más oscuro al pasar el mouse */
             border-color: #0056b3;
             transform: translateY(-2px);
-            /* Pequeño efecto de elevación */
             box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-            /* Sombra al pasar el mouse */
         }
 
-        /* Estilos de la tabla */
+
         .table-responsive {
             border-radius: 12px;
-            /* Bordes redondeados para el contenedor de la tabla */
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            /* Sombra para la tabla */
         }
 
         .table {
             border-collapse: separate;
-            /* Necesario para que border-radius funcione en las celdas */
             border-spacing: 0;
             margin-bottom: 0;
-            /* Eliminar margen inferior de la tabla */
         }
 
         .table-bordered {
             border: 1px solid #dee2e6;
-            /* Borde más suave */
         }
 
         .table thead {
             background-color: #007bff;
-            /* Fondo del encabezado de la tabla azul primario */
             color: white;
         }
 
         .table th {
             padding: 1rem 1.25rem;
-            /* Más padding en los encabezados */
             text-align: left;
             font-weight: 700;
             border-bottom: 2px solid #0056b3;
-            /* Borde inferior más oscuro */
             border-color: #0056b3 !important;
-            /* Asegurar el color del borde */
         }
 
         .table td {
             padding: 0.85rem 1.25rem;
-            /* Más padding en las celdas de datos */
             text-align: left;
             vertical-align: middle;
-            /* Centrar verticalmente el contenido de la celda */
             border-color: #e9ecef;
-            /* Color de borde más claro para las celdas */
         }
 
-        /* Filas alternas (efecto cebra) */
         .table tbody tr:nth-of-type(odd) {
             background-color: #ffffff;
         }
 
         .table tbody tr:nth-of-type(even) {
             background-color: #f8f9fa;
-            /* Gris muy suave para filas pares */
         }
 
-        /* Hover en filas */
         .table-hover tbody tr:hover {
             background-color: #e2f2ff;
-            /* Resaltado azul claro al pasar el mouse */
             cursor: pointer;
         }
 
-        /* Alerta de advertencia */
         .alert-warning {
             border: 1px solid #ffda6a;
-            /* Borde más suave para la alerta */
             background-color: #fff3cd;
-            /* Fondo más suave */
             color: #664d03;
-            /* Texto más suave */
             border-radius: 8px;
             padding: 1rem 1.5rem;
             font-weight: 600;
             box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
-            /* Sombra sutil */
         }
 
-        /* Sección del formulario */
         .form-section {
             background-color: #ffffff;
             padding: 30px;
-            /* Más padding */
             border-radius: 12px;
-            /* Bordes más redondeados */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            /* Sombra más pronunciada */
             margin-top: 2rem;
-            /* Espacio superior para la sección del formulario */
             margin-bottom: 3rem;
-            /* Espacio inferior para la sección del formulario */
+        }
+
+        .card-list {
+            display: none;
+        }
+        
+        .patient-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #007bff; 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .patient-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #0056b3;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .card-text-item {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .card-text-item strong {
+            color: #007bff;
         }
 
         /* Media Queries para Responsividad */
-        @media (max-width: 992px) {
-            .container {
-                padding: 30px;
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            h3 {
-                font-size: 1.6rem;
-            }
-
-            .form-section {
-                padding: 25px;
-                margin-top: 1.5rem;
-                margin-bottom: 2rem;
-            }
-
-            .btn-primary {
-                padding: 8px 20px;
-                font-size: 1rem;
-            }
-
-            .table th,
-            .table td {
-                padding: 0.75rem 1rem;
-                font-size: 0.9em;
+        @media (min-width: 769px) {
+            .card-list {
+                display: none;
             }
         }
-
         @media (max-width: 768px) {
+            /* Ocultar la tabla en pantallas pequeñas */
+            .table-responsive {
+                display: none;
+            }
+            /* Mostrar la vista de tarjetas en pantallas pequeñas */
+            .card-list {
+                display: block;
+            }
             .container {
                 padding: 20px;
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
-
             h2 {
                 font-size: 1.8rem;
                 margin-bottom: 2rem;
             }
-
             h3 {
                 font-size: 1.5rem;
                 margin-top: 2rem;
                 margin-bottom: 1rem;
             }
-
             .form-section {
                 padding: 20px;
                 margin-top: 1rem;
                 margin-bottom: 1.5rem;
             }
-
             .btn-primary {
                 width: 100%;
                 justify-content: center;
             }
-
-            /* Botón ocupa todo el ancho */
-            .table-responsive {
-                border-radius: 8px;
-            }
-
-            .table th,
-            .table td {
-                padding: 0.6rem 0.8rem;
-                font-size: 0.8em;
-            }
         }
-
+        
         @media (max-width: 576px) {
             .container {
                 padding: 15px;
             }
-
             h2 {
                 font-size: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-
             h3 {
                 font-size: 1.3rem;
                 margin-top: 1.5rem;
                 margin-bottom: 0.8rem;
             }
-
             .form-section {
                 padding: 15px;
             }
@@ -355,6 +286,7 @@
 
         <?php if (!empty($casosPacientes)): ?>
             <h3 class="mt-5"><i class="bi bi-clipboard2-data-fill me-2"></i>Resultados de la Búsqueda</h3>
+
             <div class="table-responsive mt-3">
                 <table class="table table-hover table-bordered">
                     <thead>
@@ -398,6 +330,30 @@
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="card-list mt-3">
+                <?php foreach ($casosPacientes as $caso): ?>
+                    <div class="patient-card">
+                        <div class="card-title"><i class="bi bi-person-fill me-2"></i><?= esc($caso->nombres_apellidos) ?></div>
+                        <div class="card-text-item"><strong>Cédula:</strong> <?= esc($caso->cedula) ?></div>
+                        <div class="card-text-item"><strong>Dirección:</strong> <?= esc($caso->direccion) ?></div>
+                        <div class="card-text-item"><strong>Fecha de Nacimiento:</strong> <?= esc($caso->fecha_nacimiento) ?></div>
+                        <div class="card-text-item"><strong>Edad:</strong> <?= esc($caso->edad) ?></div>
+                        <div class="card-text-item"><strong>Teléfono:</strong> <?= esc($caso->telefono) ?></div>
+                        <div class="card-text-item"><strong>Motivo de Consulta:</strong> <?= esc($caso->motivo_consulta) ?></div>
+                        <div class="card-text-item"><strong>Ant. Personal 1:</strong> <?= esc($caso->antecedente_personal_1) ?></div>
+                        <div class="card-text-item"><strong>Ant. Personal 2:</strong> <?= esc($caso->antecedente_personal_2) ?></div>
+                        <div class="card-text-item"><strong>Ant. Familiar 1:</strong> <?= esc($caso->antecedente_familiar_1) ?></div>
+                        <div class="card-text-item"><strong>Ant. Familiar 2:</strong> <?= esc($caso->antecedente_familiar_2) ?></div>
+                        <div class="card-text-item"><strong>Fecha de Registro:</strong> <?= esc($caso->fecha_registro) ?></div>
+                        <div class="text-end mt-3">
+                            <a href="<?= site_url('ResumenHistorial/' . $caso->id) ?>" class="btn btn-sm btn-outline-info" title="Ver Detalles del Caso">
+                                <i class="bi bi-eye"></i> Ver Historial
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         <?php else: ?>
             <?php if (!isset($mensaje_error) && (isset($_GET['buscar_caso_nombre']) || isset($_GET['buscar_caso_cedula']) || isset($_GET['buscar_caso_fecha']))): ?>

@@ -11,7 +11,7 @@
         /* Estilos generales del cuerpo para asegurar el layout full-height */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa; /* Un fondo muy suave para el cuerpo */
+            background-color: #f8f9fa;
             color: #333;
             min-height: 100vh;
             display: flex;
@@ -20,29 +20,29 @@
 
         /* Navbar personalizado */
         .navbar {
-            background-color: #007bff !important; /* Azul primario de Bootstrap, más vibrante */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto flotante */
-            padding: 0.8rem 1.5rem; /* Padding más equilibrado */
+            background-color: #007bff !important; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+            padding: 0.8rem 1.5rem; 
         }
 
         .navbar-brand {
-            display: flex; /* Para alinear el logo y el texto */
+            display: flex; 
             align-items: center;
-            font-weight: 600; /* Texto de marca más grueso */
-            font-size: 1.35rem; /* Tamaño de fuente ligeramente mayor */
-            color: #ffffff !important; /* Asegurar color blanco para la marca */
+            font-weight: 600; 
+            font-size: 1.35rem; 
+            color: #ffffff !important; 
             transition: color 0.3s ease;
         }
 
         .navbar-brand:hover {
-            color: #e0f0ff !important; /* Tono más claro al pasar el mouse */
+            color: #e0f0ff !important; 
         }
 
         .navbar-brand img {
-            height: 40px; /* Tamaño del logo */
-            margin-right: 12px; /* Espacio entre el logo y el texto */
-            border-radius: 50%; /* Si el logo es cuadrado, lo hace circular */
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Sombra sutil alrededor del logo */
+            height: 40px; 
+            margin-right: 12px; 
+            border-radius: 50%; 
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); 
         }
 
         .navbar-toggler {
@@ -55,18 +55,18 @@
 
         /* Estilos para los elementos de navegación */
         .navbar-nav .nav-item {
-            margin-left: 15px; /* Espacio entre elementos del menú */
+            margin-left: 15px; 
         }
 
         .navbar-nav .nav-link {
-            color: #ffffff !important; /* Texto del enlace blanco */
-            font-weight: 500; /* Fuente semibold */
-            padding: 0.75rem 1rem; /* Padding más generoso para los enlaces */
-            border-radius: 8px; /* Bordes redondeados para los enlaces */
+            color: #ffffff !important; 
+            font-weight: 500; 
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
             transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-            display: flex; /* Para alinear icono y texto */
+            display: flex; 
             align-items: center;
-            gap: 8px; /* Espacio entre icono y texto */
+            gap: 8px; 
         }
 
         .navbar-nav .nav-link:hover,
@@ -77,7 +77,7 @@
         }
 
         .navbar-nav .nav-link i {
-            font-size: 1.1em; /* Tamaño de los iconos */
+            font-size: 1.1em; 
         }
 
         /* Contenido principal */
@@ -100,14 +100,14 @@
             }
             .navbar-nav .nav-item {
                 margin-left: 0; /* Eliminar margen horizontal en móviles */
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador para cada elemento */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
             }
             .navbar-nav .nav-link {
-                padding: 0.75rem 1.5rem; /* Más padding para los enlaces en móvil */
-                justify-content: flex-start; /* Alinear a la izquierda en móvil */
+                padding: 0.75rem 1.5rem; 
+                justify-content: flex-start; 
             }
             .navbar-collapse {
-                background-color: #0069d9; /* Fondo azul más oscuro para el menú desplegable en móvil */
+                background-color: #0069d9; 
                 border-radius: 0 0 10px 10px;
                 margin-top: 10px;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);

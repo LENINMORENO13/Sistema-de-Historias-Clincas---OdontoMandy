@@ -1,0 +1,49 @@
+# Archivos y carpetas de PHP y gestores de dependencias
+/vendor/
+/node_modules/
+/composer.lock
+/package-lock.json
+
+# Archivos de configuración sensibles (credenciales, etc.)
+# Se recomienda tener un archivo .env.example en su lugar.
+.env
+
+
+# Archivos de caché, logs y temporales generados por la aplicación
+/cache/
+/log/
+/temp/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos generados por editores e IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de pruebas
+phpunit.xml
+phpunit.xml.dist
+
+# Archivos de bases de datos
+*.sql
+*.sqlite
+*.db
+
+# Archivos de imágenes temporales o de backup
+*.png~
+
+# Archivos de sesiones (si se guardan en el sistema de archivos)
+/sessions/
+
+# Archivos de usuario o específicos del entorno
+*.user
+

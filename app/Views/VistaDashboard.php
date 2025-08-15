@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <!-- Aquí podrías añadir más tarjetas si quieres -->
+        <!-- Aquí se puede añadir más tarjetas  -->
     <h4 class="mb-3 text-dark"><i class="bi bi-journal-medical"></i> Últimos Casos Clínicos</h4>
     <div class="table-responsive">
         <table class="table table-hover align-middle shadow-sm">

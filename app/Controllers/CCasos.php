@@ -95,7 +95,7 @@ class CCasos extends BaseController
     public function MetodoMostrarCasoDetallado($id_paciente = null)
     {
         if (!$id_paciente) {
-            return redirect()->to(base_url('/SelectCasos')); // O cualquier vista segura
+            return redirect()->to(base_url('/SelectCasos'));
         }
         return view('historia_clinica_detalle', ['id_paciente' => $id_paciente]);
     }
@@ -125,7 +125,6 @@ class CCasos extends BaseController
 
     public function mostrarFormularioDetallado($idPaciente)
     {
-        // Enviamos el id con el nombre 'id_paciente' para que coincida con la vista
         return view('VistaFormularioDetallado', ['id_paciente' => $idPaciente]);
     }
 
@@ -155,8 +154,6 @@ class CCasos extends BaseController
 
 
 
-    // return view('header') . view('historia_clinica_detallada' .view('footer'));
-
 
     //Modelo para la actualizacion de Casos
     public function MetodoActualizarCasosFC()
@@ -182,6 +179,8 @@ class CCasos extends BaseController
 
     public function MostrarCasosConPacientes()
     { {
+            helper('Fecha');
+
             $paciente = $this->request->getGet('buscar_caso_nombre') ?? '';
             $cedula = $this->request->getGet('buscar_caso_cedula') ?? '';
             $fecha = $this->request->getGet('buscar_caso_fecha') ?? '';
