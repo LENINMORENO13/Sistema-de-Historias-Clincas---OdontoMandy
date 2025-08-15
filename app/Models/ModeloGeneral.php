@@ -140,7 +140,6 @@ class ModeloGeneral extends Model
             $v1 = $ParametrosCasos['nombres_apellidos'];
             $v2 = $ParametrosCasos['direccion'];
             $v3 = $ParametrosCasos['fecha_nacimiento'];
-            $v4 = $ParametrosCasos['edad'];
             $v5 = $ParametrosCasos['telefono'];
             $v6 = $ParametrosCasos['cedula'];
             $v7 = $ParametrosCasos['motivo_consulta'];
@@ -153,8 +152,8 @@ class ModeloGeneral extends Model
 
 
             $query = $this->db->query(
-                "CALL SP_INSERT_CASO_CLINICO(?,?,?,?,?,?,?,?,?,?,?,?)",
-                [$v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9, $v10, $v11, $v12]
+                "CALL SP_INSERT_CASO_CLINICO(?,?,?,?,?,?,?,?,?,?,?)",
+                [$v1, $v2, $v3, $v5, $v6, $v7, $v8, $v9, $v10, $v11, $v12]
             );
 
             // Esto captura el primer resultado del SELECT LAST_INSERT_ID()
