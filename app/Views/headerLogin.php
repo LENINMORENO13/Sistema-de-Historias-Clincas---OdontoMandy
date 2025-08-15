@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Iniciar Sesión - Sistema Odontológico</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
     <style>
-        /* Fondo grande con imagen */
+        /* Estilos generales y fondo */
         body, html {
             height: 100%;
             margin: 0;
@@ -20,7 +20,6 @@
             color: #003366;
         }
 
-        /* Capa semitransparente para oscurecer un poco el fondo */
         body::before {
             content: "";
             position: fixed;
@@ -30,7 +29,7 @@
             z-index: 0;
         }
 
-        /* Contenedor principal centrado */
+        /* Contenedor principal */
         .login-container {
             position: relative;
             z-index: 1;
@@ -45,54 +44,72 @@
 
         /* Caja del formulario */
         .login-box {
-            background-color: rgba(255, 255, 255, 0.92);
+            background-color: rgba(255, 255, 255, 0.95); 
             border-radius: 15px;
             padding: 3rem 3.5rem;
             max-width: 420px;
             width: 100%;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-        }
-
-        /* Logo arriba */
-        .login-logo {
-            max-width: 140px;
-            margin-bottom: 1.8rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
         }
 
         /* Títulos */
         .login-box h2 {
             font-weight: 700;
-            margin-bottom: 1rem;
             color: #003366;
+            margin-bottom: 0.5rem;
+        }
+        .login-box h2:first-of-type {
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .login-box h2:last-of-type {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .login-box p.lead {
             color: #007bff;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
         }
 
-        /* Labels y inputs */
-        label {
-            font-weight: 600;
-            color: #004080;
-            text-align: left;
-            display: block;
+        /* Inputs con iconos */
+        .input-group-custom {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group-custom .input-group-text {
+            background-color: #f8f9fa;
+            border-right: none;
+            border-color: #007bff;
+            color: #007bff;
+            border-radius: 10px 0 0 10px;
         }
 
         input.form-control {
-            border-radius: 10px;
-            border: 1.5px solid #007bff;
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+            border-color: #007bff;
             padding: 12px 14px;
             font-size: 1rem;
-            margin-bottom: 1.5rem;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         input.form-control:focus {
             border-color: #0056b3;
-            box-shadow: 0 0 10px #80bdff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
             outline: none;
+        }
+        
+        .password-toggle {
+            background-color: #f8f9fa;
+            border-color: #007bff;
+            border-left: none;
+            color: #007bff;
+            cursor: pointer;
+            border-radius: 0 10px 10px 0;
+            padding: 0.75rem;
         }
 
         /* Botón */
@@ -104,11 +121,14 @@
             padding: 14px 0;
             font-size: 1.2rem;
             border-radius: 12px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
         }
 
         button.btn-primary:hover {
             background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
         }
 
         /* Mensajes de error */
@@ -116,16 +136,24 @@
             display: block;
             font-size: 0.9rem;
             color: #dc3545;
-            margin-top: -1rem;
-            margin-bottom: 1rem;
             text-align: left;
+            margin-top: -1rem; /* Ajustar el margen para que no ocupe tanto espacio */
+            margin-bottom: 1.5rem;
         }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            .login-box {
-                padding: 2rem 1.5rem;
-            }
+        
+        /* Oculta los mensajes de error por defecto */
+        .form-control:invalid ~ .invalid-feedback {
+            display: none;
+        }
+        .form-control.is-invalid ~ .invalid-feedback {
+            display: block;
+        }
+        
+        /* Alerta de sesión */
+        .alert-dismissible {
+            opacity: 0.95;
+            border-radius: 8px;
+            border-left: 5px solid;
         }
     </style>
 </head>
@@ -133,33 +161,41 @@
 <body>
     <?php if (session()->getFlashdata('error')): ?>
         <div class="alert alert-danger alert-dismissible fade show position-fixed top-0 end-0 m-3" style="z-index: 1050;" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
             <?= session()->getFlashdata('error'); ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
         </div>
     <?php endif; ?>
 
     <main class="login-container" role="main" aria-label="Formulario de inicio de sesión">
-        <img src="O.MANDY.png" alt="Logo Odontológico" class="login-logo" />
         <div class="login-box">
-            <h2>Iniciar Sesión</h2>
+            <h2>Consultorio OdontoMandy</h2>
+            <h2 class="mb-2">Iniciar Sesión</h2>
             <p class="lead">Por favor ingresa tus datos para acceder</p>
 
             <form action="<?= base_url('login/verificacionlogin') ?>" method="post" novalidate>
                 <?= csrf_field() ?>
 
-                <div>
-                    <label for="correo">Correo</label>
-                    <input type="email" id="correo" name="correo" class="form-control" required />
-                    <div class="invalid-feedback">Por favor ingrese un correo válido.</div>
+                <div class="input-group input-group-custom">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="email" id="correo" name="correo" class="form-control" required placeholder="Correo electrónico" autocomplete="username" />
+                </div>
+                <div class="invalid-feedback">
+                    Por favor ingrese un correo válido.
                 </div>
 
-                <div>
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena" class="form-control" required />
-                    <div class="invalid-feedback">Por favor ingrese su contraseña.</div>
+                <div class="input-group input-group-custom">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                    <input type="password" id="contrasena" name="contrasena" class="form-control" required placeholder="Contraseña" autocomplete="current-password" />
+                    <button class="btn btn-outline-secondary password-toggle" type="button" id="togglePassword">
+                        <i class="bi bi-eye"></i>
+                    </button>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                <div class="invalid-feedback">
+                    Por favor ingrese su contraseña.
+                </div>
+                
+                <button type="submit" class="btn btn-primary mt-3">Iniciar Sesión</button>
             </form>
         </div>
     </main>
@@ -170,6 +206,9 @@
         (() => {
             'use strict'
             const form = document.querySelector('form');
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('contrasena');
+
             form.addEventListener('submit', e => {
                 if (!form.checkValidity()) {
                     e.preventDefault();
@@ -177,6 +216,12 @@
                 }
                 form.classList.add('was-validated');
             }, false);
+            togglePassword.addEventListener('click', function (e) {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.querySelector('i').classList.toggle('bi-eye');
+                this.querySelector('i').classList.toggle('bi-eye-slash');
+            });
         })();
     </script>
 </body>

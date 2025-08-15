@@ -10,100 +10,75 @@
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to bottom, #e0eafc, #cfdef3);
-            /* Colores más suaves y profesionales */
         }
 
         h1 {
             font-weight: bold;
             color: #2c3e50;
-            /* Color de título más oscuro */
             padding-bottom: 15px;
             border-bottom: 2px solid #3498db;
-            /* Línea inferior para el título */
             margin-bottom: 25px;
         }
 
         .container {
             margin-top: 30px;
             max-width: 950px;
-            /* Un poco más ancho para mejor visualización */
             background-color: #ffffff;
-            /* Fondo blanco para la ficha */
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            /* Sombra para dar profundidad */
         }
 
         .card-header {
             font-weight: bold;
             background-color: #3498db !important;
-            /* Azul más vibrante para los encabezados */
             color: white !important;
             padding: 12px 20px;
             border-radius: 8px 8px 0 0 !important;
-            /* Bordes redondeados superiores */
             font-size: 1.1em;
         }
 
         .card-body {
             padding: 25px;
             border: 1px solid #dcdcdc;
-            /* Borde suave para los cuerpos de las tarjetas */
             border-top: none;
-            /* Eliminar el borde superior para que se una al header */
             border-radius: 0 0 8px 8px;
-            /* Bordes redondeados inferiores */
         }
 
         .card {
             border: none;
-            /* Eliminar borde predeterminado de la tarjeta */
             margin-bottom: 25px;
         }
 
         .form-floating label {
             color: #6c757d;
-            /* Color de las etiquetas flotantes */
         }
 
         .form-control:focus {
             border-color: #3498db;
-            /* Resaltar borde en foco */
             box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
         }
 
         .diente {
             width: 35px;
-            /* Un poco más grande */
             height: 35px;
             border: 1px solid #a0a0a0;
-            /* Borde más suave */
             border-radius: 8px;
-            /* Bordes más redondeados */
             text-align: center;
             font-size: 13px;
-            /* Tamaño de fuente un poco más grande */
             line-height: 35px;
-            /* Ajustar line-height */
             display: inline-block;
             margin: 3px;
-            /* Más espacio entre dientes */
             cursor: pointer;
             background-color: #f0f0f0;
-            /* Fondo más claro */
             color: #444;
-            /* Color de texto más oscuro */
             transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
             box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
-            /* Sombra sutil */
         }
 
         .diente:hover {
             transform: scale(1.08);
-            /* Ligeramente más grande al pasar el ratón */
             border: 2px solid #3498db;
-            /* Borde de resalte */
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -116,17 +91,14 @@
 
         .diente[style*="background-color: blue"] {
             background-color: #2980b9 !important;
-            /* Azul más fuerte */
             color: white;
             border-color: #2471a3;
         }
 
         .fila {
             text-align: center;
-            /* Centrar las filas de dientes */
             padding: 5px 0;
             background-color: #f8f9fa;
-            /* Fondo ligero para cada fila */
             border-radius: 5px;
             margin-bottom: 10px !important;
         }
@@ -169,17 +141,17 @@
         }
 
         .btn-primary {
-            background-color: #28a745;
+            background-color: #2980b9;
             /* Botón de guardar en verde */
-            border-color: #28a745;
+            border-color: #2980b9;
             font-size: 1.2em;
             padding: 12px 25px;
             transition: background-color 0.2s ease, border-color 0.2s ease;
         }
 
         .btn-primary:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
+            background-color: #5fa5eaff;
+            border-color: #4961ebff;
         }
 
         .btn-secondary {
@@ -203,7 +175,6 @@
             border-top: 1px solid #eee;
             z-index: 100;
             text-align: center;
-            /* Centrar el botón */
         }
     </style>
 </head>
