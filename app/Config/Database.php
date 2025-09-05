@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'odontomandy_db',
+        'hostname'     => 'sql213.infinityfree.com',
+        'username'     => 'if0_39797090',
+        'password'     => '2awGhmcCYz',
+        'database'     => 'if0_39797090_odontomandy',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -50,27 +50,27 @@ class Database extends Config
         ],
     ];
 
-    public array $oracle = [
-        'DSN'        => '',
-        'hostname'   => 'localhost', 
-        'username'   => 'CURSOS',
-        'password'   => 'CURSOS',
-        'database'   => 'XE', 
-        'DBDriver'   => 'OCI8',
-        'DBPrefix'   => '',
-        'pConnect'   => false,
-        'DBDebug'    => true,
-        'charset'    => 'AL32UTF8',
-        'DBCollat'   => 'AL32UTF8',
-        'swapPre'    => '',
-        'failover'   => [],
-        'port'       => 1521, // Puerto por defecto de Oracle
-        'dateFormat' => [
-            'date'     => 'Y-m-d',
-            'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s',
-        ],
-    ];
+    // public array $oracle = [
+    //     'DSN'        => '',
+    //     'hostname'   => 'localhost', 
+    //     'username'   => 'CURSOS',
+    //     'password'   => 'CURSOS',
+    //     'database'   => 'XE', 
+    //     'DBDriver'   => 'OCI8',
+    //     'DBPrefix'   => '',
+    //     'pConnect'   => false,
+    //     'DBDebug'    => true,
+    //     'charset'    => 'AL32UTF8',
+    //     'DBCollat'   => 'AL32UTF8',
+    //     'swapPre'    => '',
+    //     'failover'   => [],
+    //     'port'       => 1521, // Puerto por defecto de Oracle
+    //     'dateFormat' => [
+    //         'date'     => 'Y-m-d',
+    //         'datetime' => 'Y-m-d H:i:s',
+    //         'time'     => 'H:i:s',
+    //     ],
+    // ];
     
 
     //    /**

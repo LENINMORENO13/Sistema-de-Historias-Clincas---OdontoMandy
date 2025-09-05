@@ -14,26 +14,27 @@
             </div>
         </div>
         <!-- Aquí se puede añadir más tarjetas  -->
-    <h4 class="mb-3 text-dark"><i class="bi bi-journal-medical"></i> Últimos Casos Clínicos</h4>
-    <div class="table-responsive">
-        <table class="table table-hover align-middle shadow-sm">
-            <thead class="table-primary">
-                <tr>
-                    <th>🧑 Paciente</th>
-                    <th>📝 Descripción</th>
-                    <th>📅 Fecha</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($ultimosCasos as $caso): ?>
+        <h4 class="mb-3 text-dark"><i class="bi bi-journal-medical"></i> Últimos Casos Clínicos</h4>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle shadow-sm">
+                <thead class="table-primary">
                     <tr>
-                        <td><?= esc($caso->paciente) ?></td>
-                        <td><?= esc($caso->motivo_consulta) ?></td>
-                        <td><?= esc($caso->fecha_registro) ?></td>
+                        <th>🧑 Paciente</th>
+                        <th>📝 Descripción</th>
+                        <th>📅 Fecha</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    <?php foreach ($ultimosCasos as $caso): ?>
+                        <tr>
+                            <td><?= esc($caso->nombres_apellidos) ?></td>
+                            <td><?= esc($caso->motivo_consulta) ?></td>
+                            <td><?= esc($caso->fecha_registro) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
 
-</div>
+            </table>
+        </div>
+
+    </div>
