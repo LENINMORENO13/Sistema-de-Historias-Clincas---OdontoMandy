@@ -61,7 +61,7 @@ class CCasos extends BaseController
         $Vectordata = [
             "VectorDatos" => $instancia->SelectCasosFM(),
         ];
-        return view('header') . view("VistaSelectCasos", $Vectordata) . view("footer");
+        return view('header') . view("VistaSelectCasos", $Vectordata);
     }
 
     public function ExtraerSelectCasoFC($idurl)

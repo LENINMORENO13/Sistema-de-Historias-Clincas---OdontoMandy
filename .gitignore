@@ -47,3 +47,4 @@ phpunit.xml.dist
 # Archivos de usuario o específicos del entorno
 *.user
 
+writable/session/
