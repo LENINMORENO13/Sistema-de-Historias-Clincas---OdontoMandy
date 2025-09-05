@@ -359,7 +359,7 @@
                                     <div class="card case-card">
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                Paciente: <?= htmlspecialchars($caso->paciente) ?> (<?= calcularEdad($caso->fecha_nacimiento) ?> años)
+                                                Paciente: <?= htmlspecialchars($caso->nombres_apellidos) ?> (<?= calcularEdad($caso->fecha_nacimiento) ?> años)
                                             </h5>
                                             <p class="card-text">
                                                 <strong>Cédula:</strong> <?= htmlspecialchars($caso->cedula) ?><br />
@@ -367,6 +367,7 @@
                                                 <strong>Motivo de Consulta:</strong> <?= htmlspecialchars($caso->motivo_consulta) ?><br />
                                                 <strong>Fecha de Registro:</strong> <?= htmlspecialchars($caso->fecha_registro) ?>
                                             </p>
+
 
                                             <div class="odontograma-section">
                                                 <h6 class="mb-2" style="color: #007bff; font-weight: bold;">
