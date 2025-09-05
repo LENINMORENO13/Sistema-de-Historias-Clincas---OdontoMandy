@@ -207,23 +207,6 @@ class ModeloGeneral extends Model
 
 
 
-    //Metodo para eliminar casos por ID
-    // public function EliminarCasoFM($ideliminar)
-    // {
-    //     try {
-    //         //Query realiza la sentencia de eliminado
-    //         $variable = $this->db->query('CALL SP_DELETE_CASO(?)', array($ideliminar));
-    //         //Este if es para validar si se elimino o no
-    //         if ($variable) {
-    //             return true;
-    //         } else {
-    //             return false;
-    //         }
-    //     } catch (\Throwable $th) {
-    //         throw $th;
-    //     }
-    // }
-
 
     public function obtenerDatosPaciente($id_paciente)
     {
