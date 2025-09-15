@@ -1,0 +1,34 @@
+# Archivos y carpetas de Git
+.git/
+.gitignore
+
+# Dependencias locales o de desarrollo (si las tienes)
+node_modules/
+vendor/
+
+# Archivos temporales y de sistema
+*.log
+*.tmp
+*.cache
+
+# Carpetas de debug y cache
+writable/debugbar/
+writable/cache/
+writable/session/
+writable/uploads/tmp/
+
+# Archivos de entorno o configuración local
+.env
+.env.local
+app/Config/Development/
+
+# Otros archivos que no quieres subir
+/tests/
+/docs/
+/.docker/
+
+# Archivos de IDE o sistema operativo
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
