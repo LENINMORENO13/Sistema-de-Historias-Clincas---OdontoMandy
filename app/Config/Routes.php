@@ -55,11 +55,19 @@
     $routes->get('/FormularioDetallado/(:num)', 'CCasos::mostrarFormularioDetallado/$1');
     $routes->get('/ResumenHistorial/(:num)', 'CCasos::MetodoResumenHistorial/$1');
 
-    
+
+    //Rutas para la generacion de reportes
+    $routes->get('reportes/generar_reporte', 'Reportes::generar_reporte');
+    $routes->get('reporte/paciente/(:num)','Reportes::generarIndividual/$1' );
 
 
+
+
+
+
+    $routes->get('admin/registrar', 'CAdmin::mostrarFormularioRegistro');
+    $routes->post('admin/guardarUsuario', 'CAdmin::guardarUsuario');
 
 
 
     // $routes->get('/hashear-claves', 'Home::convertirContraseñasAHASH');
-

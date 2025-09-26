@@ -76,19 +76,6 @@ class CCasos extends BaseController
         return view("VistaActualizarCaso", $Vectordata);
     }
 
-    public function EliminarCasoFC($ParametroUrlId)
-    {
-        $instancia = new ModeloGeneral();
-        if ($instancia->EliminarCasoFM($ParametroUrlId)) {
-            return redirect()->to(base_url('/SelectCasos'));
-        } else {
-            echo ("Eliminacion No Exitosa");
-        }
-    }
-
-
-
-
 
     //Metodo para la historia clinica detallada
     public function MetodoMostrarCasoDetallado($id_paciente = null)
@@ -213,6 +200,7 @@ class CCasos extends BaseController
 
         $modelo = new ModeloGeneral();
         $resultados = $modelo->ObtenerCasos($nombre, $cedula, $fecha);
+
 
         return view('VistaCasosPacientes', [
             'casosPacientes' => $resultados,

@@ -23,40 +23,6 @@ class Home extends BaseController
         return view('VistaPacientes');
     }
 
-    // public function MetodoInsertarUsuario()
-    // {
-    //     $edad = $_POST['VEdad'];
-    //     if ($edad < 0 || $edad > 150) {
-    //         echo "<script>alert('La edad debe estar entre 0 y 150 años.'); window.history.back();</script>";
-    //         return;
-    //     }
-    //     $correo = $_POST['VCorreo'];
-    //     $instancia = new ModeloGeneral();
-    //     if ($instancia->verificarduplicidadcorreo($correo)) {
-    //         echo "<script>alert('El correo utilizado ya existe.'); window.history.back();</script>";
-    //         return;
-    //     }
-
-
-    //     $datos = [
-    //         'pa_nombres' => $_POST['VNombres'],
-    //         'pa_apellidos' => $_POST['VApellidos'],
-    //         'pa_edad' => $edad,
-    //         'pa_telefono' => $_POST['VTelefono'],
-    //         'pa_direccion' => $_POST['VDireccion'],
-    //         'pa_correo' => $correo,
-    //         'pa_estado' => $_POST['VEstado'],
-    //         'pa_fecha_registro' => date('Y-m-d H:i:s'),
-
-    //     ];
-    //     //Compruebo la ejecucion del metodo del modelo
-    //     if ($instancia->MetodoModeloInsertUsuario($datos)) {
-    //         session()->setFlashdata('success', 'Usuario registrado correctamente.');
-    //         return redirect()->to(base_url('/Select'));
-    //     } else {
-    //         echo "<script>alert('Error al ingresar datos.'); window.history.back();</script>";
-    //     }
-    // }
 
     //Metodo para seleccionar todos los pacientes
     public function SelectUsuarioFC()
@@ -157,29 +123,6 @@ class Home extends BaseController
             }
         }
         return redirect()->to(base_url('/')); // Esta es la vista de login donde se mostrará el error
-    }
-
-
-
-    public function MetodoActualizarPacienteFC()
-    {
-        $instancia = new ModeloGeneral();
-        $datos = [
-            'pa_id' => $_POST['VId'],
-            'pa_nombres' => $_POST['VNombres'],
-            'pa_apellidos' => $_POST['VApellidos'],
-            'pa_edad' => $_POST['VEdad'],
-            'pa_telefono' => $_POST['VTelefono'],
-            'pa_direccion' => $_POST['VDireccion'],
-            'pa_correo' => $_POST['VCorreo'],
-            'pa_estado' => $_POST['VEstado'],
-        ];
-        //Compruebo la ejecucion del metodo del modelo
-        if ($instancia->ActualizarUsuarioFM($datos)) {
-            return redirect()->to(base_url('/Select'));
-        } else {
-            echo ('Error al ingresar datos');
-        }
     }
 
     public function MostrarDashboard()

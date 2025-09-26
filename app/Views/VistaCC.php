@@ -214,7 +214,7 @@
                             <label for="direccion">Dirección Domiciliaria</label>
                         </div>
                         <div class="col-md-6 form-floating">
-                            <input type="number" name="telefono" class="form-control" id="telefono" placeholder="Número de Teléfono" required>
+                            <input type="number" name="telefono" class="form-control" id="telefono"  max="10" placeholder="Número de Teléfono" required>
                             <label for="telefono">Teléfono de Contacto</label>
                         </div>
                     </div>

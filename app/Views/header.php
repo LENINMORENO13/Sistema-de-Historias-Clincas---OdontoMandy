@@ -152,6 +152,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('reportes/generar_reporte'); ?>">
+                            <i class="bi bi-journal-check"></i> Generar Reporte
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('/'); ?>">
                             <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
                         </a>

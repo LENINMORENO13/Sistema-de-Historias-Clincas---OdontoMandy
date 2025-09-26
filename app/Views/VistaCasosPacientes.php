@@ -267,10 +267,10 @@
                     </div>
                     <div class="col-md-4">
                         <label for="buscar_caso_cedula">Cédula del Paciente</label>
-                        <input type="text" id="buscar_caso_cedula" name="buscar_caso_cedula" class="form-control" placeholder="Ej: 1234567890" value="<?= esc($buscar_caso_cedula ?? '') ?>">
+                        <input type="text" id="buscar_caso_cedula" name="buscar_caso_cedula" class="form-control" placeholder="Ej: 1234567890" value="<?= esc($buscar_caso_cedula ?? '') ?>" minlength="10" maxlength="10">
                     </div>
                     <div class="col-md-4">
-                        <label for="buscar_caso_fecha">Fecha de Registro (Caso)</label>
+                        <label for="buscar_caso_fecha">Fecha de Registro (Caso)</label> 
                         <input type="date" id="buscar_caso_fecha" name="buscar_caso_fecha" class="form-control" value="<?= esc($buscar_caso_fecha ?? '') ?>">
                     </div>
                 </div>

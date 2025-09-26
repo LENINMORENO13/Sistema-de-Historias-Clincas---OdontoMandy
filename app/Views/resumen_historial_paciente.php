@@ -165,7 +165,7 @@
         <div class="btn-action-group mb-4">
             <a href="<?= base_url('SelectCasos') ?>" class="btn btn-secondary"><i class="bi bi-arrow-left-circle me-2"></i> Volver a la lista de casos</a>
             <?php if (!empty($historial)): ?>
-                <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Agregar nuevo detalle</a>
+                <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Agregar nuevo historial</a>
             <?php else: ?>
                 <a href="<?= base_url('MostrarCD/' . $datosPaciente->id) ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Agregar primer detalle</a>
             <?php endif; ?>
