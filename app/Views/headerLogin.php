@@ -154,6 +154,19 @@
             opacity: 0.95;
             border-radius: 8px;
             border-left: 5px solid;
+            
+        }
+        
+        /* Nuevos estilos para el enlace de registro */
+        .register-link {
+            display: block;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            color: #007bff;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -197,6 +210,8 @@
                 
                 <button type="submit" class="btn btn-primary mt-3">Iniciar Sesión</button>
             </form>
+            
+            <a href="<?= base_url('admin/registrar') ?>" class="register-link">¿No tienes una cuenta? Registra un nuevo usuario aquí.</a>
         </div>
     </main>
 

@@ -9,11 +9,10 @@ use LDAP\Result;
 //Cambiar por nombre del archivo el de la clase
 class ModeloGeneral extends Model
 {
-    protected $table = 'casos_clinicos'; // Nombre de la tabla
-    protected $primaryKey = 'id'; // Clave primaria
+    protected $table = 'casos_clinicos';
+    protected $primaryKey = 'id';
 
-    //Modelo para el login
-    // Nombre de la tabla
+
     public function obtenerUsuarioPorCorreo($correo)
     {
         // Conexión directa a la base de datos
@@ -180,31 +179,39 @@ class ModeloGeneral extends Model
     {
         try {
             $builder = $this->db->query('CALL SP_ListarCasosClinicos');
-            $result = $builder->getResult();      // Guardamos resultado en $result
-            $builder->freeResult();                // Liberamos recursos antes de retornar
-            return $result;                        // Retornamos el resultado almacenado
+            $result = $builder->getResult();
+            $builder->freeResult();
+            return $result;
         } catch (\Throwable $th) {
             throw $th;
         }
     }
 
 
-    //Metodo del Modelo para la HC Detallada
     public function MetodoModeloInsertCasoDetallado($ParametrosCasoDetallado)
     {
         try {
-            $v1 = $ParametrosCasoDetallado['id_paciente'];
-            $v2 = $ParametrosCasoDetallado['diagnostico'];
-            $v3 = $ParametrosCasoDetallado['tratamiento'];
-            $v4 = $ParametrosCasoDetallado['indicaciones'];
-            $v5 = $ParametrosCasoDetallado['estado'];
-            $query = $this->db->query("CALL sp_insertar_historial_clinico_detalle(?,?,?,?,?)", array($v1, $v2, $v3, $v4, $v5));
-            return $query ? true : false;
+            // Prepara los datos para la inserción en la tabla
+            $data = [
+                // El ID del paciente va directamente a la columna 'id' de la tabla de historial
+                'id' => $ParametrosCasoDetallado['id_paciente'],
+                'diagnostico' => $ParametrosCasoDetallado['diagnostico'],
+                'tratamiento' => $ParametrosCasoDetallado['tratamiento'],
+                'indicaciones' => $ParametrosCasoDetallado['indicaciones'],
+                'fecha_del_registro' => date('Y-m-d H:i:s'), // Genera la fecha y hora actuales
+                'estado' => $ParametrosCasoDetallado['estado']
+            ];
+
+            // Realiza la inserción directa en la tabla 'historial_clinico_detalle'
+            $this->db->table('historial_clinico_detalle')->insert($data);
+
+            // Devuelve verdadero si la inserción fue exitosa
+            return $this->db->affectedRows() ? true : false;
         } catch (\Throwable $th) {
-            return $th;
+            // Lanza una excepción si hay un error
+            throw $th;
         }
     }
-
 
 
 
@@ -219,7 +226,7 @@ class ModeloGeneral extends Model
     public function obtenerHistorialClinicoPorPaciente($id_paciente)
     {
         return $this->db->table('historial_clinico_detalle')
-            ->where('id', $id_paciente) // si tienes campo fecha_registro
+            ->where('id', $id_paciente)
             ->get()
             ->getResult();
     }
@@ -269,5 +276,57 @@ class ModeloGeneral extends Model
 
         $query = $builder->get();
         return $query->getResult();
+    }
+
+
+    // Nuevo método para obtener datos para el reporte
+    public function obtener_reporte()
+    {
+        try {
+            // Llama al procedimiento almacenado para obtener los datos
+            $query = $this->db->query('CALL SP_GENERAR_REPORTE()');
+
+            $result = $query->getResult();
+
+            $query->freeResult();
+
+            return $result;
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    public function obtener_reporte_individual($id_paciente)
+    {
+        // Obtiene la información del paciente
+        $queryPaciente = $this->db->query("SELECT * FROM casos_clinicos WHERE id = ?", array($id_paciente));
+        $paciente = $queryPaciente->getRowArray();
+
+        // Obtiene todos los historiales del paciente, ordenados por fecha
+        $queryHistoriales = $this->db->query("SELECT * FROM historial_clinico_detalle WHERE id = ? ORDER BY fecha_del_registro ASC", array($id_paciente));
+        $historiales = $queryHistoriales->getResultArray();
+
+        // Si el paciente no existe, devuelve un array vacío para evitar errores
+        if (!$paciente) {
+            return ['paciente' => [], 'detalles_casos' => []];
+        }
+
+        // Combina los datos del paciente y sus historiales en un solo array
+        // La clave 'detalles_casos' ahora coincide con la vista
+        $reporte = [
+            'paciente' => $paciente,
+            'detalles_casos' => $historiales
+        ];
+
+        return $reporte;
+    }
+
+    public function guardarUsuario($datos)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('tbl_usuarios'); // Asegúrate de que este es el nombre de tu tabla de usuarios
+
+        // El método insert retorna true si la inserción fue exitosa, de lo contrario false.
+        return $builder->insert($datos);
     }
 }
