@@ -50,27 +50,27 @@ class Database extends Config
         ],
     ];
 
-    public array $oracle = [
-        'DSN'        => '',
-        'hostname'   => 'localhost', 
-        'username'   => 'CURSOS',
-        'password'   => 'CURSOS',
-        'database'   => 'XE', 
-        'DBDriver'   => 'OCI8',
-        'DBPrefix'   => '',
-        'pConnect'   => false,
-        'DBDebug'    => true,
-        'charset'    => 'AL32UTF8',
-        'DBCollat'   => 'AL32UTF8',
-        'swapPre'    => '',
-        'failover'   => [],
-        'port'       => 1521, // Puerto por defecto de Oracle
-        'dateFormat' => [
-            'date'     => 'Y-m-d',
-            'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s',
-        ],
-    ];
+    // public array $oracle = [
+    //     'DSN'        => '',
+    //     'hostname'   => 'localhost', 
+    //     'username'   => 'CURSOS',
+    //     'password'   => 'CURSOS',
+    //     'database'   => 'XE', 
+    //     'DBDriver'   => 'OCI8',
+    //     'DBPrefix'   => '',
+    //     'pConnect'   => false,
+    //     'DBDebug'    => true,
+    //     'charset'    => 'AL32UTF8',
+    //     'DBCollat'   => 'AL32UTF8',
+    //     'swapPre'    => '',
+    //     'failover'   => [],
+    //     'port'       => 1521, // Puerto por defecto de Oracle
+    //     'dateFormat' => [
+    //         'date'     => 'Y-m-d',
+    //         'datetime' => 'Y-m-d H:i:s',
+    //         'time'     => 'H:i:s',
+    //     ],
+    // ];
     
 
     //    /**
