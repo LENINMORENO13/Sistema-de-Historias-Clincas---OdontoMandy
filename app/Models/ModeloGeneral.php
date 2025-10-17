@@ -6,7 +6,6 @@ use CodeIgniter\Database\MySQLi\Builder;
 use CodeIgniter\Model;
 use LDAP\Result;
 
-//Cambiar por nombre del archivo el de la clase
 class ModeloGeneral extends Model
 {
     protected $table = 'casos_clinicos';
@@ -17,32 +16,9 @@ class ModeloGeneral extends Model
     {
         // Conexión directa a la base de datos
         $db = \Config\Database::connect();
-
-        // Consulta para obtener el usuario por correo
         $query = $db->table('tbl_usuarios')->where('correo_electronico', $correo)->get();
 
-        return $query->getRowArray(); // Devuelve el usuario como un array o null si no lo encuentra
-    }
-
-
-
-    //Este va a ser el metodo para el insert paciente
-    public function MetodoModeloInsertUsuario($Parametros)
-    {
-        try {
-            $v1 = $Parametros['pa_nombres'];
-            $v2 = $Parametros['pa_apellidos'];
-            $v3 = $Parametros['pa_edad'];
-            $v4 = $Parametros['pa_telefono'];
-            $v5 = $Parametros['pa_direccion'];
-            $v6 = $Parametros['pa_correo'];
-            $v7 = $Parametros['pa_estado'];
-            $query = $this->db->query("CALL SP_INSERT_USUARIO(?,?,?,?,?,?,?)", array($v1, $v2, $v3, $v4, $v5, $v6, $v7));
-
-            return $query ? true : false;
-        } catch (\Throwable $th) {
-            return $th;
-        }
+        return $query->getRowArray(); 
     }
 
     //Modelo validacion de correos
@@ -58,77 +34,6 @@ class ModeloGeneral extends Model
             return false;
         }
     }
-
-
-    //Este va a ser el metodo select usuario
-    public function SelectUsuarioFM()
-    {
-        try {
-            $variable = $this->db->query('CALL SP_SELECT_USUARIO');
-            return $variable->getResult();
-        } catch (\Throwable $th) {
-            throw $th;
-        }
-    }
-
-    public function SelectExtraerUsuarioFM($valoridurl)
-    {
-        try {
-            $variable = $this->db->query('CALL SP_EXTRAERID_USUARIO(?)', array($valoridurl));
-            return $variable->getResult();
-        } catch (\Throwable $th) {
-            throw $th;
-        }
-    }
-
-    //Metodo para eliminar pacientes por ID
-    public function EliminarUsuarioFM($ideliminar)
-    {
-        try {
-            //Query realiza la sentencia de eliminado
-            $variable = $this->db->query('CALL SP_DELETE_USUARIO(?)', array($ideliminar));
-            //Este if es para validar si se elimino o no
-            if ($variable) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (\Throwable $th) {
-            throw $th;
-        }
-    }
-    public function ActualizarUsuarioFM($datosenviadosdelpost)
-    {
-        try {
-            //Este es el desgllose de las varibales recibidas del POST del controlador en el 
-            //vector llave valor del $datosenviadosdelpost
-            $v1 = $datosenviadosdelpost['pa_id'];
-            $v2 = $datosenviadosdelpost['pa_nombres'];
-            $v3 = $datosenviadosdelpost['pa_apellidos'];
-            $v4 = $datosenviadosdelpost['pa_edad'];
-            $v5 = $datosenviadosdelpost['pa_telefono'];
-            $v6 = $datosenviadosdelpost['pa_direccion'];
-            $v7 = $datosenviadosdelpost['pa_correo'];
-            $v8 = $datosenviadosdelpost['pa_estado'];
-
-
-            //La funcion queryBuilder para realizar el insert
-            $query = $this->db->query('CALL SP_UPDATE_USUARIO(?,?,?,?,?,?,?,?)', array($v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8));
-
-            //Validacion de la insercion
-            if ($query) {
-                return true;
-            } else {
-                return false;
-            }
-            // password_verify("1234", $v2);
-        } catch (\Throwable $th) {
-            throw $th;
-        }
-    }
-
-
-
 
     //METODOS PARA LOS CASOS CLINICOS
     //ESTE ES EL INSERT
@@ -193,26 +98,21 @@ class ModeloGeneral extends Model
         try {
             // Prepara los datos para la inserción en la tabla
             $data = [
-                // El ID del paciente va directamente a la columna 'id' de la tabla de historial
                 'id' => $ParametrosCasoDetallado['id_paciente'],
                 'diagnostico' => $ParametrosCasoDetallado['diagnostico'],
                 'tratamiento' => $ParametrosCasoDetallado['tratamiento'],
                 'indicaciones' => $ParametrosCasoDetallado['indicaciones'],
-                'fecha_del_registro' => date('Y-m-d H:i:s'), // Genera la fecha y hora actuales
+                'fecha_del_registro' => date('Y-m-d H:i:s'), 
                 'estado' => $ParametrosCasoDetallado['estado']
             ];
 
-            // Realiza la inserción directa en la tabla 'historial_clinico_detalle'
             $this->db->table('historial_clinico_detalle')->insert($data);
 
-            // Devuelve verdadero si la inserción fue exitosa
             return $this->db->affectedRows() ? true : false;
         } catch (\Throwable $th) {
-            // Lanza una excepción si hay un error
             throw $th;
         }
     }
-
 
 
     public function obtenerDatosPaciente($id_paciente)
@@ -236,8 +136,6 @@ class ModeloGeneral extends Model
     public function ActualizarCasosFM($datosenviadosdelpost)
     {
         try {
-            //Este es el desgllose de las varibales recibidas del POST del controlador en el 
-            //vector llave valor del $datosenviadosdelpost
             $v1 = $datosenviadosdelpost['id_casos'];
             $v2 = $datosenviadosdelpost['cc_descripcion'];
             $v3 = $datosenviadosdelpost['cc_diagnostico'];
@@ -283,7 +181,6 @@ class ModeloGeneral extends Model
     public function obtener_reporte()
     {
         try {
-            // Llama al procedimiento almacenado para obtener los datos
             $query = $this->db->query('CALL SP_GENERAR_REPORTE()');
 
             $result = $query->getResult();
@@ -298,21 +195,16 @@ class ModeloGeneral extends Model
 
     public function obtener_reporte_individual($id_paciente)
     {
-        // Obtiene la información del paciente
         $queryPaciente = $this->db->query("SELECT * FROM casos_clinicos WHERE id = ?", array($id_paciente));
         $paciente = $queryPaciente->getRowArray();
 
-        // Obtiene todos los historiales del paciente, ordenados por fecha
         $queryHistoriales = $this->db->query("SELECT * FROM historial_clinico_detalle WHERE id = ? ORDER BY fecha_del_registro ASC", array($id_paciente));
         $historiales = $queryHistoriales->getResultArray();
 
-        // Si el paciente no existe, devuelve un array vacío para evitar errores
         if (!$paciente) {
             return ['paciente' => [], 'detalles_casos' => []];
         }
 
-        // Combina los datos del paciente y sus historiales en un solo array
-        // La clave 'detalles_casos' ahora coincide con la vista
         $reporte = [
             'paciente' => $paciente,
             'detalles_casos' => $historiales
@@ -324,9 +216,8 @@ class ModeloGeneral extends Model
     public function guardarUsuario($datos)
     {
         $db = \Config\Database::connect();
-        $builder = $db->table('tbl_usuarios'); // Asegúrate de que este es el nombre de tu tabla de usuarios
+        $builder = $db->table('tbl_usuarios'); 
 
-        // El método insert retorna true si la inserción fue exitosa, de lo contrario false.
         return $builder->insert($datos);
     }
 }

@@ -17,10 +17,9 @@ class CAdmin extends BaseController
     // Método para procesar y guardar el nuevo usuario
     public function guardarUsuario()
     {
-        // Obtener datos del formulario
         $correo = $this->request->getPost('correo');
         $contrasena = $this->request->getPost('contrasena');
-        $rol = $this->request->getPost('rol'); // ¡Nuevo! Obtener el valor del rol
+        $rol = $this->request->getPost('rol');
 
         // Validar que los campos no estén vacíos
         if (empty($correo) || empty($contrasena) || empty($rol)) {
@@ -37,10 +36,8 @@ class CAdmin extends BaseController
             'rol' => $rol, 
         ];
 
-        // Instanciar el modelo
         $modelo = new ModeloGeneral();
 
-        // Guardar el usuario en la base de datos
         if ($modelo->guardarUsuario($datosUsuario)) {
             session()->setFlashdata('success', 'Usuario registrado con éxito.');
         } else {
