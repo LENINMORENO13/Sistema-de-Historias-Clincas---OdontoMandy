@@ -3,7 +3,7 @@ name: Despliegue por FTP al hosting
 on:
   push:
     branches:
-      - deploy-free-v1
+      - main
 
 jobs:
   ftp-deploy:
