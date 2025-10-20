@@ -39,7 +39,7 @@ class Home extends BaseController
     //LOGIN
     public function vistalogin()
     {
-        return view('headerLogin') . view('footer'); 
+        return view('headerLogin'); 
     }
 
 
