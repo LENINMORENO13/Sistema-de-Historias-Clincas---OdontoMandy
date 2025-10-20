@@ -1,0 +1,169 @@
+body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+        }
+
+        h1 {
+            font-weight: bold;
+            color: #2c3e50;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            margin-bottom: 25px;
+        }
+
+        .container {
+            margin-top: 30px;
+            max-width: 950px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            font-weight: bold;
+            background-color: #3498db !important;
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 8px 8px 0 0 !important;
+            font-size: 1.1em;
+        }
+
+        .card-body {
+            padding: 25px;
+            border: 1px solid #dcdcdc;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .card {
+            border: none;
+            margin-bottom: 25px;
+        }
+
+        .form-floating label {
+            color: #6c757d;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+        }
+
+        .diente {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #a0a0a0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 35px;
+            display: inline-block;
+            margin: 3px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            color: #444;
+            transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .diente:hover {
+            transform: scale(1.08);
+            border: 2px solid #3498db;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .diente[style*="background-color: red"] {
+            background-color: #e74c3c !important;
+            /* Rojo más fuerte */
+            color: white;
+            border-color: #c0392b;
+        }
+
+        .diente[style*="background-color: blue"] {
+            background-color: #2980b9 !important;
+            color: white;
+            border-color: #2471a3;
+        }
+
+        .fila {
+            text-align: center;
+            padding: 5px 0;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-bottom: 10px !important;
+        }
+
+        #modal-confirm {
+            display: none;
+            background: rgba(0, 0, 0, 0.6);
+            /* Fondo más oscuro para el modal */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #modal-confirm.show {
+            display: flex;
+        }
+
+        #modal-confirm p {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #28a745;
+            /* Verde de éxito */
+            font-size: 1.2em;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #modal-confirm button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .btn-primary {
+            background-color: #2980b9;
+            /* Botón de guardar en verde */
+            border-color: #2980b9;
+            font-size: 1.2em;
+            padding: 12px 25px;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #5fa5eaff;
+            border-color: #4961ebff;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+
+        .sticky-bottom {
+            position: sticky;
+            bottom: 0;
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            z-index: 100;
+            text-align: center;
+        }
