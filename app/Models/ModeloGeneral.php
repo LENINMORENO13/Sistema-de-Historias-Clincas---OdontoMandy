@@ -65,21 +65,6 @@ class ModeloGeneral extends Model
             ->delete();
     }
 
-    public function ActualizarUsuarioFM($datosenviadosdelpost)
-    {
-        return $this->db->table('tbl_pacientes')
-            ->where('pa_id', $datosenviadosdelpost['pa_id'])
-            ->update([
-                'pa_nombres' => $datosenviadosdelpost['pa_nombres'],
-                'pa_apellidos' => $datosenviadosdelpost['pa_apellidos'],
-                'pa_edad' => $datosenviadosdelpost['pa_edad'],
-                'pa_telefono' => $datosenviadosdelpost['pa_telefono'],
-                'pa_direccion' => $datosenviadosdelpost['pa_direccion'],
-                'pa_correo' => $datosenviadosdelpost['pa_correo'],
-                'pa_estado' => $datosenviadosdelpost['pa_estado']
-            ]);
-    }
-
     // Insert casos clínicos
     public function MetodoModeloInsertCaso($ParametrosCasos)
     {
