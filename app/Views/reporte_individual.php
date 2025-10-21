@@ -23,14 +23,14 @@
         .header {
             text-align: center;
             padding-bottom: 10px;
-            border-bottom: 4px solid #1a4f94; /* Línea de color primario */
+            border-bottom: 4px solid #1a4f94; 
             margin-bottom: 25px;
         }
 
         .header h1 {
             font-size: 20pt;
             margin: 0;
-            color: #1a4f94; /* Color Primario: Azul Odontológico */
+            color: #1a4f94; 
             font-weight: 600;
         }
 
@@ -44,35 +44,33 @@
         /* --- Títulos de Sección --- */
         h2 {
             font-size: 14pt;
-            color: #007bff; /* Color Secundario: Azul de Resalte */
-            background-color: #f0f8ff; /* Fondo muy claro para sección */
+            color: #007bff; 
+            background-color: #f0f8ff; 
             padding: 8px 15px;
             margin-top: 30px;
             margin-bottom: 15px;
             border-left: 5px solid #007bff;
         }
 
-        /* --- Sección de Información del Paciente (Tarjeta) --- */
         .info-card {
             padding: 15px;
             margin-bottom: 25px;
-            background-color: #ffffff; /* Fondo Blanco */
+            background-color: #ffffff; 
             border: 1px solid #d1e0e8;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra suave para efecto tarjeta */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
         }
 
         .info-grid {
             width: 100%;
             border-collapse: collapse;
-            /* Usamos celdas al 50% para antecedentes */
         }
 
         .info-grid td {
             padding: 8px 15px;
             border-bottom: 1px solid #f0f0f0;
             vertical-align: top;
-            width: 25%; /* Cada dato y su etiqueta */
+            width: 25%; 
         }
         
         .info-grid tr:last-child td {
@@ -81,7 +79,7 @@
 
         .info-label {
             font-weight: bold;
-            color: #1a4f94; /* Mismo azul que el header */
+            color: #1a4f94; 
             display: block;
             font-size: 9pt;
         }
@@ -97,7 +95,6 @@
             margin: 15px 0;
         }
 
-        /* --- Detalle de Historial (Visitas) --- */
         .history-section {
             margin-top: 20px;
         }
@@ -107,7 +104,7 @@
             padding: 20px;
             margin-bottom: 25px;
             background-color: #ffffff;
-            border-left: 5px solid #1a4f94; /* Barra de color para el item */
+            border-left: 5px solid #1a4f94;
         }
 
         .history-date {
