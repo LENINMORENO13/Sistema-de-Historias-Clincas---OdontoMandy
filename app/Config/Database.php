@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'sql213.infinityfree.com',
-        'username'     => 'if0_39797090',
-        'password'     => '2awGhmcCYz',
-        'database'     => 'if0_39797090_odontomandy',
+        'hostname'     => 'localhost',
+        'username'     => 'root',
+        'password'     => '',
+        'database'     => 'odontomandy_db',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

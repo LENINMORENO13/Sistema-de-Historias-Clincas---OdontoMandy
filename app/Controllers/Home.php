@@ -39,7 +39,7 @@ class Home extends BaseController
     //LOGIN
     public function vistalogin()
     {
-        return view('headerLogin'); 
+        return view('headerLogin');
     }
 
 
@@ -64,21 +64,50 @@ class Home extends BaseController
                 session()->setFlashdata('error', 'Contraseña incorrecta.');
             }
         }
-        return redirect()->to(base_url('/')); 
+        return redirect()->to(base_url('/'));
     }
 
     public function MostrarDashboard()
     {
         $modelo = new ModeloGeneral();
 
+        $todosLosCasos = $modelo->SelectCasosFM();
 
-        $totalCasos = count($modelo->SelectCasosFM());
+        $totalCasos = count($todosLosCasos);
+        $casosMes = 0;
+        $casosHoy = 0;
+        $pendientes = 0;
 
-        $ultimosCasos = $modelo->SelectCasosFM();
-        $ultimosCasos = array_slice($ultimosCasos, 0, 5); 
+        $mesActual = date('m');
+        $anioActual = date('Y');
+        $fechaHoy = date('Y-m-d');
+
+        foreach ($todosLosCasos as $caso) {
+
+            $fechaDelCaso = $caso->fecha_registro;
+            $timestamp = strtotime($fechaDelCaso);
+            if (date('m', $timestamp) == $mesActual && date('Y', $timestamp) == $anioActual) {
+                $casosMes++;
+            }
+
+            if (date('Y-m-d', $timestamp) == $fechaHoy) {
+                $casosHoy++;
+            }
+
+            if (isset($caso->estado) && ($caso->estado == 'pendiente' || $caso->estado == 'inactivo')) {
+                $pendientes++;
+            }
+        }
+
+        $ultimosCasos = array_slice($todosLosCasos, 0, 5);
+
+
         $data = [
-            'totalCasos' => $totalCasos,
-            'ultimosCasos' => $ultimosCasos
+            'totalCasos'   => $totalCasos,
+            'ultimosCasos' => $ultimosCasos,
+            'casosMes'     => $casosMes,
+            'casosHoy'     => $casosHoy,
+            'pendientes'   => $pendientes
         ];
 
         return view('VistaDashboard', $data);

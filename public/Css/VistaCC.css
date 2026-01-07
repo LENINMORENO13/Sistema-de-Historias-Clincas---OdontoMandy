@@ -97,7 +97,6 @@ body {
         #modal-confirm {
             display: none;
             background: rgba(0, 0, 0, 0.6);
-            /* Fondo más oscuro para el modal */
             position: fixed;
             top: 0;
             left: 0;
@@ -132,6 +131,7 @@ body {
 
         .btn-primary {
             background-color: #2980b9;
+
             border-color: #2980b9;
             font-size: 1.2em;
             padding: 12px 25px;
