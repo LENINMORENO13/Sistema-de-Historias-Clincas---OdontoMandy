@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'REDACTED_HOST',
-        'username'     => 'REDACTED_USER',
-        'password'     => 'REDACTED_PASSWORD',
-        'database'     => 'REDACTED_USER_odontomandy',
+        'hostname'     => 'localhost',
+        'username'     => 'root',
+        'password'     => '',
+        'database'     => 'odontomandy_db',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

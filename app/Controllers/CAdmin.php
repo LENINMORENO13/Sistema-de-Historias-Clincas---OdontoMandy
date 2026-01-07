@@ -21,13 +21,11 @@ class CAdmin extends BaseController
         $contrasena = $this->request->getPost('contrasena');
         $rol = $this->request->getPost('rol');
 
-        // Validar que los campos no estén vacíos
         if (empty($correo) || empty($contrasena) || empty($rol)) {
             session()->setFlashdata('error', 'Por favor, complete todos los campos.');
             return redirect()->back()->withInput();
         }
 
-        // HASHEAR LA CONTRASEÑA antes de guardarla
         $contrasena_hasheada = password_hash($contrasena, PASSWORD_DEFAULT);
 
         $datosUsuario = [

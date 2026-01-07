@@ -17,10 +17,9 @@ class App extends BaseConfig
      * E.g., http://example.com/
      */
 
-    public string $baseURL = 'https://sisodontomandy.free.nf/SisOdontoMandy/';
 
 
-    // public string $baseURL = 'http://localhost/SisOdontoMandy/';
+    public string $baseURL = 'http://localhost/SisOdontoMandy/';
 
 
     /**
