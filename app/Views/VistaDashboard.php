@@ -168,7 +168,6 @@
         border-top: 1px solid rgba(0, 0, 0, 0.03);
     }
 
-    /* Avatar circular mejorado */
     .patient-avatar {
         width: 42px;
         height: 42px;
@@ -194,7 +193,6 @@
         border: 1px solid rgba(13, 110, 253, 0.2);
     }
 
-    /* Botones de acción mejorados */
     .btn-action-group {
         display: flex;
         gap: 6px;
@@ -268,7 +266,6 @@
         }
     }
 
-    /* Animaciones sutiles */
     @keyframes fadeInUp {
         from {
             opacity: 0;
@@ -291,7 +288,6 @@
 </style>
 
 <div class="container mt-4 mb-5">
-    <!-- Header Mejorado con Fusión -->
     <div class="dashboard-header animate-fade-in">
         <div class="row align-items-center">
             <div class="col-md-8">
@@ -306,9 +302,7 @@
         </div>
     </div>
 
-    <!-- Estadísticas Fusionadas - 5 Tarjetas -->
     <div class="row g-4 mb-5">
-        <!-- Total Casos (Rojo) -->
         <div class="col-md-6 col-lg-4 col-xl">
             <div class="stat-card stat-card-total bg-white shadow-sm animate-fade-in delay-1">
                 <div class="card-body p-4">
@@ -336,7 +330,6 @@
             </div>
         </div>
 
-        <!-- Casos del Mes (Verde) -->
         <div class="col-md-6 col-lg-4 col-xl">
             <div class="stat-card stat-card-mes bg-white shadow-sm animate-fade-in delay-2">
                 <div class="card-body p-4">
@@ -364,7 +357,6 @@
             </div>
         </div>
 
-        <!-- Casos de Hoy (Amarillo) -->
         <div class="col-md-6 col-lg-4 col-xl">
             <div class="stat-card stat-card-hoy bg-white shadow-sm animate-fade-in delay-3">
                 <div class="card-body p-4">
@@ -391,38 +383,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- Sistema (Gris) -->
-        <div class="col-md-6 col-lg-4 col-xl">
-            <div class="stat-card stat-card-sistema bg-dark bg-gradient text-white shadow-sm animate-fade-in">
-                <div class="card-body p-4">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <span class="stat-badge bg-white bg-opacity-20">
-                            <i class="bi bi-gear-wide-connected me-1"></i>Sistema
-                        </span>
-                        <i class="bi bi-shield-check opacity-75"></i>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-end">
-                        <div>
-                            <h2 class="fw-bold mb-1">OdontoMandy</h2>
-                            <p class="opacity-75 mb-0 small">v1.0 Estable</p>
-                        </div>
-                        <div class="stat-icon-wrapper bg-dark bg-opacity-50">
-                            <i class="bi bi-gear-wide-connected"></i>
-                        </div>
-                    </div>
-                    <div class="mt-3 pt-3 border-top border-white border-opacity-25">
-                        <small class="opacity-75">
-                            <i class="bi bi-circle-fill me-1 text-success" style="font-size: 8px;"></i>
-                            Sistema operativo
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
-    <!-- Tabla de Últimos Casos Mejorada -->
     <div class="table-container animate-fade-in">
         <div class="table-header">
             <div class="d-flex justify-content-between align-items-center">

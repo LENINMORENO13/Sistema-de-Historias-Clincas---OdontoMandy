@@ -34,9 +34,6 @@
                             <i class="bi bi-search search-icon"></i>
                             <input type="text" id="buscador" class="form-control search-input" placeholder="Buscar por nombre o cédula...">
                         </div>
-                        <a href="<?= base_url('InsertCC') ?>" class="btn btn-primary btn-new-case shadow-sm">
-                            <i class="bi bi-plus-lg"></i> <span>Nuevo Caso</span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -98,19 +95,16 @@
                                                 <?php
                                                 $odontograma = json_decode($caso->odontograma, true);
                                                 $count = 0;
-                                                $max_display = 6; // Máximo de cuadritos a mostrar
+                                                $max_display = 6; 
 
                                                 if ($odontograma && is_array($odontograma)) {
                                                     foreach ($odontograma as $diente => $data) {
-                                                        // Extraer color y nota
                                                         $color = is_array($data) ? ($data['color'] ?? '') : $data;
                                                         $nota = is_array($data) ? ($data['nota'] ?? '') : '';
 
                                                         if (($color == 'rojo' || $color == 'azul') && $count < $max_display) {
-                                                            // Estilos según color
                                                             $bgClass = ($color == 'rojo') ? 'bg-danger text-white' : 'bg-primary text-white';
 
-                                                            // Crear el Tooltip con la nota
                                                             $tooltipText = "Diente $diente: " . ucfirst($color);
                                                             if (!empty($nota)) {
                                                                 $tooltipText .= " - Nota: " . $nota;

@@ -386,15 +386,13 @@
 
 <body>
 
-    <!-- Versión del sistema -->
     <div class="system-version d-none d-md-block">
-        v2.1.0 • OdontoMandy
+        v1.0.0 • OdontoMandy
     </div>
 
     <div class="login-container">
         <div class="login-card">
             <div class="login-content">
-                <!-- Header -->
                 <div class="login-header">
                     <div class="logo-container">
                         <div class="logo-wrapper">
@@ -547,7 +545,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Toggle Password
             const togglePassword = document.getElementById('togglePassword');
             const password = document.getElementById('contrasena');
 
@@ -560,12 +557,10 @@
                     icon.classList.toggle('bi-eye');
                     icon.classList.toggle('bi-eye-slash');
                     
-                    // Cambiar el atributo aria-label para accesibilidad
                     this.setAttribute('aria-label', type === 'password' ? 'Mostrar contraseña' : 'Ocultar contraseña');
                 });
             }
 
-            // Validación Bootstrap
             (() => {
                 'use strict'
                 const forms = document.querySelectorAll('.needs-validation')
@@ -575,7 +570,6 @@
                             event.preventDefault()
                             event.stopPropagation()
                         } else {
-                            // Mostrar spinner de carga
                             const submitBtn = form.querySelector('.btn-login');
                             const spinner = document.getElementById('loadingSpinner');
                             if (submitBtn && spinner) {
@@ -588,7 +582,6 @@
                 })
             })();
 
-            // Auto-ocultar alertas después de 5 segundos
             setTimeout(() => {
                 const alerts = document.querySelectorAll('.alert');
                 alerts.forEach(alert => {
@@ -597,7 +590,6 @@
                 });
             }, 5000);
 
-            // Prevenir envío múltiple del formulario
             let formSubmitted = false;
             const loginForm = document.querySelector('form');
             if (loginForm) {
@@ -611,7 +603,6 @@
                 });
             }
 
-            // Cargar imagen alternativa si la principal falla
             const logoImg = document.querySelector('.logo-img');
             if (logoImg) {
                 logoImg.onerror = function() {
@@ -622,7 +613,6 @@
                 };
             }
 
-            // Focus en el primer campo al cargar la página
             const firstInput = document.getElementById('correo');
             if (firstInput) {
                 setTimeout(() => {
