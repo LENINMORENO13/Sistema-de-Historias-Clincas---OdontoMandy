@@ -17,16 +17,19 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /var/www/html
-            # Sincronizamos con GitHub sin tocar el archivo .env
+            # Sincronizar código
             sudo git fetch --all
             sudo git reset --hard origin/despliegue-aws
             
-            # Limpieza de basura y archivos temporales
-            sudo git clean -fd -e .env
-            
-            # Asegurar permisos para evitar errores de escritura/cache
+            # Forzar permisos correctos en carpetas de escritura
             sudo chown -R www-data:www-data /var/www/html/writable
             sudo chmod -R 775 /var/www/html/writable
             
-            # Limpiar cache de CodeIgniter
-            php spark cache:clear
+            # Crear carpetas si no existen y dar permisos
+            sudo mkdir -p /var/www/html/writable/cache
+            sudo mkdir -p /var/www/html/writable/logs
+            sudo mkdir -p /var/www/html/writable/session
+            sudo chmod -R 777 /var/www/html/writable/cache
+            
+            # Intentar limpiar la caché (con sudo para evitar el error que viste)
+            sudo php spark cache:clear || echo "No se pudo limpiar la caché, pero el código se actualizó."
