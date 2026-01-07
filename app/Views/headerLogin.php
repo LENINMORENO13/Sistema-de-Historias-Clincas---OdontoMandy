@@ -52,6 +52,8 @@
                 
                 <button type="submit" class="btn btn-primary mt-3">Iniciar Sesión</button>
             </form>
+            
+            <a href="<?= base_url('admin/registrar') ?>" class="register-link">¿No tienes una cuenta? Registra un nuevo usuario aquí.</a>
         </div>
     </main>
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Reporte de Historiales Clínicos</title>
+    <link rel="stylesheet" href="css/reporte_clinico.css">
     <style>
         body {
             font-family: 'dejavusans', sans-serif;
@@ -33,7 +34,7 @@
 
         table {
             width: 100%;
-            border-spacing: 0 6px; 
+            border-spacing: 0 6px;
             margin-top: 5px;
         }
 
@@ -61,7 +62,6 @@
         .even-row {
             background-color: #f9fcff;
         }
-
 
         .col-paciente {
             width: 26%;

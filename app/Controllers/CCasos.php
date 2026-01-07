@@ -37,7 +37,7 @@ class CCasos extends BaseController
             'antecedente_personal_2' => $this->request->getPost('antecedente_personal_2'),
             'antecedente_familiar_1' => $this->request->getPost('antecedente_familiar_1'),
             'antecedente_familiar_2' => $this->request->getPost('antecedente_familiar_2'),
-            'odontograma' => $odontograma_json, // aquí uso la variable con JSON
+            'odontograma' => $odontograma_json, 
         ];
 
         $nuevo_id = $instancia->MetodoModeloInsertCaso($datos);
@@ -66,28 +66,12 @@ class CCasos extends BaseController
 
     public function ExtraerSelectCasoFC($idurl)
     {
-        // Instanciar el modelo
         $instancia = new ModeloGeneral();
-
-        // Obtener datos del modelo
         $Vectordata = [
             "VectorDatos" => $instancia->SelectExtraerCasoFM($idurl),
         ];
         return view("VistaActualizarCaso", $Vectordata);
     }
-
-    public function EliminarCasoFC($ParametroUrlId)
-    {
-        $instancia = new ModeloGeneral();
-        if ($instancia->EliminarCasoFM($ParametroUrlId)) {
-            return redirect()->to(base_url('/SelectCasos'));
-        } else {
-            echo ("Eliminacion No Exitosa");
-        }
-    }
-
-
-
 
 
     //Metodo para la historia clinica detallada
@@ -149,31 +133,6 @@ class CCasos extends BaseController
     }
 
 
-
-
-
-
-
-    //Modelo para la actualizacion de Casos
-    public function MetodoActualizarCasosFC()
-    {
-        $instancia = new ModeloGeneral();
-        $Vectorllavevalor = [
-            'id_casos' => $_POST['VId'],
-            'cc_descripcion' => $_POST['VDescripcion'],
-            'cc_diagnostico' => $_POST['VDiagnostico'],
-            'cc_tratamiento' => $_POST['VTratamiento'],
-            'cc_fecha_consulta' => $_POST['VFechaConsulta'],
-            'cc_estado' => $_POST['VEstado'],
-        ];
-        //Compruebo la ejecucion del metodo del modelo
-        if ($instancia->ActualizarCasosFM($Vectorllavevalor)) {
-            return redirect()->to(base_url('/SelectCasos'));
-        } else {
-            echo ('Error al actualizar datos');
-        }
-    }
-
     //METODO OBTENER CASOS CON PACIENTES CON INNER
 
     public function MostrarCasosConPacientes()
@@ -186,7 +145,6 @@ class CCasos extends BaseController
 
             $data = [];
 
-            // Solo buscar si hay un filtro aplicado
             if (!empty($paciente) || !empty($cedula) || !empty($fecha)) {
                 $modelo = new ModeloGeneral();
                 $casos = $modelo->ObtenerCasos($paciente, $cedula, $fecha);
@@ -203,20 +161,5 @@ class CCasos extends BaseController
 
             return view('VistaCasosPacientes', $data);
         }
-    }
-
-    public function buscar_caso()
-    {
-        $nombre = $this->request->getGet('buscar_caso_nombre') ?? '';
-        $cedula = $this->request->getGet('buscar_caso_cedula') ?? '';
-        $fecha = $this->request->getGet('buscar_caso_fecha') ?? '';
-
-        $modelo = new ModeloGeneral();
-        $resultados = $modelo->ObtenerCasos($nombre, $cedula, $fecha);
-
-        return view('VistaCasosPacientes', [
-            'casosPacientes' => $resultados,
-            'mensaje_error' => empty($resultados) ? 'No se encontraron resultados.' : ''
-        ]);
     }
 }

@@ -14,7 +14,7 @@ class Home extends BaseController
         if ($datosconexion->connect()) {
             echo 'Se conecto al OdontoMandy correctamente';
         } else {
-            echo 'Error de conexion, a gastronomia';
+            echo 'Error de conexion';
         }
     }
 
@@ -24,13 +24,23 @@ class Home extends BaseController
     }
 
 
+    public function ExtraerSelectUsuarioFC($idurl)
+    {
+        // Instanciar el modelo
+        $instancia = new ModeloGeneral();
+
+        // Obtener datos del modelo
+        $Vectordata = [
+            "VectorDatos" => $instancia->SelectExtraerUsuarioFM($idurl),
+        ];
+        return view("VistaActualizarPaciente", $Vectordata);
+    }
 
     //LOGIN
     public function vistalogin()
     {
         return view('headerLogin'); 
     }
-
 
 
     public function verificacionlogin()
@@ -56,7 +66,6 @@ class Home extends BaseController
         }
         return redirect()->to(base_url('/')); 
     }
-
 
     public function MostrarDashboard()
     {

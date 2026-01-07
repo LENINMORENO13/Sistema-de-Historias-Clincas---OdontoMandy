@@ -9,31 +9,14 @@ class ModeloGeneral extends Model
     protected $table = 'casos_clinicos';
     protected $primaryKey = 'id';
 
-    // Modelo login
+
     public function obtenerUsuarioPorCorreo($correo)
     {
-        return $this->db->table('tbl_usuarios')
-            ->where('correo_electronico', $correo)
-            ->get()
-            ->getRowArray();
-    }
+        // Conexión directa a la base de datos
+        $db = \Config\Database::connect();
+        $query = $db->table('tbl_usuarios')->where('correo_electronico', $correo)->get();
 
-    // Insert usuario
-    public function MetodoModeloInsertUsuario($Parametros)
-    {
-        try {
-            return $this->db->table('tbl_pacientes')->insert([
-                'pa_nombres' => $Parametros['pa_nombres'],
-                'pa_apellidos' => $Parametros['pa_apellidos'],
-                'pa_edad' => $Parametros['pa_edad'],
-                'pa_telefono' => $Parametros['pa_telefono'],
-                'pa_direccion' => $Parametros['pa_direccion'],
-                'pa_correo' => $Parametros['pa_correo'],
-                'pa_estado' => $Parametros['pa_estado']
-            ]);
-        } catch (\Throwable $th) {
-            return $th;
-        }
+        return $query->getRowArray(); 
     }
 
     // Validación de correos
@@ -44,28 +27,9 @@ class ModeloGeneral extends Model
             ->countAllResults() > 0;
     }
 
-    // Select usuarios
-    public function SelectUsuarioFM()
-    {
-        return $this->db->table('tbl_pacientes')->get()->getResult();
-    }
-
-    public function SelectExtraerUsuarioFM($valoridurl)
-    {
-        return $this->db->table('tbl_pacientes')
-            ->where('pa_id', $valoridurl)
-            ->get()
-            ->getResult();
-    }
-
-    public function EliminarUsuarioFM($ideliminar)
-    {
-        return $this->db->table('tbl_pacientes')
-            ->where('pa_id', $ideliminar)
-            ->delete();
-    }
-
-    // Insert casos clínicos
+    //METODOS PARA LOS CASOS CLINICOS
+    //ESTE ES EL INSERT
+    //Este va a ser el metodo para el insert paciente
     public function MetodoModeloInsertCaso($ParametrosCasos)
     {
         try {
@@ -99,19 +63,38 @@ class ModeloGeneral extends Model
 
     public function SelectCasosFM()
     {
-        return $this->db->table('casos_clinicos')->get()->getResult();
+        try {
+            $builder = $this->db->query('CALL SP_ListarCasosClinicos');
+            $result = $builder->getResult();
+            $builder->freeResult();
+            return $result;
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
+
 
     public function MetodoModeloInsertCasoDetallado($ParametrosCasoDetallado)
     {
-        return $this->db->table('historial_clinico_detalle')->insert([
-            'id' => $ParametrosCasoDetallado['id_paciente'],
-            'diagnostico' => $ParametrosCasoDetallado['diagnostico'],
-            'tratamiento' => $ParametrosCasoDetallado['tratamiento'],
-            'indicaciones' => $ParametrosCasoDetallado['indicaciones'],
-            'estado' => $ParametrosCasoDetallado['estado']
-        ]);
+        try {
+            // Prepara los datos para la inserción en la tabla
+            $data = [
+                'id' => $ParametrosCasoDetallado['id_paciente'],
+                'diagnostico' => $ParametrosCasoDetallado['diagnostico'],
+                'tratamiento' => $ParametrosCasoDetallado['tratamiento'],
+                'indicaciones' => $ParametrosCasoDetallado['indicaciones'],
+                'fecha_del_registro' => date('Y-m-d H:i:s'), 
+                'estado' => $ParametrosCasoDetallado['estado']
+            ];
+
+            $this->db->table('historial_clinico_detalle')->insert($data);
+
+            return $this->db->affectedRows() ? true : false;
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
+
 
     public function obtenerDatosPaciente($id_paciente)
     {
@@ -131,15 +114,25 @@ class ModeloGeneral extends Model
 
     public function ActualizarCasosFM($datosenviadosdelpost)
     {
-        return $this->db->table('casos_clinicos')
-            ->where('id', $datosenviadosdelpost['id_casos'])
-            ->update([
-                'cc_descripcion' => $datosenviadosdelpost['cc_descripcion'],
-                'cc_diagnostico' => $datosenviadosdelpost['cc_diagnostico'],
-                'cc_tratamiento' => $datosenviadosdelpost['cc_tratamiento'],
-                'cc_fecha_consulta' => $datosenviadosdelpost['cc_fecha_consulta'],
-                'cc_estado' => $datosenviadosdelpost['cc_estado']
-            ]);
+        try {
+            $v1 = $datosenviadosdelpost['id_casos'];
+            $v2 = $datosenviadosdelpost['cc_descripcion'];
+            $v3 = $datosenviadosdelpost['cc_diagnostico'];
+            $v4 = $datosenviadosdelpost['cc_tratamiento'];
+            $v5 = $datosenviadosdelpost['cc_fecha_consulta'];
+            $v6 = $datosenviadosdelpost['cc_estado'];
+
+            //La funcion queryBuilder para realizar el insert
+            $query = $this->db->query('CALL SP_UPDATE_CASO(?,?,?,?,?,?)', array($v1, $v2, $v3, $v4, $v5, $v6));
+
+            if ($query) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     public function ObtenerCasos($nombre = '', $cedula = '', $fecha = '')
@@ -154,5 +147,50 @@ class ModeloGeneral extends Model
         }
 
         return $builder->get()->getResult();
+    }
+
+
+    // Nuevo método para obtener datos para el reporte
+    public function obtener_reporte()
+    {
+        try {
+            $query = $this->db->query('CALL SP_GENERAR_REPORTE()');
+
+            $result = $query->getResult();
+
+            $query->freeResult();
+
+            return $result;
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    public function obtener_reporte_individual($id_paciente)
+    {
+        $queryPaciente = $this->db->query("SELECT * FROM casos_clinicos WHERE id = ?", array($id_paciente));
+        $paciente = $queryPaciente->getRowArray();
+
+        $queryHistoriales = $this->db->query("SELECT * FROM historial_clinico_detalle WHERE id = ? ORDER BY fecha_del_registro ASC", array($id_paciente));
+        $historiales = $queryHistoriales->getResultArray();
+
+        if (!$paciente) {
+            return ['paciente' => [], 'detalles_casos' => []];
+        }
+
+        $reporte = [
+            'paciente' => $paciente,
+            'detalles_casos' => $historiales
+        ];
+
+        return $reporte;
+    }
+
+    public function guardarUsuario($datos)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('tbl_usuarios'); 
+
+        return $builder->insert($datos);
     }
 }
