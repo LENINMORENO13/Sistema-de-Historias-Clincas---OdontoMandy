@@ -19,7 +19,6 @@
         min-height: 100vh;
     }
 
-    /* Mezcla de tarjetas de estadísticas */
     .stat-card {
         border: none;
         border-radius: 12px;

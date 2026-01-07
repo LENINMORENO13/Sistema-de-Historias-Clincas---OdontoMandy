@@ -1,24 +1,32 @@
-name: Despliegue por FTP al hosting
+name: Deploy to AWS
 
 on:
   push:
     branches:
-      - main
+      - despliegue-aws  
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Clonar el repositorio
-        uses: actions/checkout@v3
-
-      - name: Subir archivos al hosting por FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
-          port: 21
-          server-dir: /htdocs/SisOdontoMandy/
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /var/www/html
+            # Sincronizamos con GitHub sin tocar el archivo .env
+            sudo git fetch --all
+            sudo git reset --hard origin/despliegue-aws
+            
+            # Limpieza de basura y archivos temporales
+            sudo git clean -fd -e .env
+            
+            # Asegurar permisos para evitar errores de escritura/cache
+            sudo chown -R www-data:www-data /var/www/html/writable
+            sudo chmod -R 775 /var/www/html/writable
+            
+            # Limpiar cache de CodeIgniter
+            php spark cache:clear
