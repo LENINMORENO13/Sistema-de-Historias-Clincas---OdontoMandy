@@ -9,7 +9,7 @@
             margin: 0;
         }
 
-        /* Contenedor principal */
+
         .container {
             max-width: 1200px;
             background-color: #ffffff;
@@ -42,7 +42,7 @@
             margin-bottom: .5rem;
         }
 
-        /* Campos de entrada */
+
         input.form-control {
             border: 1px solid #007bff;
             border-radius: 8px;
@@ -58,7 +58,7 @@
             outline: none;
         }
 
-        /* Botón de Buscar */
+
         .btn-primary {
             background-color: #007bff;
             border-color: #007bff;
@@ -190,11 +190,13 @@
             }
         }
         @media (max-width: 768px) {
-            /* Ocultar la tabla en pantallas pequeñas */
+
             .table-responsive {
                 display: none;
             }
-            /* Mostrar la vista de tarjetas en pantallas pequeñas */
+            .table-responsive {
+                display: none;
+            }
             .card-list {
                 display: block;
             }

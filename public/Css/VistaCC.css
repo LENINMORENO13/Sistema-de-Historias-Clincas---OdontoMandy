@@ -118,7 +118,6 @@ body {
             border-radius: 10px;
             font-weight: bold;
             color: #28a745;
-            /* Verde de éxito */
             font-size: 1.2em;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -133,7 +132,6 @@ body {
 
         .btn-primary {
             background-color: #2980b9;
-            /* Botón de guardar en verde */
             border-color: #2980b9;
             font-size: 1.2em;
             padding: 12px 25px;

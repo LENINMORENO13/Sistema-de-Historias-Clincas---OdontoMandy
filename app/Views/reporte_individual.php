@@ -19,7 +19,6 @@
             margin: 0 auto;
         }
 
-        /* --- Header Principal --- */
         .header {
             text-align: center;
             padding-bottom: 10px;
@@ -41,11 +40,10 @@
             font-style: italic;
         }
         
-        /* --- Títulos de Sección --- */
         h2 {
             font-size: 14pt;
             color: #007bff; 
-            background-color: #f0f8ff; 
+            background-color: #f0f8ff;
             padding: 8px 15px;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -70,7 +68,7 @@
             padding: 8px 15px;
             border-bottom: 1px solid #f0f0f0;
             vertical-align: top;
-            width: 25%; 
+            width: 25%;
         }
         
         .info-grid tr:last-child td {
@@ -79,7 +77,7 @@
 
         .info-label {
             font-weight: bold;
-            color: #1a4f94; 
+            color: #1a4f94;
             display: block;
             font-size: 9pt;
         }

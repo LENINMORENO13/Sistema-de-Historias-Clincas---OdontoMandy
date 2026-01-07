@@ -8,23 +8,26 @@ use App\Models\ModeloGeneral;
 
 class CAdmin extends BaseController
 {
+    // Método para mostrar el formulario de registro
     public function mostrarFormularioRegistro()
     {
         return view('VistaRegistro');
     }
 
+    // Método para procesar y guardar el nuevo usuario
     public function guardarUsuario()
     {
-        // Obtener datos del formulario
         $correo = $this->request->getPost('correo');
         $contrasena = $this->request->getPost('contrasena');
-        $rol = $this->request->getPost('rol'); 
+        $rol = $this->request->getPost('rol');
 
+        // Validar que los campos no estén vacíos
         if (empty($correo) || empty($contrasena) || empty($rol)) {
             session()->setFlashdata('error', 'Por favor, complete todos los campos.');
             return redirect()->back()->withInput();
         }
 
+        // HASHEAR LA CONTRASEÑA antes de guardarla
         $contrasena_hasheada = password_hash($contrasena, PASSWORD_DEFAULT);
 
         $datosUsuario = [
