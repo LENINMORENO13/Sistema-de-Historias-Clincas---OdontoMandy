@@ -53,13 +53,6 @@ class ModeloGeneral extends Model
         }
     }
 
-    public function SelectExtraerCasoFM($valoridurl)
-    {
-        return $this->db->table('casos_clinicos')
-            ->where('id', $valoridurl)
-            ->get()
-            ->getResult();
-    }
 
     public function SelectCasosFM()
     {
@@ -112,28 +105,6 @@ class ModeloGeneral extends Model
             ->getResult();
     }
 
-    public function ActualizarCasosFM($datosenviadosdelpost)
-    {
-        try {
-            $v1 = $datosenviadosdelpost['id_casos'];
-            $v2 = $datosenviadosdelpost['cc_descripcion'];
-            $v3 = $datosenviadosdelpost['cc_diagnostico'];
-            $v4 = $datosenviadosdelpost['cc_tratamiento'];
-            $v5 = $datosenviadosdelpost['cc_fecha_consulta'];
-            $v6 = $datosenviadosdelpost['cc_estado'];
-
-            //La funcion queryBuilder para realizar el insert
-            $query = $this->db->query('CALL SP_UPDATE_CASO(?,?,?,?,?,?)', array($v1, $v2, $v3, $v4, $v5, $v6));
-
-            if ($query) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (\Throwable $th) {
-            throw $th;
-        }
-    }
 
     public function ObtenerCasos($nombre = '', $cedula = '', $fecha = '')
     {

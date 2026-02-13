@@ -31,6 +31,9 @@ Thumbs.db
 phpunit.xml
 phpunit.xml.dist
 
+# Archivos de prueba
+test.php
+
 
 *.sql
 *.sqlite

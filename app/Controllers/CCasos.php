@@ -64,14 +64,6 @@ class CCasos extends BaseController
         return view('header') . view("VistaSelectCasos", $Vectordata);
     }
 
-    public function ExtraerSelectCasoFC($idurl)
-    {
-        $instancia = new ModeloGeneral();
-        $Vectordata = [
-            "VectorDatos" => $instancia->SelectExtraerCasoFM($idurl),
-        ];
-        return view("VistaActualizarCaso", $Vectordata);
-    }
 
 
     //Metodo para la historia clinica detallada
@@ -105,11 +97,6 @@ class CCasos extends BaseController
         }
     }
 
-
-    public function mostrarFormularioDetallado($idPaciente)
-    {
-        return view('VistaFormularioDetallado', ['id_paciente' => $idPaciente]);
-    }
 
 
 

@@ -4,80 +4,124 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detalles de Caso Clínico - Continuación</title>
+    <title>Detalles del Caso - SisOdontoMandy</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url('public/css/historia_clinica_detalle.css') ?>">
+
 </head>
 
 <body>
-    <div class="container">
-        <h1><i class="bi bi-journal-medical"></i> Continuación del Registro Clínico</h1>
+
+    <header class="clinic-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-icon"><i class="fas fa-file-medical"></i></div>
+                <div>
+                    <h1 class="h4 m-0 fw-bold">Dental Manager</h1>
+                    <p class="m-0 small opacity-75">Gestión Clínica Integral</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <div class="page-title">
+            <h2><i class="fas fa-stethoscope me-2"></i>Detalles del Tratamiento</h2>
+            <p class="text-muted mb-0">Complete la información técnica del caso clínico</p>
+        </div>
+
         <form action="<?= base_url('/InsertarCD') ?>" method="post" id="form_caso_detallado">
             <?= csrf_field() ?>
 
-            <div class="card">
-                <div class="card-header">1. IDENTIFICACIÓN DEL PACIENTE</div>
+            <div class="section-card">
+                <div class="card-header">
+                    <i class="fas fa-id-badge"></i> 1. Identificación del Paciente
+                </div>
                 <div class="card-body">
-                    <div class="mb-3">
-                        <label for="id_paciente" class="form-label">ID del Paciente</label>
-                        <input type="number" name="id_paciente" id="id_paciente" class="form-control" value="<?= esc($id_paciente) ?>" readonly>
-                        <small class="form-text text-muted">Este campo se rellena automáticamente.</small>
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <label for="id_paciente" class="form-label mb-0">ID de Expediente:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0"><i class="fas fa-hashtag text-secondary"></i></span>
+                                <input type="number" name="id_paciente" id="id_paciente" class="form-control input-readonly-custom border-start-0 ps-0" value="<?= esc($id_paciente) ?>" readonly>
+                            </div>
+                            <small class="text-muted mt-1 d-block"><i class="fas fa-lock me-1"></i>Dato vinculado automáticamente</small>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">2. DETALLES DE DIAGNÓSTICO</div>
+            <div class="section-card">
+                <div class="card-header">
+                    <i class="fas fa-search-plus"></i> 2. Diagnóstico Clínico
+                </div>
                 <div class="card-body">
-                    <div class="mb-3">
-                        <label for="diagnostico" class="form-label">Diagnóstico Principal</label>
-                        <input type="text" name="diagnostico" id="diagnostico" class="form-control" required placeholder="Ej: Caries dental, Gingivitis, Periodontitis, etc.">
+                    <label for="diagnostico" class="form-label">Diagnóstico Principal</label>
+                    <div class="input-group">
+                        <input type="text" name="diagnostico" id="diagnostico" class="form-control" required placeholder="Ej: Caries dental profunda en pieza 18...">
+                        <span class="input-group-text bg-white"><i class="fas fa-pen text-secondary opacity-50"></i></span>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">3. PLAN DE TRATAMIENTO</div>
+            <div class="section-card">
+                <div class="card-header">
+                    <i class="fas fa-tools"></i> 3. Plan de Tratamiento
+                </div>
                 <div class="card-body">
-                    <div class="mb-3">
-                        <label for="tratamiento" class="form-label">Tratamiento Propuesto</label>
-                        <input type="text" name="tratamiento" id="tratamiento" class="form-control" required placeholder="Ej: Obturación, Endodoncia, Exodoncia, Limpieza.">
+                    <label for="tratamiento" class="form-label">Procedimiento a realizar</label>
+                    <input type="text" name="tratamiento" id="tratamiento" class="form-control" required placeholder="Ej: Endodoncia monorradicular y reconstrucción...">
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="card-header">
+                    <i class="fas fa-prescription"></i> 4. Indicaciones Post-Operatorias
+                </div>
+                <div class="card-body">
+                    <label for="indicaciones" class="form-label">Instrucciones para el paciente</label>
+                    <textarea name="indicaciones" id="indicaciones" class="form-control" required placeholder="- Tomar medicación cada 8 horas&#10;- Dieta blanda por 24 horas&#10;- Evitar irritantes" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="card-header">
+                    <i class="fas fa-tasks"></i> 5. Estado del Caso
+                </div>
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <label for="estado" class="form-label">Situación actual:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <select name="estado" id="estado" class="form-select">
+                                <option value="activo" selected>🔵 Activo (En tratamiento)</option>
+                                <option value="inactivo">⚪ Inactivo (Finalizado/Pendiente)</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">4. INDICACIONES AL PACIENTE</div>
-                <div class="card-body">
-                    <div class="mb-3">
-                        <label for="indicaciones" class="form-label">Instrucciones Post-Tratamiento</label>
-                        <textarea name="indicaciones" id="indicaciones" class="form-control" required placeholder="Instrucciones para el paciente (ej: dieta blanda, higiene, citas de control)." rows="4"></textarea>
-                    </div>
+            <div class="d-grid gap-3 mt-4">
+                <button type="submit" class="btn-action">
+                    <i class="fas fa-save me-2"></i> GUARDAR Y FINALIZAR
+                </button>
+                
+                <div class="text-center mt-2">
+                    <a href="<?= base_url('Inicio') ?>" class="btn-back text-decoration-none">
+                        <i class="fas fa-arrow-left me-2"></i>Volver al Inicio
+                    </a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">5. ESTADO DEL CASO</div>
-                <div class="card-body">
-                    <div class="mb-4">
-                        <label for="estado" class="form-label">Estado Actual del Caso Clínico</label>
-                        <select name="estado" id="estado" class="form-select" required>
-                            <option value="activo" selected>Activo (En tratamiento)</option>
-                            <option value="inactivo">Inactivo (Pendiente)</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> GUARDAR DETALLES DEL CASO</button>
         </form>
-        <div class="text-center mt-3">
-            <a href="<?= base_url('Inicio') ?>" class="btn btn-secondary">VOLVER AL INICIO</a>
-        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

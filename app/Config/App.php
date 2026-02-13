@@ -21,6 +21,17 @@ class App extends BaseConfig
 
     public string $baseURL = 'http://localhost/SisOdontoMandy/';
 
+    public function __construct()
+    {
+        parent::__construct();
+        // Override baseURL from environment variable if set
+        $envURL = getenv('app.baseURL');
+        if (!empty($envURL)) {
+            $this->baseURL = $envURL;
+        }
+    }
+    // public string $baseURL = 'http://192.168.0.8/SisOdontoMandy/';
+
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

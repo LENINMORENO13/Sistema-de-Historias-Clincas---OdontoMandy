@@ -119,7 +119,6 @@
             $i = 0;
             foreach ($casos as $caso): 
                 $i++;
-                // Color alterno para filas pares
                 $bg_color = ($i % 2 == 0) ? '#f2f8ff' : '#ffffff'; 
             ?>
                 <tr style="background-color: <?php echo $bg_color; ?>;">

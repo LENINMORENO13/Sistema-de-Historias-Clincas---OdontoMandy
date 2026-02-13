@@ -18,24 +18,6 @@ class Home extends BaseController
         }
     }
 
-    public function MetodoVerFormularioUsuario()
-    {
-        return view('VistaPacientes');
-    }
-
-
-    public function ExtraerSelectUsuarioFC($idurl)
-    {
-        // Instanciar el modelo
-        $instancia = new ModeloGeneral();
-
-        // Obtener datos del modelo
-        $Vectordata = [
-            "VectorDatos" => $instancia->SelectExtraerUsuarioFM($idurl),
-        ];
-        return view("VistaActualizarPaciente", $Vectordata);
-    }
-
     //LOGIN
     public function vistalogin()
     {
