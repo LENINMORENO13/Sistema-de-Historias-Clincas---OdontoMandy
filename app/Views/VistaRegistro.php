@@ -9,23 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     
     <link rel="stylesheet" href="<?= base_url('public/css/VistaRegistro.css') ?>">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.css">
 </head>
 
 <body>
-
-    <?php if (session()->getFlashdata('error')): ?>
-        <div class="alert alert-danger fade show" role="alert">
-            <i class="bi bi-exclamation-triangle-fill me-2"></i>
-            <?= session()->getFlashdata('error') ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if (session()->getFlashdata('success')): ?>
-        <div class="alert alert-success fade show" role="alert">
-            <i class="bi bi-check-circle-fill me-2"></i>
-            <?= session()->getFlashdata('success') ?>
-        </div>
-    <?php endif; ?>
 
     <div class="register-container">
         <h3 class="text-center">Registro de Nuevo Usuario</h3>
@@ -66,18 +56,39 @@
         <a href="<?= base_url('/') ?>" class="back-to-login mt-4">¿Ya tienes una cuenta? Inicia sesión aquí.</a>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const alerts = document.querySelectorAll('.alert');
-            alerts.forEach(alert => {
-                setTimeout(() => {
-                    alert.classList.remove('show');
-                    alert.classList.add('fade');
-                }, 5000);
+    <!-- SweetAlert2 - Mostrar alertas desde PHP -->
+    <?php if ($error = session()->getFlashdata('error')): ?>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: '<?= str_replace(["'", "\n"], ["\\'", " "], $error) ?>',
+                    timer: 4000,
+                    timerProgressBar: true,
+                    showConfirmButton: true,
+                    confirmButtonText: 'Entendido'
+                });
             });
-        });
-    </script>   
+        </script>
+    <?php endif; ?>
+
+    <?php if ($success = session()->getFlashdata('success')): ?>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Éxito!',
+                    text: '<?= str_replace(["'", "\n"], ["\\'", " "], $success) ?>',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    showConfirmButton: false
+                });
+            });
+        </script>
+    <?php endif; ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
 
 </body>
 

@@ -3,7 +3,7 @@ name: Deploy to AWS
 on:
   push:
     branches:
-      - despliegue-aws  
+      - despliegue-aws
 
 jobs:
   deploy:
@@ -17,19 +17,17 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /var/www/html
-            # Sincronizar código
+            # 1. Actualizar el código
             sudo git fetch --all
             sudo git reset --hard origin/despliegue-aws
             
-            # Forzar permisos correctos en carpetas de escritura
+            # 2. Reparar permisos de carpetas de escritura (Soluciona el error de Cache)
             sudo chown -R www-data:www-data /var/www/html/writable
             sudo chmod -R 775 /var/www/html/writable
             
-            # Crear carpetas si no existen y dar permisos
-            sudo mkdir -p /var/www/html/writable/cache
-            sudo mkdir -p /var/www/html/writable/logs
-            sudo mkdir -p /var/www/html/writable/session
+            # 3. Asegurar que las subcarpetas existan
+            sudo mkdir -p /var/www/html/writable/cache /var/www/html/writable/logs /var/www/html/writable/session
             sudo chmod -R 777 /var/www/html/writable/cache
             
-            # Intentar limpiar la caché (con sudo para evitar el error que viste)
-            sudo php spark cache:clear || echo "No se pudo limpiar la caché, pero el código se actualizó."
+            # 4. Limpiar la caché de CodeIgniter
+            sudo php spark cache:clear || echo "Caché ya estaba limpia"

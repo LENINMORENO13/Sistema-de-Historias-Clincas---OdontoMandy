@@ -24,24 +24,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* FONDO: Imagen médica con un filtro azul encima */
-            background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.6)), 
-                        url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop');
+            background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.6)),
+                url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             position: relative;
             padding: 20px;
         }
 
-        /* Efecto de partículas en el fondo */
         body::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
                 radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 2%, transparent 2%),
                 radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 2%, transparent 2%),
                 radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 2%, transparent 2%);
@@ -49,23 +44,21 @@
             z-index: 0;
         }
 
-        /* Contenedor principal más ancho */
         .login-container {
             width: 100%;
-            max-width: 500px; /* Más ancho que antes */
-            min-height: 550px; /* Altura específica */
+            max-width: 500px;
+            min-height: 550px;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1;
         }
 
-        /* La Tarjeta Central - Dimensiones mejoradas */
         .login-card {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             width: 100%;
-            padding: 2.5rem; /* Reducido un poco el padding */
+            padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             position: relative;
@@ -74,19 +67,16 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* Decoración superior de la tarjeta (Barra azul) */
         .login-card::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             width: 100%;
             height: 5px;
             background: linear-gradient(90deg, var(--primary-color), #0dcaf0);
             z-index: 2;
         }
 
-        /* Contenedor del logo mejorado */
         .logo-container {
             margin: 0 auto 1.2rem auto;
             text-align: center;
@@ -99,11 +89,10 @@
             margin-bottom: 0.8rem;
         }
 
-        /* Fondo circular para el logo */
         .logo-background {
-            width: 75px; /* Reducido */
-            height: 75px;
-            background: linear-gradient(135deg, var(--light-blue) 0%, rgba(13, 110, 253, 0.1) 100%);
+            width: 85px; /* Aumentado ligeramente para la imagen */
+            height: 85px;
+            background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -121,36 +110,12 @@
             box-shadow: 0 10px 25px rgba(13, 110, 253, 0.25);
         }
 
-        /* Imagen del logo */
         .logo-img {
-            width: 50px; /* Reducido */
-            height: 50px;
+            width: 60%; /* Ajuste para que la imagen dental se vea bien */
+            height: 60%;
             object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
 
-        /* Si la imagen no carga, mostrar ícono de respaldo */
-        .logo-background::after {
-            content: '\F5B2'; /* Código del ícono de diente de Bootstrap Icons */
-            font-family: 'bootstrap-icons';
-            font-size: 2rem; /* Reducido */
-            color: var(--primary-color);
-            position: absolute;
-            opacity: 0.3;
-            z-index: 0;
-        }
-
-        .logo-img:not([src]), 
-        .logo-img[src=""] {
-            opacity: 0;
-        }
-
-        .logo-img:not([src]) + .logo-background::after,
-        .logo-img[src=""] + .logo-background::after {
-            opacity: 1;
-        }
-
-        /* Estilo de los Inputs */
         .form-control {
             border: 1px solid #dee2e6;
             padding: 0.8rem 1rem;
@@ -160,14 +125,13 @@
             background-color: #f8f9fa;
             width: 100%;
         }
-        
+
         .form-control:focus {
             box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
             border-color: var(--primary-color);
             background-color: white;
         }
 
-        /* Contenedor del input con ícono */
         .input-with-icon {
             position: relative;
             margin-bottom: 1rem;
@@ -186,7 +150,6 @@
             padding-left: 45px;
         }
 
-        /* Contenedor del input group para contraseña */
         .password-container {
             position: relative;
         }
@@ -208,7 +171,6 @@
             color: var(--primary-color);
         }
 
-        /* Botón de login */
         .btn-login {
             background: linear-gradient(135deg, var(--primary-color), #0a58ca);
             border: none;
@@ -224,40 +186,17 @@
             margin-top: 0.5rem;
         }
 
-        .btn-login::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
-
         .btn-login:hover {
             background: linear-gradient(135deg, #0a58ca, var(--primary-color));
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
         }
 
-        .btn-login:hover::before {
-            left: 100%;
-        }
-
-        /* Animación de entrada suave */
         @keyframes slideUp {
-            from { 
-                opacity: 0; 
-                transform: translateY(20px) scale(0.98); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0) scale(1); 
-            }
+            from { opacity: 0; transform: translateY(20px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* Animación del logo */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -268,29 +207,25 @@
             animation: pulse 3s ease-in-out infinite;
         }
 
-        /* Estilos para la alerta */
         .alert-custom {
             border-radius: 10px;
             border: none;
             background-color: rgba(220, 53, 69, 0.1);
-            border-left: 4px solid var(--danger-color, #dc3545);
+            border-left: 4px solid #dc3545;
             padding: 0.8rem 1rem;
             margin-bottom: 1.5rem;
         }
 
-        /* Estilos para el checkbox */
         .form-check-input:checked {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
         }
 
-        /* Estilos para los enlaces */
         a.text-primary:hover {
             color: var(--primary-dark) !important;
             text-decoration: underline !important;
         }
 
-        /* Versión del sistema */
         .system-version {
             position: fixed;
             bottom: 10px;
@@ -300,23 +235,17 @@
             z-index: 1;
         }
 
-        /* Footer de seguridad */
         .security-footer {
             margin-top: 1.5rem;
             padding-top: 1rem;
             border-top: 1px solid #dee2e6;
         }
 
-        /* Ajustes para mantener proporciones */
         .login-content {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             min-height: 450px;
-        }
-
-        .login-header {
-            flex-shrink: 0;
         }
 
         .login-body {
@@ -326,69 +255,24 @@
             justify-content: center;
         }
 
-        .login-footer {
-            flex-shrink: 0;
-        }
-
-        /* Ajustes para móvil */
+        /* Responsive */
         @media (max-width: 768px) {
-            .login-container {
-                max-width: 90%;
-                min-height: 500px;
-            }
-            
-            .login-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .logo-background {
-                width: 65px;
-                height: 65px;
-            }
-
-            .logo-img {
-                width: 40px;
-                height: 40px;
-            }
-
-            body {
-                padding: 15px;
-            }
+            .login-container { max-width: 90%; min-height: 500px; }
+            .login-card { padding: 2rem 1.5rem; }
+            .logo-background { width: 75px; height: 75px; }
+            body { padding: 15px; }
         }
 
         @media (max-width: 576px) {
-            .login-container {
-                max-width: 95%;
-                min-height: 480px;
-            }
-            
-            .login-card {
-                padding: 1.5rem;
-            }
-
-            .system-version {
-                display: none;
-            }
-        }
-
-        @media (max-height: 700px) {
-            .login-container {
-                min-height: auto;
-                padding: 20px 0;
-            }
-            
-            .login-card {
-                margin: 10px 0;
-            }
+            .login-container { max-width: 95%; min-height: 480px; }
+            .login-card { padding: 1.5rem; }
+            .system-version { display: none; }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="system-version d-none d-md-block">
-        v1.0.0 • OdontoMandy
-    </div>
 
     <div class="login-container">
         <div class="login-card">
@@ -397,14 +281,13 @@
                     <div class="logo-container">
                         <div class="logo-wrapper">
                             <div class="logo-background">
-                                <img src="<?= base_url('OdontoMandy.png') ?>" 
-                                     alt="Logo OdontoMandy" 
+                                <img src="https://cdn-icons-png.flaticon.com/512/3004/3004458.png"
                                      class="logo-img"
-                                     onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)'">
+                                     alt="Logo Dental"
+                                     onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-tooth-fill\' style=\'font-size: 2rem; color: #0d6efd;\'></i>'">
                             </div>
                         </div>
-                        <h3 class="fw-bold text-dark mb-1" style="font-size: 1.5rem;">OdontoMandy</h3>
-                        <p class="text-muted small mb-2">Sistema de Gestión Odontológica</p>
+                        <h3 class="fw-bold text-dark mb-1" style="font-size: 1.5rem;">Dental Manager</h3>
                         <div class="welcome-message">
                             <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1 rounded-pill" style="font-size: 0.75rem;">
                                 <i class="bi bi-shield-check me-1"></i>Acceso seguro
@@ -413,7 +296,6 @@
                     </div>
                 </div>
 
-                <!-- Body -->
                 <div class="login-body">
                     <?php if (session()->getFlashdata('error')): ?>
                         <div class="alert alert-custom d-flex align-items-center p-2 mb-3" role="alert">
@@ -438,11 +320,11 @@
                             </label>
                             <div class="input-with-icon">
                                 <i class="bi bi-person"></i>
-                                <input type="email" class="form-control" id="correo" name="correo" 
-                                       placeholder="ejemplo@consultorio.com" required
-                                       autocomplete="username">
+                                <input type="email" class="form-control" id="correo" name="correo"
+                                    placeholder="ejemplo@consultorio.com" required
+                                    autocomplete="username">
                             </div>
-                            <div class="invalid-feedback small">Por favor ingrese un correo electrónico válido.</div>
+                            <div class="invalid-feedback small">Correo inválido.</div>
                         </div>
 
                         <div class="mb-3">
@@ -450,29 +332,29 @@
                                 <label for="contrasena" class="form-label small fw-bold text-secondary">
                                     <i class="bi bi-key me-1"></i>CONTRASEÑA
                                 </label>
-                                <a href="#" class="small text-primary text-decoration-none fw-semibold" 
+                                <!-- <a href="#" class="small text-primary text-decoration-none fw-semibold"
                                    data-bs-toggle="modal" data-bs-target="#passwordModal">
                                     ¿Olvidaste tu contraseña?
-                                </a>
+                                </a> -->
                             </div>
-                            
+
                             <div class="password-container">
-                                <input type="password" class="form-control" id="contrasena" name="contrasena" 
-                                       placeholder="••••••••" required
-                                       autocomplete="current-password">
+                                <input type="password" class="form-control" id="contrasena" name="contrasena"
+                                    placeholder="••••••••" required
+                                    autocomplete="current-password">
                                 <button type="button" class="toggle-password" id="togglePassword">
                                     <i class="bi bi-eye"></i>
                                 </button>
                             </div>
-                            <div class="invalid-feedback small">La contraseña es requerida.</div>
+                            <div class="invalid-feedback small">Contraseña requerida.</div>
                         </div>
 
-                        <div class="form-check mb-4">
+                        <!-- <div class="form-check mb-4">
                             <input class="form-check-input" type="checkbox" id="rememberMe" name="remember">
                             <label class="form-check-label small text-muted" for="rememberMe">
-                                <i class="bi bi-check2-circle me-1"></i>Recordar mis credenciales
+                                <i class="bi bi-check2-circle me-1"></i>Recordar credenciales
                             </label>
-                        </div>
+                        </div> -->
 
                         <div class="d-grid">
                             <button type="submit" class="btn btn-primary btn-login">
@@ -484,17 +366,15 @@
                     </form>
                 </div>
 
-                <!-- Footer -->
                 <div class="login-footer">
                     <div class="text-center mt-4 pt-3 border-top">
-                        <span class="text-muted small">¿No tienes acceso al sistema?</span>
-                        <a href="<?= base_url('admin/registrar') ?>" 
+                        <span class="text-muted small">¿No tienes acceso?</span>
+                        <a href="<?= base_url('admin/registrar') ?>"
                            class="text-primary small fw-bold text-decoration-none ms-1">
                             Solicitar credenciales
                         </a>
                     </div>
 
-                    <!-- Información del sistema -->
                     <div class="security-footer">
                         <div class="row text-center">
                             <div class="col-6">
@@ -516,7 +396,6 @@
         </div>
     </div>
 
-    <!-- Modal para recuperación de contraseña -->
     <div class="modal fade" id="passwordModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content">
@@ -527,9 +406,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body py-3">
-                    <p class="small text-muted mb-2">
-                        Ingresa tu correo electrónico registrado.
-                    </p>
+                    <p class="small text-muted mb-2">Ingresa tu correo registrado.</p>
                     <div class="mb-3">
                         <input type="email" class="form-control form-control-sm" placeholder="ejemplo@consultorio.com">
                     </div>
@@ -545,80 +422,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const togglePassword = document.getElementById('togglePassword');
-            const password = document.getElementById('contrasena');
-
-            if (togglePassword && password) {
-                togglePassword.addEventListener('click', function (e) {
-                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-                    password.setAttribute('type', type);
-                    
-                    const icon = this.querySelector('i');
-                    icon.classList.toggle('bi-eye');
-                    icon.classList.toggle('bi-eye-slash');
-                    
-                    this.setAttribute('aria-label', type === 'password' ? 'Mostrar contraseña' : 'Ocultar contraseña');
+            // Toggle Password
+            const toggleBtn = document.getElementById('togglePassword');
+            const pwdInput = document.getElementById('contrasena');
+            if (toggleBtn && pwdInput) {
+                toggleBtn.addEventListener('click', function() {
+                    const type = pwdInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    pwdInput.setAttribute('type', type);
+                    this.querySelector('i').classList.toggle('bi-eye');
+                    this.querySelector('i').classList.toggle('bi-eye-slash');
                 });
             }
 
-            (() => {
-                'use strict'
-                const forms = document.querySelectorAll('.needs-validation')
-                Array.from(forms).forEach(form => {
-                    form.addEventListener('submit', event => {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        } else {
-                            const submitBtn = form.querySelector('.btn-login');
-                            const spinner = document.getElementById('loadingSpinner');
-                            if (submitBtn && spinner) {
-                                submitBtn.disabled = true;
-                                spinner.classList.remove('d-none');
-                            }
+            // Validación y Loading
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        const btn = form.querySelector('.btn-login');
+                        const spinner = document.getElementById('loadingSpinner');
+                        if (btn && spinner) {
+                            btn.disabled = true;
+                            spinner.classList.remove('d-none');
                         }
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-            })();
-
-            setTimeout(() => {
-                const alerts = document.querySelectorAll('.alert');
-                alerts.forEach(alert => {
-                    const bsAlert = new bootstrap.Alert(alert);
-                    bsAlert.close();
-                });
-            }, 5000);
-
-            let formSubmitted = false;
-            const loginForm = document.querySelector('form');
-            if (loginForm) {
-                loginForm.addEventListener('submit', function(e) {
-                    if (formSubmitted) {
-                        e.preventDefault();
-                        return false;
                     }
-                    formSubmitted = true;
-                    return true;
-                });
-            }
+                    form.classList.add('was-validated');
+                }, false);
+            });
 
-            const logoImg = document.querySelector('.logo-img');
-            if (logoImg) {
-                logoImg.onerror = function() {
-                    this.style.display = 'none';
-                    const bg = this.parentElement;
-                    bg.style.background = 'linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)';
-                    bg.innerHTML = '<i class="bi bi-tooth-fill" style="font-size: 1.8rem; color: #0d6efd;"></i>';
-                };
-            }
-
-            const firstInput = document.getElementById('correo');
-            if (firstInput) {
-                setTimeout(() => {
-                    firstInput.focus();
-                }, 300);
-            }
+            const emailInput = document.getElementById('correo');
+            if(emailInput) setTimeout(() => emailInput.focus(), 300);
         });
     </script>
 </body>
