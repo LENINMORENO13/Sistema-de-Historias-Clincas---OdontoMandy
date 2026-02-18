@@ -2,23 +2,45 @@
 
 ## Sistema de Gestión Integral para Clínicas Odontológicas
 
+[![Estado](https://img.shields.io/badge/Estado-Desplegado%20%26%20Operativo-success?style=for-the-badge)](https://dentalmanager.alwaysdata.net/)
+[![Demo](https://img.shields.io/badge/Demo-Ver%20en%20Vivo-blue?style=for-the-badge&logo=google-chrome)](https://dentalmanager.alwaysdata.net/)
+[![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4.x-blue?style=for-the-badge&logo=php)](https://codeigniter.com/)
+[![PHP](https://img.shields.io/badge/PHP-8.1%2B-purple?style=for-the-badge&logo=php)](https://www.php.net/)
+
+---
+
+### 🌐 ¡PRUÉBALO AHORA!
+
+El sistema está desplegado y **abierto para pruebas públicas**. No necesitas instalar nada.
+
+👉 **https://dentalmanager.alwaysdata.net/**
+
+**Instrucciones de Acceso:**
+1. Ve al enlace.
+2. Haz clic en **"Registrarse"** en la pantalla de inicio.
+3. Crea una cuenta de prueba gratuita.
+4. ¡Explora todas las funciones libremente!
+
+> ⚠️ **Aviso:** Este es un entorno de demostración. Por favor, **no ingreses información confidencial real** de pacientes. Los datos aquí son ficticios con fines educativos.
+
 ---
 
 ### 🎯 En una frase
 
-Dental Manager es un sistema web completo que automatiza la gestión de pacientes, tratamientos y reportes en clínicas dentales, reduciendo el tiempo de administración y mejorando la atención al paciente.
+DentalManager es un sistema web completo que automatiza la gestión de pacientes, tratamientos y reportes en clínicas dentales, reduciendo el tiempo de administración y mejorando la atención al paciente.
 
 ---
 
 ### 🚀 ¿Por qué importa este proyecto?
 
 Las clínicas odontológicas tradicionales enfrentan desafíos diarios:
-- **Pérdida de tiempo** en papeleo y registros manuales
-- **Desorganización** de historiales médicos
-- **Dificultad** para generar reportes y estadísticas
-- **Sin acceso centralizado** a la información de pacientes
 
-**Dental Manager resuelve estos problemas** proporcionando una plataforma digital que centraliza toda la operación de la clínica.
+- **Pérdida de tiempo** en papeleo y registros manuales.
+- **Desorganización** de historiales médicos.
+- **Dificultad** para generar reportes y estadísticas.
+- **Sin acceso centralizado** a la información de pacientes.
+
+**DentalManager resuelve estos problemas** proporcionando una plataforma digital centralizada, segura y accesible desde cualquier lugar.
 
 ---
 
@@ -26,58 +48,49 @@ Las clínicas odontológicas tradicionales enfrentan desafíos diarios:
 
 | Métrica | Antes | Después |
 |---------|-------|---------|
-| Tiempo en registrar un paciente | 15-20 min | 2-3 min |
-| Búsqueda de historiales | 5-10 min | Instantáneo |
-| Generación de reportes | Manual (horas) | Automatizado (segundos) |
-| Acceso a estadísticas | No disponible | En tiempo real |
+| Tiempo en registrar un paciente | 15-20 min | **2-3 min** |
+| Búsqueda de historiales | 5-10 min | **Instantáneo** |
+| Generación de reportes | Manual (horas) | **Automatizado (segundos)** |
+| Acceso a estadísticas | No disponible | **En tiempo real** |
 
 ---
 
 ### ✨ Características principales
 
 #### 1️⃣ Gestión completa de pacientes
-- Registro digital de datos personales
-- Historial médico completo
-- Búsqueda rápida y filtrada
-- Seguimiento a largo plazo
+- Registro digital de datos personales.
+- Historial médico completo.
+- Búsqueda rápida y filtrada.
 
 #### 2️⃣ Casos clínicos especializados
-- Documentación estructurada de tratamientos
-- Motivo de consulta y antecedentes
-- Plan de tratamiento personalizado
-- Estado del caso (en progreso, completado, derivado)
+- Documentación estructurada de tratamientos.
+- Motivo de consulta y antecedentes.
+- Estado del caso (en progreso, completado, derivado).
 
 #### 3️⃣ Odontograma digital
-- Visualización gráfica del estado dental
-- Registro de piezas presentes y ausentes
-- Marcas visuales por condición (caries, restauración, extracción)
-- Evolución visual del tratamiento
+- Visualización gráfica del estado dental.
+- Registro de piezas presentes y ausentes.
+- Marcas visuales por condición (caries, restauración, extracción).
 
 #### 4️⃣ Historias clínicas detalladas
-- Diagnósticos precisos con códigos
-- Tratamientos realizados con descripciones
-- Indicaciones post-tratamiento para pacientes
-- Notas de evolución y seguimiento
+- Diagnósticos precisos.
+- Tratamientos realizados con descripciones.
+- Indicaciones post-tratamiento.
 
 #### 5️⃣ Reportería inteligente
-- Reportes individuales por paciente
-- Reportes consolidados de la clínica
-- Estadísticas de tratamientos más comunes
-- Exportación de datos para análisis
+- Reportes individuales por paciente (PDF).
+- Reportes consolidados de la clínica.
+- Exportación de datos para análisis.
 
 #### 6️⃣ Panel de control (Dashboard)
-- Resumen de actividad diaria
-- Citas y casos pendientes
-- Métricas clave de la clínica
-- Vista rápida de pacientes recientes
+- Resumen de actividad diaria.
+- Métricas clave de la clínica.
+- Vista rápida de pacientes recientes.
 
-#### 7️⃣ Seguridad empresarial
-- Autenticación segura con sesiones
-- Control de acceso por roles
-- Datos encriptados
-- Registro de actividades
-
----
+#### 7️⃣ Seguridad
+- Autenticación segura con sesiones.
+- Datos encriptados.
+- Registro abierto para nuevos doctores (Modo Demo).
 
 ---
 
@@ -101,62 +114,53 @@ Una vista rápida a las funcionalidades principales de Dental Manager:
 
 ### 🛠️ Stack tecnológico
 
-```
-Frontend:      HTML5, CSS3, JavaScript
-Backend:       PHP 8.1+
-Framework:     CodeIgniter 4
-Database:      MySQL
-Servidor:      Apache/Nginx (XAMPP)
-Control:       Git/GitHub
+```text
+Frontend:       HTML5, CSS3, JavaScript (Bootstrap 5)
+Backend:        PHP 8.1+
+Framework:      CodeIgniter 4
+Database:       MySQL (MariaDB)
+Despliegue:     AlwaysData Cloud
+Control:        Git/GitHub
 ```
 
 ---
 
 ### 🧠 Habilidades demostradas
 
-#### Backend
-- ✅ Programación orientada a objetos en PHP
-- ✅ Patrón de arquitectura MVC
-- ✅ Conexión y consultas a bases de datos MySQL
-- ✅ Validación y sanitización de datos
-- ✅ Manejo de sesiones y autenticación
-- ✅ Desarrollo de APIs y controladores
+#### Backend & Cloud
+- ✅ Despliegue en Producción: Configuración de entorno real en AlwaysData.
+- ✅ Optimización: Ajuste de rutas y assets para entornos web.
+- ✅ Seguridad: Manejo de sesiones y sanitización en la nube.
+- ✅ MVC: Arquitectura escalable y mantenible.
+- ✅ Desarrollo de APIs: Controladores RESTful para consumo interno.
 
 #### Frontend
-- ✅ HTML semántico y accesible
-- ✅ CSS con diseño responsive
-- ✅ JavaScript para interactividad
-- ✅ Integración frontend-backend
+- ✅ Diseño Responsive: Adaptable a móviles y escritorio.
+- ✅ Integración de librerías: Uso de herramientas para generación de PDF y gráficos dinámicos.
+- ✅ UX/UI: Diseño intuitivo enfocado en usuarios no técnicos.
 
 #### Base de datos
-- ✅ Diseño de esquemas relacionales
-- ✅ Consultas SQL optimizadas
-- ✅ Normalización de datos
-- ✅ Procedures y funciones
-
-#### General
-- ✅ Control de versiones con Git
-- ✅ Documentación técnica
-- ✅ Resolución de problemas
-- ✅ Código limpio y mantenible
+- ✅ Stored Procedures: Lógica de negocio encapsulada en la BD para reportes rápidos.
+- ✅ Relaciones complejas: Diseño relacional normalizado.
+- ✅ Consultas optimizadas: Joins eficientes para grandes volúmenes de datos.
 
 ---
 
 ### 📁 Estructura del proyecto
 
-```
+```plaintext
 SisOdontoMandy/
 ├── app/
 │   ├── Config/          → Configuraciones del framework
-│   ├── Controllers/      → Lógica de negocio (Home, CCasos, Reportes, Admin)
-│   ├── Models/          → Acceso a datos (ModeloGeneral)
-│   ├── Views/           → Interfaces de usuario (PHP templates)
+│   ├── Controllers/     → Lógica de negocio (Home, CCasos, Reportes)
+│   ├── Models/          → Acceso a datos y Stored Procedures
+│   ├── Views/           → Interfaces de usuario
 │   └── Helpers/         → Funciones utilitarias
-├── Img/                 → Imágenes del proyecto (screenshots, logos)
-├── public/
-│   ├── css/             → Estilos del sistema
-│   └── [assets]        → Imágenes, JS, etc.
-└── system/              → Framework CodeIgniter 4
+├── public/              → Raíz del servidor web
+│   ├── css/             → Estilos personalizados
+│   ├── js/              → Lógica de cliente
+│   └── assets/          → Recursos estáticos
+└── system/              → Core de CodeIgniter 4
 ```
 
 ---
@@ -164,53 +168,34 @@ SisOdontoMandy/
 ### 🔑 Módulos principales
 
 | Módulo | Archivo clave | Descripción |
-|--------|---------------|-------------|
-| Login | `Home.php` | Autenticación de usuarios |
-| Dashboard | `VistaDashboard.php` | Panel principal |
-| Pacientes | `VistaRegistro.php` | Registro de pacientes |
-| Casos | `CCasos.php` + `VistaCC.php` | Gestión de casos clínicos |
-| Odontograma | `VistaSelectCasos.php` | Visualización dental |
-| Reportes | `Reportes.php` | Generación de informes |
-| Admin | `CAdmin.php` | Administración del sistema |
+|--------|--------------|------------|
+| Login | Home.php | Autenticación de usuarios |
+| Dashboard | VistaDashboard.php | Panel principal |
+| Pacientes | VistaRegistro.php | Registro de pacientes |
+| Casos | CCasos.php + VistaCC.php | Gestión de casos clínicos |
+| Odontograma | VistaSelectCasos.php | Visualización dental |
+| Reportes | Reportes.php | Generación de informes |
+| Admin | CAdmin.php | Administración del sistema |
 
 ---
 
 ### 💡 Lo que aprendí
 
-1. **Diseñar soluciones reales** - Entender necesidades de usuarios y traducirlas en funcionalidades
-2. **Arquitectura escalable** - Aplicar patrones como MVC para proyectos mantenibles
-3. **Seguridad primero** - Implementar protecciones contra vulnerabilidades comunes
-4. **Experiencia de usuario** - Crear interfaces intuitivas para usuarios no técnicos
-5. **Gestión de proyecto** - Planificar, ejecutar y entregar un sistema completo
+- Diseñar soluciones reales: Entender necesidades de usuarios y traducirlas en funcionalidades.
+- Arquitectura escalable: Aplicar patrones como MVC para proyectos mantenibles.
+- Seguridad primero: Implementar protecciones contra vulnerabilidades comunes.
+- Despliegue real: Llevar un proyecto local a un entorno de nube productivo.
+- Gestión de proyecto: Planificar, ejecutar y entregar un sistema completo.
 
 ---
 
 ### 📈 Próximos pasos (v2.0)
 
-- [ ] Citas y agenda automática
-- [ ] Recordatorios por WhatsApp/SMS
-- [ ] Portal del paciente
-- [ ] App móvil
-- [ ] Multiclinica (SaaS)
-
-
-### 🚀 Cómo ejecutar el proyecto
-
-```bash
-# Requisitos
-- PHP 8.1+
-- MySQL
-- Composer
-- XAMPP/WAMP
-
-# Instalación
-1. Clonar el repositorio
-2. composer install
-3. Crear base de datos 'odontomandy_db'
-4. Importar schema SQL
-5. Configurar .env
-6. Acceder a http://localhost/SisOdontoMandy/
-```
+- [ ] Citas y agenda automática.
+- [ ] Recordatorios por WhatsApp/SMS.
+- [ ] Portal del paciente.
+- [ ] App móvil.
+- [ ] Multiclinica (SaaS).
 
 ---
 
@@ -221,6 +206,3 @@ SisOdontoMandy/
 - **GitHub:** [LENINMOREN013](https://github.com/LENINMOREN013)
 - **Email:** mlenin922@gmail.com
 - **LinkedIn:** [Lenin Moreno](https://www.linkedin.com/in/lenin-moreno/)
-
----
-

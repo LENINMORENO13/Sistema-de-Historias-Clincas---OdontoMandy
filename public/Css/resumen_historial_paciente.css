@@ -1,111 +1,285 @@
+/* Variables */
 :root {
     --primary-color: #0d6efd;
-    --primary-gradient: linear-gradient(135deg, #0d6efd 0%, #0043a8 100%);
-    --background-light: #f4f6f9;
-    --text-dark: #2c3e50;
-    --table-header-bg: #f8f9fc;
-    --table-header-text: #4e73df;
+    --primary-dark: #0a58ca;
+    --primary-light: #e3f2fd;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --background-light: #f0f4f8;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
+/* Body */
 body {
-    background-color: var(--background-light);
+    background: linear-gradient(135deg, var(--background-light) 0%, #e2e8f0 100%);
     font-family: 'Poppins', sans-serif;
     color: var(--text-dark);
+    min-height: 100vh;
+    position: relative;
 }
 
+/* Decorative background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(13, 110, 253, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(13, 110, 253, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
 
+/* Header */
 .header-app {
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: white;
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(13, 110, 253, 0.25);
+    position: relative;
+    overflow: hidden;
 }
 
+.header-app::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: headerShine 15s infinite linear;
+}
 
+@keyframes headerShine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.header-app .container {
+    position: relative;
+    z-index: 1;
+}
+
+.header-app i {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+/* Cards */
 .card-custom {
     border: none;
-    border-radius: 12px;
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
     background: white;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
 
-
-.border-dashed {
-    border: 2px dashed #e3e6f0 !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
+.card-custom::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #0dcaf0);
 }
 
+.card-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Patient info section */
+.patient-info {
+    background: linear-gradient(135deg, var(--primary-light) 0%, #f8fbff 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(13, 110, 253, 0.1);
+}
+
+/* Labels */
+.label-small {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Table */
+.table-custom {
+    margin-bottom: 0;
+}
 
 .table-custom thead th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-text);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: var(--text-dark);
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 0.5px;
-    border-bottom: 2px solid #e3e6f0;
-    padding: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 1rem 1.25rem;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .table-custom tbody td {
-    padding: 1rem;
+    padding: 1rem 1.25rem;
     vertical-align: middle;
-    color: #5a5c69;
-    border-bottom: 1px solid #eaecf4;
+    color: #475569;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.9rem;
 }
 
-.table-hover tbody tr:hover {
-    background-color: #f8f9fc;
-    transform: translateY(-1px); 
+.table-custom tbody tr {
+    transition: all 0.2s ease;
     position: relative;
-    z-index: 1;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+.table-custom tbody tr:hover {
+    background: linear-gradient(135deg, var(--primary-light) 0%, #f0f7ff 100%);
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.1);
+    border-radius: 8px;
+    z-index: 10;
+}
 
+/* Inactive rows */
 .row-inactive {
-    background-color: #fafafa;
-    opacity: 0.8;
+    background-color: #f8fafc;
+    opacity: 0.7;
 }
+
 .row-inactive:hover {
     opacity: 1;
+    background: #f8fafc;
 }
 
-
-.label-small {
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
+.row-inactive td {
+    text-decoration: line-through;
+    color: #94a3b8;
 }
 
-
+/* Badges */
 .badge-status {
-    padding: 0.5em 0.9em;
-    font-weight: 500;
-    border-radius: 50px; 
-    font-size: 0.75rem;
+    padding: 0.5em 1em;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 0.7rem;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
+.badge-status.bg-success {
+    background-color: rgba(25, 135, 84, 0.1) !important;
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.badge-status.bg-danger {
+    background-color: rgba(220, 53, 69, 0.1) !important;
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+}
+
+/* Buttons */
 .btn-action {
-    border-radius: 50px;
-    padding: 0.5rem 1.5rem;
-    font-weight: 500;
+    border-radius: 10px;
+    padding: 0.6rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.875rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
+    gap: 6px;
+}
+
+.btn-primary.btn-action {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.25);
 }
 
 .btn-primary.btn-action:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.35);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
 }
 
+.btn-outline-secondary.btn-action {
+    border: 2px solid #e2e8f0;
+    color: #64748b;
+    background: white;
+}
+
+.btn-outline-secondary.btn-action:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #475569;
+    transform: translateY(-2px);
+}
+
+/* Empty state */
+.empty-state {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: white;
+    border-radius: 16px;
+    border: 2px dashed #cbd5e1 !important;
+    box-shadow: none !important;
+}
+
+.empty-state-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-light) 0%, #f0f7ff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.empty-state-icon i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+/* Alert */
+.alert-success {
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.1) 0%, rgba(25, 135, 84, 0.05) 100%);
+    border-left: 4px solid var(--success-color);
+    padding: 1rem 1.25rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .header-app h1 { font-size: 1.25rem; }
-    .card-body { padding: 1.5rem; }
+    .header-app h1 { font-size: 1.1rem; }
+    .card-body { padding: 1.25rem; }
     .btn-action { width: 100%; margin-bottom: 0.5rem; }
+    .table-custom thead th, 
+    .table-custom tbody td { padding: 0.75rem; font-size: 0.8rem; }
+    .patient-info { padding: 1rem; }
+}
+
+@media (max-width: 576px) {
+    .header-app { padding: 1rem 0; }
+    .header-app h1 { font-size: 1rem; }
 }

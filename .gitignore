@@ -1,53 +1,78 @@
-# Archivos y carpetas de PHP y gestores de dependencias
+# --------------------------------------------------------------------
+# 1. SEGURIDAD Y ENTORNO 
+# --------------------------------------------------------------------
+.env
+.env.boot
+.env.test
+/app/Config/development/
+/app/Config/testing/
+
+# --------------------------------------------------------------------
+# 2. DEPENDENCIAS (Composer y NPM)
+# --------------------------------------------------------------------
 /vendor/
 /node_modules/
-/composer.lock
-/package-lock.json
+# ¡OJO! Comentamos estos dos para que SÍ se suban y mantengan versiones:
+# composer.lock
+# package-lock.json
 
+# --------------------------------------------------------------------
+# 3. CODEIGNITER 4 - CARPETA WRITABLE (Temporales)
+# --------------------------------------------------------------------
+# Ignorar contenido pero MANTENER la estructura de carpetas
+/writable/cache/*
+!/writable/cache/index.html
+!/writable/cache/.gitkeep
 
-.env
+/writable/logs/*
+!/writable/logs/index.html
+!/writable/logs/.gitkeep
 
+/writable/session/*
+!/writable/session/index.html
+!/writable/session/.gitkeep
 
-# Archivos de caché, logs y temporales generados por la aplicación
-/cache/
-/log/
-/temp/
+/writable/uploads/*
+!/writable/uploads/index.html
+!/writable/uploads/.gitkeep
+
+/writable/debugbar/*
+!/writable/debugbar/.gitkeep
+
+# --------------------------------------------------------------------
+# 4. IDEs Y SISTEMA OPERATIVO
+# --------------------------------------------------------------------
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# --------------------------------------------------------------------
+# 5. ARCHIVOS TEMPORALES Y LOGS GENERALES
+# --------------------------------------------------------------------
 *.log
 *.tmp
 *.bak
 *.swp
 *.swo
+*.user
+php_errors.log
 
-# Archivos del sistema operativo
-.DS_Store
-Thumbs.db
-
-
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-phpunit.xml
-phpunit.xml.dist
-
-# Archivos de prueba
-test.php
-
-
+# --------------------------------------------------------------------
+# 6. BASE DE DATOS
+# --------------------------------------------------------------------
 *.sql
 *.sqlite
 *.db
+!database/schema.sql  <-- Si tienes tu script de instalación aquí, esto permite subirlo.
 
-*.png~
+# --------------------------------------------------------------------
+# 7. TESTING
+# --------------------------------------------------------------------
+/tests/_support/_generated/
+phpunit.xml
+# Mantenemos phpunit.xml.dist como plantilla
 
-/sessions/
-
-# Archivos de usuario o específicos del entorno
-*.user
-
-writable/session/
-writable/debugbar/*
-!writable/debugbar/.gitkeep
-
-/app/ThirdParty/tcpdf/
+!Img/
