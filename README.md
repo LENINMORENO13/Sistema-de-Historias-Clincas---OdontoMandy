@@ -15,11 +15,10 @@ El sistema está desplegado y **abierto para pruebas públicas**. No necesitas i
 
 👉 **https://dentalmanager.alwaysdata.net/**
 
-**Instrucciones de Acceso:**
-1. Ve al enlace.
-2. Haz clic en **"Registrarse"** en la pantalla de inicio.
-3. Crea una cuenta de prueba gratuita.
-4. ¡Explora todas las funciones libremente!
+**🔑 Demo Login (Acceso rapido):**
+
+**Email**: admin@gmail.com
+**Password**: admin123
 
 > ⚠️ **Aviso:** Este es un entorno de demostración. Por favor, **no ingreses información confidencial real** de pacientes. Los datos aquí son ficticios con fines educativos.
 
@@ -187,17 +186,6 @@ SisOdontoMandy/
 - Despliegue real: Llevar un proyecto local a un entorno de nube productivo.
 - Gestión de proyecto: Planificar, ejecutar y entregar un sistema completo.
 
----
-
-### 📈 Próximos pasos (v2.0)
-
-- [ ] Citas y agenda automática.
-- [ ] Recordatorios por WhatsApp/SMS.
-- [ ] Portal del paciente.
-- [ ] App móvil.
-- [ ] Multiclinica (SaaS).
-
----
 
 ### 📬 Contacto
 
