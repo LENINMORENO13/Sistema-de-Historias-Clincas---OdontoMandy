@@ -12,6 +12,8 @@ use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\PageCache;
 use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
+use App\Filters\AdminFilter;
+use App\Filters\AuthFilter;
 
 class Filters extends BaseFilters
 {
@@ -29,6 +31,8 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'auth'          => AuthFilter::class,
+        'requiereadmin' => AdminFilter::class,
     ];
 
     /**
@@ -38,12 +42,12 @@ class Filters extends BaseFilters
      */
     public array $required = [
         'before' => [
-            'forcehttps', 
-            // 'pagecache',  
+            'forcehttps',
+            // 'pagecache',
         ],
         'after' => [
-            'performance', 
-            'toolbar',    
+            'performance',
+            'toolbar',
         ],
     ];
 
@@ -54,12 +58,13 @@ class Filters extends BaseFilters
     public array $globals = [
         'before' => [
             // 'honeypot',
-            'csrf',         
-            'invalidchars',  
+            'csrf',
+            'invalidchars',
+            'auth',
         ],
         'after' => [
             // 'honeypot',
-            'secureheaders', 
+            'secureheaders',
         ],
     ];
 

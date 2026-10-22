@@ -18,6 +18,8 @@
 
 <body>
 
+    <?= $this->include('aviso_proyecto_pausado') ?>
+
     <div class="register-container">
         <div class="register-card">
             <div class="register-content">

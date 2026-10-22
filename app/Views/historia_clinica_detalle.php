@@ -15,6 +15,8 @@
 
 <body>
 
+    <?= $this->include('aviso_proyecto_pausado') ?>
+
     <header class="clinic-header">
         <div class="container">
             <div class="header-content">

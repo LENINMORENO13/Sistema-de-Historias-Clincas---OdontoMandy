@@ -6,46 +6,66 @@ use App\Models\ModeloGeneral;
 
 class Home extends BaseController
 {
+    /**
+     * Numero maximo de intentos fallidos antes de bloquear el login.
+     */
+    private const MAX_INTENTOS = 5;
 
-    //Test de pruebaconexion
-    public function pruebaconexion()
-    {
-        $datosconexion = \Config\Database::connect();
-        if ($datosconexion->connect()) {
-            echo 'Se conecto al OdontoMandy correctamente';
-        } else {
-            echo 'Error de conexion';
-        }
-    }
+    /**
+     * Segundos de bloqueo tras superar el maximo de intentos.
+     */
+    private const SEGUNDOS_BLOQUEO = 300;
 
-    //LOGIN
+    /**
+     * LOGIN
+     */
     public function vistalogin()
     {
         return view('headerLogin');
     }
 
-
     public function verificacionlogin()
     {
+        $correo = trim((string) $this->request->getPost('correo'));
+        $contrasena = (string) $this->request->getPost('contrasena');
 
-        $correo = $this->request->getPost('correo');
-        $contrasena = $this->request->getPost('contrasena');
+        if ($correo === '' || $contrasena === '') {
+            session()->setFlashdata('error', 'Ingresa tu correo y contrasena.');
+            return redirect()->to(base_url('/'));
+        }
 
-        // Crear una instancia del modelo
+        if ($this->loginBloqueado()) {
+            session()->setFlashdata('error', 'Demasiados intentos fallidos. Espera unos minutos e intentalo de nuevo.');
+            return redirect()->to(base_url('/'));
+        }
+
         $model = new ModeloGeneral();
-
-        // Buscar el usuario en la base de datos
         $usuario = $model->obtenerUsuarioPorCorreo($correo);
 
-        if (!$usuario) {
-            session()->setFlashdata('error', 'Usuario no encontrado.');
-        } else {
-            if (password_verify($contrasena, $usuario['contrasena'])) {
-                return redirect()->to(base_url('/Inicio'));
-            } else {
-                session()->setFlashdata('error', 'Contraseña incorrecta.');
-            }
+        if (!$usuario || ! password_verify($contrasena, $usuario['contrasena'])) {
+            $this->registrarIntentoFallido();
+            session()->setFlashdata('error', 'Correo o contrasena incorrectos.');
+            return redirect()->to(base_url('/'));
         }
+
+        $this->reiniciarIntentos();
+
+        session()->regenerate(true);
+        session()->set('usuario', [
+            'correo' => $usuario['correo_electronico'],
+            'rol'    => $usuario['rol'] ?? 'odontologo',
+        ]);
+
+        return redirect()->to(base_url('/Inicio'));
+    }
+
+    /**
+     * Cierre de sesion.
+     */
+    public function logout()
+    {
+        session()->destroy();
+
         return redirect()->to(base_url('/'));
     }
 
@@ -93,5 +113,33 @@ class Home extends BaseController
         ];
 
         return view('VistaDashboard', $data);
+    }
+
+    private function loginBloqueado(): bool
+    {
+        if ((int) session()->get('login_intentos', 0) < self::MAX_INTENTOS) {
+            return false;
+        }
+
+        if (time() < (int) session()->get('login_bloqueo_hasta', 0)) {
+            return true;
+        }
+
+        $this->reiniciarIntentos();
+
+        return false;
+    }
+
+    private function registrarIntentoFallido(): void
+    {
+        $intentos = (int) session()->get('login_intentos', 0) + 1;
+
+        session()->set('login_intentos', $intentos);
+        session()->set('login_bloqueo_hasta', time() + self::SEGUNDOS_BLOQUEO);
+    }
+
+    private function reiniciarIntentos(): void
+    {
+        session()->remove(['login_intentos', 'login_bloqueo_hasta']);
     }
 }

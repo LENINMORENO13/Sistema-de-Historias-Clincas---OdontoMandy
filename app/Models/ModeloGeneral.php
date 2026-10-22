@@ -164,4 +164,16 @@ class ModeloGeneral extends Model
 
         return $builder->insert($datos);
     }
+
+    /**
+     * Verifica si ya existe un usuario con el correo indicado.
+     */
+    public function correoExiste($correo)
+    {
+        $db = \Config\Database::connect();
+
+        return $db->table('tbl_usuarios')
+            ->where('correo_electronico', $correo)
+            ->countAllResults() > 0;
+    }
 }

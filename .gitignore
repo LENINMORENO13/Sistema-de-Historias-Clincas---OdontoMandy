@@ -66,7 +66,9 @@ php_errors.log
 *.sql
 *.sqlite
 *.db
-!database/schema.sql  <-- Si tienes tu script de instalación aquí, esto permite subirlo.
+
+# El esquema versionado si se sube en database/
+!database/*.sql
 
 # --------------------------------------------------------------------
 # 7. TESTING
@@ -74,5 +76,11 @@ php_errors.log
 /tests/_support/_generated/
 phpunit.xml
 # Mantenemos phpunit.xml.dist como plantilla
+
+# --------------------------------------------------------------------
+# 8. HERRAMIENTAS
+# --------------------------------------------------------------------
+.codeviz/
+.opencode/
 
 !Img/

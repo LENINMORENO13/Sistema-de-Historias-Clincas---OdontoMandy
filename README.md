@@ -1,195 +1,201 @@
-# 🦷 DentalManager
+# 🦷 DentalManager (OdontoMandy)
 
-## Sistema de Gestión Integral para Clínicas Odontológicas
+> **Estado: en pausa / archivado.** El proyecto no recibe mantenimiento.
+> Se conserva como documentación del estado del arte en su momento y como
+> punto de partida del proyecto que sigo: **[OpsMind](#-continua-en-opsmind)**.
 
-[![Estado](https://img.shields.io/badge/Estado-Desplegado%20%26%20Operativo-success?style=for-the-badge)](https://dentalmanager.alwaysdata.net/)
-[![Demo](https://img.shields.io/badge/Demo-Ver%20en%20Vivo-blue?style=for-the-badge&logo=google-chrome)](https://dentalmanager.alwaysdata.net/)
+Sistema de gestión para clínicas odontológicas: registro de pacientes,
+historia clínica, odontograma digital y reportes en PDF.
+
+[![Estado](https://img.shields.io/badge/Estado-En%20pausa%20%26%20archivado-d4a373)](https://github.com/LENINMORENO13/Sistema-de-Historias-Clincas---OdontoMandy)
 [![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4.x-blue?style=for-the-badge&logo=php)](https://codeigniter.com/)
 [![PHP](https://img.shields.io/badge/PHP-8.1%2B-purple?style=for-the-badge&logo=php)](https://www.php.net/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 ---
 
-### 🌐 ¡PRUÉBALO AHORA!
+## ⚠️ Aviso de seguridad
 
-El sistema está desplegado y **abierto para pruebas públicas**. No necesitas instalar nada.
+Este proyecto **se enlazó en producción sin control de acceso real**. Durante
+su desarrollo el login no persistía la sesión, por lo que cualquier persona
+con la URL podía leer y modificar los historiales clínicos.
 
-👉 **https://dentalmanager.alwaysdata.net/**
+El cierre (ver [parche de seguridad](#-parche-de-seguridad-del-cierre)) añadió
+sesión por usuario, control de roles, logout real y limitador de intentos de
+acceso. Aun así:
 
-**🔑 Demo Login (Acceso rapido):**
+- **No ingreses datos reales de pacientes.** Es una demostración con datos
+  ficticios.
+- La demo pública expone credenciales de prueba a propósito. Trátala como tal.
+- El esquema SQL original **no estaba versionado**: lo que hay en
+  [`database/`](./database) fue reconstruido a partir del código. Contrástalo
+  contra tu base antes de confiar en él.
 
-**Email**: admin@gmail.com
-**Password**: admin123
-
-> ⚠️ **Aviso:** Este es un entorno de demostración. Por favor, **no ingreses información confidencial real** de pacientes. Los datos aquí son ficticios con fines educativos.
-
----
-
-### 🎯 En una frase
-
-DentalManager es un sistema web completo que automatiza la gestión de pacientes, tratamientos y reportes en clínicas dentales, reduciendo el tiempo de administración y mejorando la atención al paciente.
-
----
-
-### 🚀 ¿Por qué importa este proyecto?
-
-Las clínicas odontológicas tradicionales enfrentan desafíos diarios:
-
-- **Pérdida de tiempo** en papeleo y registros manuales.
-- **Desorganización** de historiales médicos.
-- **Dificultad** para generar reportes y estadísticas.
-- **Sin acceso centralizado** a la información de pacientes.
-
-**DentalManager resuelve estos problemas** proporcionando una plataforma digital centralizada, segura y accesible desde cualquier lugar.
+Si necesitas un sistema clínico real, usa uno con control de acceso auditado.
 
 ---
 
-### 📊 Impacto del proyecto
+## 🧭 Por qué se pausó
 
-| Métrica | Antes | Después |
-|---------|-------|---------|
-| Tiempo en registrar un paciente | 15-20 min | **2-3 min** |
-| Búsqueda de historiales | 5-10 min | **Instantáneo** |
-| Generación de reportes | Manual (horas) | **Automatizado (segundos)** |
-| Acceso a estadísticas | No disponible | **En tiempo real** |
+No fue un fallo técnico. Fue un **desajuste de problema**.
 
----
+El proyecto nació para digitalizar el historial clínico en papel de una
+clínica. La odontóloga que lo iba a usar decidió **seguir con su método de
+papel** y descartó el sistema.
 
-### ✨ Características principales
+La lección fue incómoda pero clara: **construí la solución correcta para un
+problema que esa persona no tenía.** Un consultorio de un solo profesional con
+pocos pacientes al día no tiene un problema de gestión de historias clínicas;
+tiene un problema de agenda. El sistema no se caía: resolvía algo que no
+dolía.
 
-#### 1️⃣ Gestión completa de pacientes
-- Registro digital de datos personales.
-- Historial médico completo.
-- Búsqueda rápida y filtrada.
+Y antes de eso: validé tarde. Cuando el sistema ya estaba completo, la
+primera conversación sobre el flujo real de trabajo ocurrió después del
+rechazo. Si esa conversación hubiera ocurrido antes, el alcance habría sido
+otro.
 
-#### 2️⃣ Casos clínicos especializados
-- Documentación estructurada de tratamientos.
-- Motivo de consulta y antecedentes.
-- Estado del caso (en progreso, completado, derivado).
-
-#### 3️⃣ Odontograma digital
-- Visualización gráfica del estado dental.
-- Registro de piezas presentes y ausentes.
-- Marcas visuales por condición (caries, restauración, extracción).
-
-#### 4️⃣ Historias clínicas detalladas
-- Diagnósticos precisos.
-- Tratamientos realizados con descripciones.
-- Indicaciones post-tratamiento.
-
-#### 5️⃣ Reportería inteligente
-- Reportes individuales por paciente (PDF).
-- Reportes consolidados de la clínica.
-- Exportación de datos para análisis.
-
-#### 6️⃣ Panel de control (Dashboard)
-- Resumen de actividad diaria.
-- Métricas clave de la clínica.
-- Vista rápida de pacientes recientes.
-
-#### 7️⃣ Seguridad
-- Autenticación segura con sesiones.
-- Datos encriptados.
-- Registro abierto para nuevos doctores (Modo Demo).
+Lo que sí dejó el proyecto es una lección de producto que ahora aplico en
+todo lo demás: **el flujo de trabajo del usuario es la variable crítica, no
+la tecnología.** Reescribir el backend en otro lenguaje no cambia ese
+resultado.
 
 ---
 
-### 📸 Galería del Sistema
+## ✅ Lo que sí funcionaba
 
-Una vista rápida a las funcionalidades principales de Dental Manager:
+- **Pacientes y casos clínicos**: alta, búsqueda por nombre / cédula / fecha.
+- **Odontograma digital** con estado por pieza (presente, ausente, caries,
+  restauración, extracción).
+- **Historia clínica**: diagnósticos, tratamientos e indicaciones por
+  entrada, con historial por paciente.
+- **Reportes PDF** con TCPDF: consolidado de clínica e individual por paciente.
+- **Dashboard** con métricas de actividad.
+- **Despliegue en producción** (AlwaysData) con control de versiones.
 
-| **Acceso y Control** | **Gestión Clínica** |
-|:---:|:---:|
-| **Inicio de Sesión Seguro**<br>![Login](Img/login.png) | **Panel de Control (Dashboard)**<br>![Dashboard](Img/dashboard.png) |
-
-| **Corazón del Sistema** | **Historia Clínica** |
-|:---:|:---:|
-| **Odontograma Interactivo**<br>![Odontograma](Img/odontograma.png) | **Gestión de Casos**<br>![Casos](Img/gestion_casos.png) |
-
-| **Potencia y Resultados** | **Herramientas** |
-|:---:|:---:|
-| **Reportes Profesionales PDF**<br>![Reporte](Img/reporte_pdf.png) | **Búsqueda Avanzada**<br>![Búsqueda](Img/busqueda_avanzada.png) |
+Stack: CodeIgniter 4, PHP 8.1+, MySQL, TCPDF, Bootstrap 5, Git/GitHub.
 
 ---
 
-### 🛠️ Stack tecnológico
+## ⚠️ Limitaciones conocidas
 
-```text
-Frontend:       HTML5, CSS3, JavaScript (Bootstrap 5)
-Backend:        PHP 8.1+
-Framework:      CodeIgniter 4
-Database:       MySQL (MariaDB)
-Despliegue:     AlwaysData Cloud
-Control:        Git/GitHub
+Lo que encontré al revisar el proyecto antes de archivarlo. No se corrigió
+porque el proyecto no se retomó:
+
+| Área | Problema |
+|---|---|
+| Autenticación | El login no guardaba sesión: todas las rutas eran públicas *(corregido en el cierre)* |
+| Esquema de BD | Sin migraciones ni dump versionado *(reconstruido en `database/`)* |
+| Submódulo | `app/ThirdParty/tcpdf` estaba registrado sin `.gitmodules`: un clone limpio rompía los PDF *(corregido en el cierre)* |
+| Credenciales | `test.php` y `.env` estaban commiteados con credenciales reales *(corregido en el cierre)* |
+| Roles | `rol` se guardaba pero nunca se leía *(corregido en el cierre)* |
+| Pruebas | Solo los ejemplos del framework, cero cobertura de negocio |
+| Modelo de datos | El odontograma es un JSON en una columna: no es consultable por SQL |
+| XSS | Varias vistas imprimían datos de paciente sin `esc()` |
+| Calidad | Vistas de 24 KB con lógica embebida, un único modelo "god model" |
+
+---
+
+## 🔐 Parche de seguridad del cierre
+
+Cambios aplicados en el último commit (octubre 2026) antes de archivar el
+repositorio:
+
+- **Sesión real**: el login ahora guarda el usuario y regenera el ID de sesión.
+- **Filtro de autenticación** global (`app/Filters/AuthFilter.php`): todas las
+  rutas exigen sesión iniciada.
+- **Control de roles**: `app/Filters/AdminFilter.php` restringe el alta de
+  usuarios a administradores, y el `rol` se valida contra una lista en servidor.
+- **Logout real** y verificación de correo duplicado al registrar usuarios.
+- **Limitador de fuerza bruta**: 5 intentos fallidos → 5 minutos de bloqueo.
+- **Ruta `/test` eliminada** (filtraba el estado de la conexión a la BD).
+- **Aviso visible** en todas las páginas: los datos son ficticios.
+- **`.gitmodules` restaurado** para que el clone con submódulos funcione.
+- **Credenciales expuestas retiradas** del repositorio y del historial.
+
+---
+
+## 🚀 Cómo ejecutarlo
+
+```bash
+git clone --recursive https://github.com/LENINMORENO13/Sistema-de-Historias-Clincas---OdontoMandy.git
+cd Sistema-de-Historias-Clincas---OdontoMandy
+
+cp .env.example .env      # ajusta las credenciales de MySQL
+composer install
+
+# base de datos
+mysql -u root -p < database/schema.sql
+mysql -u root -p < database/stored-procedures.sql
+mysql -u root -p < database/seed.sql
 ```
 
----
+Levanta el servidor en `public/`:
 
-### 🧠 Habilidades demostradas
+```bash
+php -S localhost:8080 -t public
+```
 
-#### Backend & Cloud
-- ✅ Despliegue en Producción: Configuración de entorno real en AlwaysData.
-- ✅ Optimización: Ajuste de rutas y assets para entornos web.
-- ✅ Seguridad: Manejo de sesiones y sanitización en la nube.
-- ✅ MVC: Arquitectura escalable y mantenible.
-- ✅ Desarrollo de APIs: Controladores RESTful para consumo interno.
+Credenciales de la demo: `admin@gmail.com` / `admin123`
 
-#### Frontend
-- ✅ Diseño Responsive: Adaptable a móviles y escritorio.
-- ✅ Integración de librerías: Uso de herramientas para generación de PDF y gráficos dinámicos.
-- ✅ UX/UI: Diseño intuitivo enfocado en usuarios no técnicos.
-
-#### Base de datos
-- ✅ Stored Procedures: Lógica de negocio encapsulada en la BD para reportes rápidos.
-- ✅ Relaciones complejas: Diseño relacional normalizado.
-- ✅ Consultas optimizadas: Joins eficientes para grandes volúmenes de datos.
+> `--recursive` es necesario: TCPDF vive en `app/ThirdParty/tcpdf` como
+> submódulo.
 
 ---
 
-### 📁 Estructura del proyecto
+## 📁 Estructura
 
 ```plaintext
 SisOdontoMandy/
 ├── app/
-│   ├── Config/          → Configuraciones del framework
-│   ├── Controllers/     → Lógica de negocio (Home, CCasos, Reportes)
-│   ├── Models/          → Acceso a datos y Stored Procedures
-│   ├── Views/           → Interfaces de usuario
-│   └── Helpers/         → Funciones utilitarias
-├── public/              → Raíz del servidor web
-│   ├── css/             → Estilos personalizados
-│   ├── js/              → Lógica de cliente
-│   └── assets/          → Recursos estáticos
+│   ├── Config/          → Configuración del framework (rutas, filtros, sesión)
+│   ├── Controllers/     → Home (login), CCasos, Reportes, CAdmin
+│   ├── Filters/         → AuthFilter, AdminFilter
+│   ├── Models/          → ModeloGeneral (acceso a datos + SP)
+│   └── Views/           → Interfaces de usuario
+├── database/            → schema.sql, stored-procedures.sql, seed.sql
+├── public/              → Raíz del servidor web (css, js, assets)
 └── system/              → Core de CodeIgniter 4
 ```
 
 ---
 
-### 🔑 Módulos principales
+## 💡 Lo que aprendí
 
-| Módulo | Archivo clave | Descripción |
-|--------|--------------|------------|
-| Login | Home.php | Autenticación de usuarios |
-| Dashboard | VistaDashboard.php | Panel principal |
-| Pacientes | VistaRegistro.php | Registro de pacientes |
-| Casos | CCasos.php + VistaCC.php | Gestión de casos clínicos |
-| Odontograma | VistaSelectCasos.php | Visualización dental |
-| Reportes | Reportes.php | Generación de informes |
-| Admin | CAdmin.php | Administración del sistema |
+- **El flujo de trabajo manda.** La tecnología es reemplazable; la forma en la
+  que el usuario trabaja no lo es.
+- **Validar antes de construir.** Una conversación de 30 minutos con el
+  usuario final evita meses de trabajo sobre un problema inexistente.
+- **Un login que no autentica no es un login.** La sensación de "está
+  protegido" y la protección real son cosas distintas, y solo una se nota
+  cuando falla.
+- **El esquema de datos es parte del producto.** Lo que no está versionado
+  (migraciones, SP, dumps) no se puede mantener ni entregar a nadie.
+- **La seguridad se hereda del esqueleto**, no se agrega al final: si el
+  framework te da filtros de sesión y CSRF y no los usas, el proyecto nace
+  con un agujero que nadie ve hasta que lo explotan.
 
 ---
 
-### 💡 Lo que aprendí
+## ➡️ Continúa en OpsMind
 
-- Diseñar soluciones reales: Entender necesidades de usuarios y traducirlas en funcionalidades.
-- Arquitectura escalable: Aplicar patrones como MVC para proyectos mantenibles.
-- Seguridad primero: Implementar protecciones contra vulnerabilidades comunes.
-- Despliegue real: Llevar un proyecto local a un entorno de nube productivo.
-- Gestión de proyecto: Planificar, ejecutar y entregar un sistema completo.
+Esto es donde terminó el proyecto: **[OpsMind](https://github.com/LENINMORENO13/OpsMind)**,
+plataforma de observabilidad de microservicios con análisis de incidentes
+asistido por IA.
 
+| | DentalManager | OpsMind |
+|---|---|---|
+| Stack | PHP / CodeIgniter 4 | TypeScript / Express / Prisma / React |
+| Autenticación | Sesión simple *(añadida al cerrar)* | JWT, roles, rate limiting, Helmet |
+| Esquema de BD | Sin versionar *(reconstruido)* | 10 migraciones Prisma |
+| Pruebas | Ninguna | 14 suites (security, SSRF, incidents, IA…) |
+| CI/CD | Manual | GitHub Actions con despliegue continuo |
+| Entorno | XAMPP + FTP | Docker + Compose + Render |
 
-### 📬 Contacto
+Todo lo que este proyecto me enseñó a hacer mal está corregido ahí.
 
-¿Interesado en el proyecto o en trabajar juntos?
+---
+
+## 📬 Contacto
 
 - **GitHub:** [LENINMOREN013](https://github.com/LENINMOREN013)
 - **Email:** mlenin922@gmail.com

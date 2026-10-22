@@ -84,7 +84,7 @@ class Reportes extends Controller
 
         // 5. Metadatos
         $nombreCompleto = $datosReporte['paciente']['nombres_apellidos'];
-        $pdf->SetCreator('SisOdontoMandy');
+        $pdf->SetCreator('DentalManager');
         $pdf->SetTitle('Historia Clínica - ' . $nombreCompleto);
 
         // 6. Generar

@@ -14,12 +14,15 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100 bg-light">
+<body class="d-flex flex-column min-h-100 bg-light">
+
+    <?= $this->include('aviso_proyecto_pausado') ?>
 
     <?php 
 
     $uri = service('uri');
     $page = $uri->getSegment(1); 
+    $usuario = session()->get('usuario');
     ?>
 
     <nav class="navbar navbar-expand-xl navbar-dark sticky-top">
@@ -79,11 +82,13 @@
                         </a>
                     </li>
 
+                    <?php if (is_array($usuario)): ?>
                     <li class="nav-item ms-lg-2">
-                        <a class="nav-link btn-logout" href="<?= base_url('/'); ?>">
+                        <a class="nav-link btn-logout" href="<?= base_url('logout'); ?>">
                             <i class="bi bi-box-arrow-right"></i> Salir
                         </a>
                     </li>
+                    <?php endif; ?>
 
                 </ul>
             </div>

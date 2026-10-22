@@ -135,7 +135,7 @@
         </div>
         
         <p class="footer-text">
-            <i class="bi bi-heart-pulse me-1"></i>Sistema Odontológico OdontoMandy
+            <i class="bi bi-heart-pulse me-1"></i>Sistema Odontológico Dental Manager
         </p>
     </div>
 </body>

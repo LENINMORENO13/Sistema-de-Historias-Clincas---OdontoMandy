@@ -273,6 +273,7 @@
 
 <body>
 
+    <?= $this->include('aviso_proyecto_pausado') ?>
 
     <div class="login-container">
         <div class="login-card">
@@ -290,7 +291,7 @@
                         <h3 class="fw-bold text-dark mb-1" style="font-size: 1.5rem;">Dental Manager</h3>
                         <div class="welcome-message">
                             <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1 rounded-pill" style="font-size: 0.75rem;">
-                                <i class="bi bi-shield-check me-1"></i>Acceso seguro
+                                <i class="bi bi-lock-fill me-1"></i>Acceso con sesión
                             </span>
                         </div>
                     </div>
@@ -368,19 +369,17 @@
 
                 <div class="login-footer">
                     <div class="text-center mt-4 pt-3 border-top">
-                        <span class="text-muted small">¿No tienes acceso?</span>
-                        <a href="<?= base_url('admin/registrar') ?>"
-                           class="text-primary small fw-bold text-decoration-none ms-1">
-                            Solicitar credenciales
-                        </a>
+                        <span class="text-muted small">
+                            ¿No tienes acceso? Solicita credenciales al administrador.
+                        </span>
                     </div>
 
                     <div class="security-footer">
                         <div class="row text-center">
                             <div class="col-6">
                                 <small class="text-muted">
-                                    <i class="bi bi-shield-check text-success me-1"></i>
-                                    Sistema seguro
+                                    <i class="bi bi-person-check text-success me-1"></i>
+                                    Sesión por usuario
                                 </small>
                             </div>
                             <div class="col-6">

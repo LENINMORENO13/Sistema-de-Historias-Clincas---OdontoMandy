@@ -37,7 +37,7 @@ class CCasos extends BaseController
             'antecedente_personal_2' => $this->request->getPost('antecedente_personal_2'),
             'antecedente_familiar_1' => $this->request->getPost('antecedente_familiar_1'),
             'antecedente_familiar_2' => $this->request->getPost('antecedente_familiar_2'),
-            'odontograma' => $odontograma_json, 
+            'odontograma' => $odontograma_json,
         ];
 
         $nuevo_id = $instancia->MetodoModeloInsertCaso($datos);
@@ -131,10 +131,19 @@ class CCasos extends BaseController
             $fecha = $this->request->getGet('buscar_caso_fecha') ?? '';
 
             $data = [];
+            $casos = [];
+
+
+
 
             if (!empty($paciente) || !empty($cedula) || !empty($fecha)) {
                 $modelo = new ModeloGeneral();
                 $casos = $modelo->ObtenerCasos($paciente, $cedula, $fecha);
+
+
+                foreach ($casos as $caso) {
+                    $caso->edad = calcularEdad($caso->fecha_nacimiento);
+                }
 
                 if (empty($casos)) {
                     $data['mensaje_error'] = "No se encontraron resultados.";
@@ -142,11 +151,14 @@ class CCasos extends BaseController
 
                 $data['casosPacientes'] = $casos;
             } else {
-                // No buscar nada, no mostrar tabla
                 $data['casosPacientes'] = [];
             }
 
-            return view('VistaCasosPacientes', $data);
+            if ($this->request->isAJAX()) {
+                return $this->response->setJSON($casos);
+            } else {
+                return view('VistaCasosPacientes', $data);
+            }
         }
     }
 }

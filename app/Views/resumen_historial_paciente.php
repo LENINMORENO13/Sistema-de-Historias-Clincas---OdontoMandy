@@ -15,6 +15,8 @@
 
 <body>
 
+    <?= $this->include('aviso_proyecto_pausado') ?>
+
     <header class="header-app">
         <div class="container d-flex align-items-center justify-content-center justify-content-md-start">
             <i class="bi bi-tooth fs-3 me-2"></i>
