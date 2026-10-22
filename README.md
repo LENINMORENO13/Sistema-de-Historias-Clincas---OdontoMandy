@@ -129,11 +129,16 @@ mysql -u root -p < database/stored-procedures.sql
 mysql -u root -p < database/seed.sql
 ```
 
-Levanta el servidor en `public/`:
+Copia la carpeta a `htdocs` de XAMPP y ábrela por Apache:
 
-```bash
-php -S localhost:8080 -t public
+```text
+http://localhost/SisOdontoMandy/
 ```
+
+> El front controller está en la **raíz** (`index.php`), no en `public/`.
+> Por eso `php spark serve` y `php -S -t public` **no funcionan**: esperan un
+> `public/index.php` que aquí no existe. Se sirve con Apache usando el
+> `.htaccess` de la raíz (o cualquier servidor con `mod_rewrite`).
 
 Credenciales de la demo: `admin@gmail.com` / `admin123`
 
@@ -153,7 +158,8 @@ SisOdontoMandy/
 │   ├── Models/          → ModeloGeneral (acceso a datos + SP)
 │   └── Views/           → Interfaces de usuario
 ├── database/            → schema.sql, stored-procedures.sql, seed.sql
-├── public/              → Raíz del servidor web (css, js, assets)
+├── index.php            → Front controller (la raíz es el punto de entrada)
+├── public/              → Assets estáticos (css, js)
 └── system/              → Core de CodeIgniter 4
 ```
 
