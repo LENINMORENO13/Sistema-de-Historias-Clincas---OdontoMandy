@@ -11,6 +11,9 @@ $routes->get('/', 'Home::vistalogin');
 $routes->post('login/verificacionlogin', 'Home::verificacionlogin');
 $routes->get('/logout', 'Home::logout');
 
+//Dashboard (requiere sesion)
+$routes->get('/Inicio', 'Home::MostrarDashboard');
+
 
 //Rutas para los Casos Clinicos
 $routes->get('/VistaCC', 'CCasos::index');
